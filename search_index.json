@@ -1,0 +1,607 @@
+[
+  {
+    "city": "shanghai",
+    "cityName": "Shanghai",
+    "hospitals": [
+      {
+        "citySlug": "shanghai",
+        "cityName": "Shanghai",
+        "name": "Shanghai Ruijin Hospital (瑞金医院)",
+        "address": "197 Ruijin No.2 Road, Huangpu District",
+        "phone": "+86-21-6437-0045",
+        "url": "http://www.rjh.com.cn/",
+        "siteName": "www.rjh.com.cn",
+        "specialties": "Oncology, Liver Transplantation, Cardiology, Orthopedics, Endocrinology, Emergency Care",
+        "note": "Website is in Chinese — Safari, Chrome, and Edge all translate pages automatically. Search \"瑞金医院\" on"
+      },
+      {
+        "citySlug": "shanghai",
+        "cityName": "Shanghai",
+        "name": "Huashan Hospital (华山医院)",
+        "address": "12 Urumqi Middle Road, Jing'an District",
+        "phone": "+86-21-5288-9999",
+        "url": "https://www.huashan.org.cn/",
+        "siteName": "www.huashan.org.cn",
+        "specialties": "Neurosurgery, Neurology, Hand Surgery, Rehabilitation Medicine, Dermatology, Infectious Diseases",
+        "note": "Website is in Chinese — Safari, Chrome, and Edge all translate pages automatically. Search \"华山医院\" on"
+      },
+      {
+        "citySlug": "shanghai",
+        "cityName": "Shanghai",
+        "name": "Zhongshan Hospital (中山医院)",
+        "address": "180 Fenglin Road, Xuhui District",
+        "phone": "+86-21-6404-1990",
+        "url": "https://www.zs-hospital.sh.cn/",
+        "siteName": "www.zs-hospital.sh.cn",
+        "specialties": "Cardiology, Cardiac Surgery, Vascular Surgery, Oncology, General Surgery, Geriatrics",
+        "note": "Website is in Chinese — Safari, Chrome, and Edge all translate pages automatically. Search \"复旦大学附属中山"
+      },
+      {
+        "citySlug": "shanghai",
+        "cityName": "Shanghai",
+        "name": "Shanghai Jiahui International Hospital (嘉会国际医院)",
+        "address": "1 Hubin Road, Huangpu District",
+        "phone": "+86-21-2216-8888",
+        "url": "",
+        "siteName": "",
+        "specialties": "Full-service, Emergency, Surgery, Oncology, Cardiology, Orthopedics, OB/GYN, Pediatrics, Imaging",
+        "note": "Most foreigner-friendly of Shanghai's hospitals. English throughout. Accepts international insurance"
+      },
+      {
+        "citySlug": "shanghai",
+        "cityName": "Shanghai",
+        "name": "Shanghai United Family Hospital (和睦家医院)",
+        "address": "699 Jiangchang West Road, Jing'an District",
+        "phone": "+86-21-2216-3999",
+        "url": "",
+        "siteName": "",
+        "specialties": "Family Medicine, OB/GYN, Pediatrics, Surgery, Dental, Mental Health, Executive Health Checks",
+        "note": "Best for routine care, health checkups, dental, and non-emergency procedures. Pricier than public ho"
+      },
+      {
+        "citySlug": "shanghai",
+        "cityName": "Shanghai",
+        "name": "Shanghai Yida Hospital (上海御膳房医院)",
+        "address": "39 Nijiajiao Road, Qingpu District",
+        "phone": "+86-21-3158-9128",
+        "url": "",
+        "siteName": "",
+        "specialties": "Oncology, Orthopedics, Cosmetic Surgery, Dermatology, IVF/Reproductive Medicine, Dental",
+        "note": "Good value for self-pay patients. Qingpu District — near Hongqiao Airport. Also popular for cosmetic"
+      }
+    ]
+  },
+  {
+    "city": "beijing",
+    "cityName": "Beijing",
+    "hospitals": [
+      {
+        "citySlug": "beijing",
+        "cityName": "Beijing",
+        "name": "Peking Union Medical College Hospital — 协和医院",
+        "address": "1 Shuaifuyuan, Dongcheng District, Beijing",
+        "phone": "+86-10-6915-6114",
+        "url": "http://www.pumch.cn/",
+        "siteName": "www.pumch.cn",
+        "specialties": "Complex Diagnosis, Rare Diseases, Immunology, Hematology, Oncology, Rheumatology, Endocrinology, Thoracic Surgery",
+        "note": "Often ranked China's #1 hospital. Very crowded. Appointments essential. Accepts foreign patients dir"
+      },
+      {
+        "citySlug": "beijing",
+        "cityName": "Beijing",
+        "name": "Chinese Academy of Medical Sciences Cancer Hospital — 东肿",
+        "address": "17 Panjiayuan Nanli, Chaoyang District, Beijing",
+        "phone": "+86-10-6778-1331",
+        "url": "https://www.cicams.ac.cn/",
+        "siteName": "www.cicams.ac.cn",
+        "specialties": "Surgical Oncology, Medical Oncology, Radiation Oncology, Thoracic Cancer, GI Cancer, Breast Cancer, Head & Neck Cancer, Proton Therapy",
+        "note": "China's premier cancer institution. Many patients come here for second opinions on diagnosis and tre"
+      },
+      {
+        "citySlug": "beijing",
+        "cityName": "Beijing",
+        "name": "PLA General Hospital (301 Hospital) — 解放军总医院",
+        "address": "28 Fuxing Road, Haidian District, Beijing",
+        "phone": "+86-10-6688-7329",
+        "url": "https://www.301hospital.cn/",
+        "siteName": "www.301hospital.cn",
+        "specialties": "Organ Transplantation (liver, kidney, heart), Hepatobiliary Surgery, Gastroenterology, Cardiology, Neurology, Oncology, Rare Disease Diagnosis",
+        "note": "One of China's highest-capacity hospitals. Military background means excellent emergency response an"
+      },
+      {
+        "citySlug": "beijing",
+        "cityName": "Beijing",
+        "name": "Peking University First Hospital — 北京大学第一医院",
+        "address": "8 Xishiku Street, Xicheng District, Beijing",
+        "phone": "+86-10-8357-2283",
+        "url": "https://www.bddyyy.com.cn/",
+        "siteName": "www.bddyyy.com.cn",
+        "specialties": "Nephrology, Urology, Cardiology, Dermatology, Respiratory Medicine, Oncology Support, General Internal Medicine",
+        "note": "Located near the Drum Tower and Lama Temple area — central Beijing with many hotel options nearby. G"
+      },
+      {
+        "citySlug": "beijing",
+        "cityName": "Beijing",
+        "name": "Beijing Tongren Hospital — 同仁医院",
+        "address": "1 Dongjiaomin Lane, Dongcheng District, Beijing",
+        "phone": "+86-10-5826-6755",
+        "url": "",
+        "siteName": "",
+        "specialties": "Ophthalmology, Otolaryngology (ENT), Head & Neck Surgery, Sinus Surgery, Facial Plastic Surgery",
+        "note": "One of China's oldest hospitals (founded 1886 by a missionary). Eye care and ENT are particular spec"
+      }
+    ]
+  },
+  {
+    "city": "guangzhou",
+    "cityName": "Guangzhou",
+    "hospitals": [
+      {
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "name": "Sun Yat-sen University Affiliated First Hospital — 中山大学附属第一医院",
+        "address": "58 Zhongshan No.2 Road, Yuexiu District, Guangzhou",
+        "phone": "+86-20-8775-5766",
+        "url": "https://www.gzsums.edu.cn/",
+        "siteName": "www.gzsums.edu.cn",
+        "specialties": "Gastroenterology, Hepatology, Nephrology, Emergency Medicine, Cardiac Surgery, Oncology, Organ Transplantation",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "name": "Guangdong Provincial People's Hospital — 广东省人民医院",
+        "address": "123 Dadi Road, Tianhe District, Guangzhou",
+        "phone": "+86-20-8382-7812",
+        "url": "https://www.e5413.com/",
+        "siteName": "www.e5413.com",
+        "specialties": "Cardiology, Cardiac Surgery, Vascular Surgery, Neurology, Oncology, Respiratory Medicine, Geriatrics",
+        "note": "Located in Tianhe District — Guangzhou's modern business center with excellent hotel and transport c"
+      },
+      {
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "name": "Jinan University Affiliated First Hospital — 暨南大学附属第一医院",
+        "address": "613 Huangpu Avenue West, Tianhe District, Guangzhou",
+        "phone": "+86-20-3868-8866",
+        "url": "https://www.jd3y.com/",
+        "siteName": "www.jd3y.com",
+        "specialties": "Rehabilitation Medicine, Geriatric Medicine, Sports Medicine, Neurology, Orthopedics, Traditional Chinese Medicine Integration",
+        "note": "Especially strong for rehabilitation medicine and orthopedic recovery. Near the Tianhe软件园 (Software "
+      },
+      {
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "name": "Guangzhou Medical University Affiliated First Hospital — 广州医科大学附属第一医院",
+        "address": "151 Yanjiang Road, Yuexiu District, Guangzhou",
+        "phone": "+86-20-8333-7750",
+        "url": "https://www.fyy.com.cn/",
+        "siteName": "www.fyy.com.cn",
+        "specialties": "Respiratory Medicine, Thoracic Surgery, Pulmonology, Sleep Disorders, Oncology, Emergency Care, ICU",
+        "note": "The respiratory and pulmonology department is nationally renowned. Also notable: the hospital's emer"
+      },
+      {
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "name": "Zhongshan Ophthalmic Center — 中山眼科中心",
+        "address": "54 Xianlie Road, Yuexiu District, Guangzhou",
+        "phone": "+86-20-8733-0487",
+        "url": "",
+        "siteName": "",
+        "specialties": "Cataract Surgery, Corneal Transplantation, Glaucoma, Retinal Surgery, LASIK/Refractive Surgery, Ocular Oncology, Pediatric Ophthalmology",
+        "note": "If you need eye surgery, this is one of the best — and most affordable — destinations in the world. "
+      }
+    ]
+  },
+  {
+    "city": "shenzhen",
+    "cityName": "Shenzhen",
+    "hospitals": [
+      {
+        "citySlug": "shenzhen",
+        "cityName": "Shenzhen",
+        "name": "Shenzhen University General Hospital — 深圳大学总医院",
+        "address": "99 Qianwan Road, Shenzhen",
+        "phone": "+86-755-2183-9999",
+        "url": "https://www.szugh.com.cn/",
+        "siteName": "www.szugh.com.cn",
+        "specialties": "Oncology, Immunotherapy, General Surgery, Cardiology, Orthopedics, Neurology, Medical Imaging",
+        "note": "One of Shenzhen's newest and most modern hospitals. The oncology department is particularly active w"
+      },
+      {
+        "citySlug": "shenzhen",
+        "cityName": "Shenzhen",
+        "name": "Shenzhen People's Hospital — 深圳市人民医院",
+        "address": "1017 Liyuan Road, Luohu District, Shenzhen",
+        "phone": "+86-755-2553-3018",
+        "url": "http://www.szhospital.cn/",
+        "siteName": "www.szhospital.cn",
+        "specialties": "Cardiology, Emergency Medicine, ICU, Oncology, Respiratory Medicine, Gastroenterology, Organ Transplantation Support",
+        "note": "Shenzhen's largest and most experienced hospital. Located near Luohu (the main commerce district, ad"
+      },
+      {
+        "citySlug": "shenzhen",
+        "cityName": "Shenzhen",
+        "name": "Peking University Shenzhen Hospital — 北京大学深圳医院",
+        "address": "1120 Lianhua Road, Futian District, Shenzhen",
+        "phone": "+86-755-8392-3333",
+        "url": "http://www.pkuszh.com.cn/",
+        "siteName": "www.pkuszh.com.cn",
+        "specialties": "Reproductive Medicine (IVF), Oncology, Neurology, Dermatology, Orthopedics, Minimally Invasive Surgery",
+        "note": "Located in Futian District — Shenzhen's city center and main business district with excellent hotels"
+      },
+      {
+        "citySlug": "shenzhen",
+        "cityName": "Shenzhen",
+        "name": "Shenzhen Second People's Hospital — 深圳市第二人民医院",
+        "address": "3002 Sungang Road, Futian District, Shenzhen",
+        "phone": "+86-755-8336-6388",
+        "url": "",
+        "siteName": "",
+        "specialties": "Trauma Surgery, Sports Medicine, Orthopedics, Neurology, Rehabilitation Medicine, Emergency Care",
+        "note": "Excellent for sports injuries, joint problems, and orthopedic surgery. Shenzhen's tech workforce (in"
+      },
+      {
+        "citySlug": "shenzhen",
+        "cityName": "Shenzhen",
+        "name": "HKU Shenzhen Hospital — 香港大学深圳医院",
+        "address": "1 Haoye Road, Nanshan District, Shenzhen",
+        "phone": "+86-755-8691-3388",
+        "url": "https://www.hku-szh.org",
+        "siteName": "www.hku-szh.org",
+        "specialties": "Full-Service, Oncology, Cardiology, Obstetrics, Pediatrics, Surgery, Emergency, Medical Imaging",
+        "note": "If you want Hong Kong-standard care at mainland China prices, this is your best option in Shenzhen. "
+      }
+    ]
+  },
+  {
+    "city": "chengdu",
+    "cityName": "Chengdu",
+    "hospitals": [
+      {
+        "citySlug": "chengdu",
+        "cityName": "Chengdu",
+        "name": "West China Hospital, Sichuan University — 四川大学华西医院",
+        "address": "37 Guoxue Lane, Wuhou District, Chengdu",
+        "phone": "+86-28-8542-2114",
+        "url": "https://www.cd120.com/",
+        "siteName": "www.cd120.com",
+        "specialties": "Neurology, Neurosurgery, Stomatology (Dental), Oncology, Cardiology, Orthopedics, Rare Disease Diagnosis, Brain Science Institute",
+        "note": "West China Hospital is ranked #2 in all of China — a truly world-class institution. Neurology, neuro"
+      },
+      {
+        "citySlug": "chengdu",
+        "cityName": "Chengdu",
+        "name": "Sichuan Provincial People's Hospital — 四川省人民医院",
+        "address": "32 Wuhouci Street, Wuhou District, Chengdu",
+        "phone": "+86-28-8739-3999",
+        "url": "https://www.samsph.com/",
+        "siteName": "www.samsph.com",
+        "specialties": "Cardiology, Geriatrics, Oncology, Emergency Medicine, Respiratory Medicine, Nephrology, Urology",
+        "note": "Sichuan Province's flagship hospital. More accessible than West China for appointment scheduling whi"
+      },
+      {
+        "citySlug": "chengdu",
+        "cityName": "Chengdu",
+        "name": "Chengdu University of TCM Affiliated Hospital — 成都中医药大学附属医院",
+        "address": "39 Shierqiao Road, Chengdu",
+        "phone": "+86-28-8776-5432",
+        "url": "https://www.cdtcm.com/",
+        "siteName": "www.cdtcm.com",
+        "specialties": "Traditional Chinese Medicine, Acupuncture, Integrative Medicine, Rehabilitation, Dermatology, Gastroenterology, Pain Management",
+        "note": "Excellent for patients interested in combining Western medicine with Traditional Chinese Medicine (T"
+      },
+      {
+        "citySlug": "chengdu",
+        "cityName": "Chengdu",
+        "name": "Chengdu Hi-Tech Medical Center — 成都高新医疗中心",
+        "address": "18 Gaopeng Avenue, High-Tech Zone, Chengdu",
+        "phone": "+86-28-8287-9999",
+        "url": "",
+        "siteName": "",
+        "specialties": "Cardiology, Oncology, General Surgery, Orthopedics, Medical Imaging, Executive Health Checks",
+        "note": "Best for patients who prefer a quieter, more modern hospital environment. Located in Chengdu's High-"
+      }
+    ]
+  },
+  {
+    "city": "hangzhou",
+    "cityName": "Hangzhou",
+    "hospitals": [
+      {
+        "citySlug": "hangzhou",
+        "cityName": "Hangzhou",
+        "name": "Zhejiang University School of Medicine Affiliated First Hospital — 浙江大学医学院附属第一医院",
+        "address": "79 Qingchun Road, Hangzhou",
+        "phone": "+86-571-8723-6600",
+        "url": "https://www.zy91.com/",
+        "siteName": "www.zy91.com",
+        "specialties": "Hepatobiliary Surgery, Liver Transplantation, Infectious Diseases, Hematology, Oncology, Cardiology, Nephrology, Critical Care",
+        "note": "One of Zhejiang Province's top two hospitals. Hepatobiliary surgery and liver transplantation are pa"
+      },
+      {
+        "citySlug": "hangzhou",
+        "cityName": "Hangzhou",
+        "name": "Sir Run Run Shaw Hospital — 邵逸夫医院",
+        "address": "3 East Qingchun Road, Hangzhou",
+        "phone": "+86-571-8609-0048",
+        "url": "https://www.srrsh.com/",
+        "siteName": "www.srrsh.com",
+        "specialties": "Oncology, Cardiology, Robotic Surgery, Minimally Invasive Surgery, Gastroenterology, Respiratory Medicine, Health Management",
+        "note": "Known for its Western-influenced hospital management and patient-centered approach. Oncology, cardio"
+      },
+      {
+        "citySlug": "hangzhou",
+        "cityName": "Hangzhou",
+        "name": "Zhejiang Provincial People's Hospital — 浙江省人民医院",
+        "address": "158 Shangtang Road, Hangzhou",
+        "phone": "+86-571-8589-3369",
+        "url": "https://www.gihospital.cn/",
+        "siteName": "www.gihospital.cn",
+        "specialties": "Cardiology, Vascular Surgery, Neurology, Rehabilitation Medicine, Emergency Care, Oncology Support, Traditional Chinese Medicine Integration",
+        "note": "Zhejiang Province's flagship general hospital. Particularly strong in cardiology and vascular surger"
+      },
+      {
+        "citySlug": "hangzhou",
+        "cityName": "Hangzhou",
+        "name": "Zhejiang University School of Medicine Affiliated Second Hospital — 浙江大学医学院附属第二医院",
+        "address": "88 Jiefang Road, Hangzhou",
+        "phone": "+86-571-8778-3984",
+        "url": "",
+        "siteName": "",
+        "specialties": "Ophthalmology, Dermatology, Cardiology, Orthopedics, Oncology, Neurology, Emergency Medicine",
+        "note": "One of China's oldest hospitals, originally founded as a missionary hospital. Ophthalmology and derm"
+      }
+    ]
+  },
+  {
+    "city": "wuhan",
+    "cityName": "Wuhan",
+    "hospitals": [
+      {
+        "citySlug": "wuhan",
+        "cityName": "Wuhan",
+        "name": "Tongji Hospital, Tongji Medical College — 华中科技大学同济医院",
+        "address": "1095 Jiefang Avenue, Wuhan",
+        "phone": "+86-27-8366-2304",
+        "url": "https://www.tjh.com.cn/",
+        "siteName": "www.tjh.com.cn",
+        "specialties": "Orthopedic Surgery, Joint Replacement, Spinal Surgery, Bone Marrow Transplantation, Organ Transplantation, Oncology, Cardiology",
+        "note": "Tongji Hospital is one of China's most prestigious names in orthopedics and joint replacement. If yo"
+      },
+      {
+        "citySlug": "wuhan",
+        "cityName": "Wuhan",
+        "name": "Renmin Hospital of Wuhan University — 武汉大学人民医院",
+        "address": "99 Zhangzhidong Road, Wuhan",
+        "phone": "+86-27-8804-1922",
+        "url": "https://www.whu-hospital.com/",
+        "siteName": "www.whu-hospital.com",
+        "specialties": "Cardiology, Neurology, Oncology, Respiratory Medicine, Emergency Medicine, Nephrology, Hepatobiliary Surgery",
+        "note": "One of Wuhan's most respected general hospitals. Strong in cardiology and neurology. Located near th"
+      },
+      {
+        "citySlug": "wuhan",
+        "cityName": "Wuhan",
+        "name": "Zhongnan Hospital of Wuhan University — 中南医院",
+        "address": "169 Donghu Road, Wuhan",
+        "phone": "+86-27-6781-3066",
+        "url": "http://www.znhospital.cn/",
+        "siteName": "www.znhospital.cn",
+        "specialties": "Oncology, Radiotherapy, Hematology, Oncology Surgery, Infectious Diseases, Critical Care, Medical Imaging",
+        "note": "Particularly strong in cancer treatment — surgery, chemotherapy, and radiotherapy. Located near East"
+      },
+      {
+        "citySlug": "wuhan",
+        "cityName": "Wuhan",
+        "name": "Wuhan Union Hospital — 武汉协和医院",
+        "address": "1277 Jiefang Avenue, Wuhan",
+        "phone": "+86-27-8572-6000",
+        "url": "",
+        "siteName": "",
+        "specialties": "Cardiology, Cardiac Surgery, Thoracic Surgery, Vascular Surgery, Emergency Care, ICU, Pulmonology",
+        "note": "One of China's oldest hospitals with a strong cardiac surgery program. Cardiothoracic surgery is a p"
+      }
+    ]
+  },
+  {
+    "city": "xian",
+    "cityName": "Xian",
+    "hospitals": [
+      {
+        "citySlug": "xian",
+        "cityName": "Xian",
+        "name": "Xijing Hospital, Fourth Military Medical University — 西京医院",
+        "address": "169 Changlexi Road, Beilin District, Xian",
+        "phone": "+86-29-8477-1114",
+        "url": "https://www.fmmu.edu.cn/",
+        "siteName": "www.fmmu.edu.cn",
+        "specialties": "Plastic & Cosmetic Surgery, Cardiac Surgery, Neurology, Orthopedics, Dermatology, Gastroenterology, Cardiology",
+        "note": "Xijing Hospital's plastic surgery department is nationally renowned — rhinoplasty, facial contouring"
+      },
+      {
+        "citySlug": "xian",
+        "cityName": "Xian",
+        "name": "Xi'an Jiaotong University First Affiliated Hospital — 西安交通大学第一附属医院",
+        "address": "277 West Yanming Road, Xian",
+        "phone": "+86-29-8532-3320",
+        "url": "https://www.dyyy.xjtu.edu.cn/",
+        "siteName": "www.dyyy.xjtu.edu.cn",
+        "specialties": "Cardiology, Nephrology, Endocrinology, Oncology, Respiratory Medicine, General Surgery, Emergency Care",
+        "note": "Xi'an Jiaotong University's flagship hospital. Strong in internal medicine, cardiology, and kidney d"
+      },
+      {
+        "citySlug": "xian",
+        "cityName": "Xian",
+        "name": "Shaanxi Provincial People's Hospital — 陕西省人民医院",
+        "address": "256 Youyi East Road, Xian",
+        "phone": "+86-29-8849-0540",
+        "url": "",
+        "siteName": "",
+        "specialties": "Geriatrics, Neurology, Oncology, Cardiology, Orthopedics, Rehabilitation Medicine",
+        "note": "Shaanxi Province's largest general hospital. Strong rehabilitation medicine and geriatrics departmen"
+      },
+      {
+        "citySlug": "xian",
+        "cityName": "Xian",
+        "name": "Xi'an Gaoxing Hospital — 西安高新医院",
+        "address": "16 North 2nd Ring Road, Yanta District, Xian",
+        "phone": "+86-29-8833-0101",
+        "url": "",
+        "siteName": "",
+        "specialties": "Oncology, Cardiology, Medical Imaging, Executive Health Checks, General Surgery, Neurology",
+        "note": "Best for patients seeking a more private hospital environment. Comprehensive health checkup packages"
+      }
+    ]
+  },
+  {
+    "city": "nanjing",
+    "cityName": "Nanjing",
+    "hospitals": [
+      {
+        "citySlug": "nanjing",
+        "cityName": "Nanjing",
+        "name": "Nanjing Drum Tower Hospital — 南京鼓楼医院",
+        "address": "321 Zhongshan Road, Nanjing",
+        "phone": "+86-25-8310-6666",
+        "url": "https://www.njglyy.com/",
+        "siteName": "www.njglyy.com",
+        "specialties": "Spinal Surgery, Orthopedics, Joint Replacement, Neurosurgery, Cardiology, Oncology, Gastroenterology, Respiratory Medicine",
+        "note": "Drum Tower Hospital's spinal surgery department is nationally renowned — if you need spinal fusion, "
+      },
+      {
+        "citySlug": "nanjing",
+        "cityName": "Nanjing",
+        "name": "Jiangsu Province People's Hospital — 江苏省人民医院",
+        "address": "300 Guangzhou Road, Nanjing",
+        "phone": "+86-25-8378-9999",
+        "url": "https://www.jsph.net.cn/",
+        "siteName": "www.jsph.net.cn",
+        "specialties": "Cardiology, Cardiac Surgery, Oncology, Nephrology, Neurology, Emergency Medicine, Respiratory Medicine, Hematology",
+        "note": "The flagship hospital of Jiangsu Province. Strong cardiac care program including bypass surgery and "
+      },
+      {
+        "citySlug": "nanjing",
+        "cityName": "Nanjing",
+        "name": "Eastern Theater General Hospital — 东部战区总医院",
+        "address": "305 East Zhongshan Road, Nanjing",
+        "phone": "+86-25-8086-1000",
+        "url": "https://www.njzyy.com/",
+        "siteName": "www.njzyy.com",
+        "specialties": "Trauma Surgery, Critical Care, Cardiology, Neurology, General Surgery, Emergency Medicine, Organ Transplantation Support",
+        "note": "Nanjing's most capable hospital for trauma and emergency cases. Strong surgical infrastructure from "
+      },
+      {
+        "citySlug": "nanjing",
+        "cityName": "Nanjing",
+        "name": "Nanjing Medical University First Affiliated Hospital — 南京医科大学第一附属医院",
+        "address": "300 Guangzhou Road, Nanjing",
+        "phone": "+86-25-6813-5000",
+        "url": "",
+        "siteName": "",
+        "specialties": "Oncology, Cardiology, Hepatobiliary Surgery, Nephrology, Respiratory Medicine, Medical Imaging, Interventional Radiology",
+        "note": "Strong in cancer treatment and cardiology. Located in the same area as Jiangsu Province People's Hos"
+      }
+    ]
+  },
+  {
+    "city": "chongqing",
+    "cityName": "Chongqing",
+    "hospitals": [
+      {
+        "citySlug": "chongqing",
+        "cityName": "Chongqing",
+        "name": "Southwest Hospital — 西南医院",
+        "address": "30 Gaotanyan Street, Shapingba District, Chongqing",
+        "phone": "+86-23-6876-5000",
+        "url": "https://www.swhhospital.com/",
+        "siteName": "www.swhhospital.com",
+        "specialties": "Burns Treatment, Plastic & Reconstructive Surgery, Trauma Surgery, General Surgery, Oncology, Gastroenterology, Cardiology",
+        "note": "Southwest Hospital's burns treatment program is nationally renowned — if you need major burns care o"
+      },
+      {
+        "citySlug": "chongqing",
+        "cityName": "Chongqing",
+        "name": "Chongqing Medical University First Affiliated Hospital — 重庆医科大学附属第一医院",
+        "address": "1 Youyi Road, Yuanjiagang, Chongqing",
+        "phone": "+86-23-6881-2968",
+        "url": "https://www.cyfyhospital.com/",
+        "siteName": "www.cyfyhospital.com",
+        "specialties": "Neurology, Cardiology, Oncology, Respiratory Medicine, Nephrology, Emergency Medicine, OB/GYN",
+        "note": "Chongqing Medical University's flagship hospital. Strong in neurology (stroke, epilepsy) and cardiol"
+      },
+      {
+        "citySlug": "chongqing",
+        "cityName": "Chongqing",
+        "name": "Daping Hospital — 大坪医院",
+        "address": "10 Changjiang Branch Road, Yuuzhong District, Chongqing",
+        "phone": "+86-23-6881-2968",
+        "url": "https://www.dphospital.com.cn/",
+        "siteName": "www.dphospital.com.cn",
+        "specialties": "Emergency Medicine, Trauma Care, Vascular Surgery, Cardiology, Military Medicine, Critical Care",
+        "note": "Chongqing's most capable hospital for emergency and trauma cases. Vascular surgery is a particular s"
+      },
+      {
+        "citySlug": "chongqing",
+        "cityName": "Chongqing",
+        "name": "Chongqing Three Gorges Central Hospital — 重庆三峡中心医院",
+        "address": "165 Section 1, Chengbei Avenue, Wanzhou District, Chongqing",
+        "phone": "+86-23-5810-3120",
+        "url": "",
+        "siteName": "",
+        "specialties": "General Medicine, Surgery, Cardiology, Oncology, Nephrology, Traditional Chinese Medicine",
+        "note": "The major hospital serving Chongqing's Wanzhou District (eastern part of the municipality). Good gen"
+      }
+    ]
+  },
+  {
+    "city": "tianjin",
+    "cityName": "Tianjin",
+    "hospitals": [
+      {
+        "citySlug": "tianjin",
+        "cityName": "Tianjin",
+        "name": "Tianjin Medical University General Hospital — 天津医科大学总医院",
+        "address": "154 Anshan Road, Heping District, Tianjin",
+        "phone": "+86-22-6036-2222",
+        "url": "https://www.tjugh.com.cn/",
+        "siteName": "www.tjugh.com.cn",
+        "specialties": "Oncology, Cardiology, Neurology, Neurosurgery, Gastroenterology, Respiratory Medicine, General Surgery, Orthopedics",
+        "note": "Tianjin's flagship general hospital. Particularly strong in oncology, cardiology, and neurology. Loc"
+      },
+      {
+        "citySlug": "tianjin",
+        "cityName": "Tianjin",
+        "name": "Tianjin First Central Hospital — 天津市第一中心医院",
+        "address": "24 Fukang Road, Nankai District, Tianjin",
+        "phone": "+86-22-2362-6600",
+        "url": "https://www.tjwwyy.com/",
+        "siteName": "www.tjwwyy.com",
+        "specialties": "Organ Transplantation (liver, kidney), Hepatobiliary Surgery, Critical Care, Cardiology, Gastroenterology, Hematology, Oncology",
+        "note": "If you need organ transplantation, this is one of China's most experienced centers — with significan"
+      },
+      {
+        "citySlug": "tianjin",
+        "cityName": "Tianjin",
+        "name": "Tianjin Medical University Cancer Institute & Hospital — 天津医科大学肿瘤医院",
+        "address": "Huanhu West Road, Hexi District, Tianjin",
+        "phone": "+86-22-2334-0123",
+        "url": "",
+        "siteName": "",
+        "specialties": "Surgical Oncology, Medical Oncology, Radiation Oncology, Breast Cancer, Lung Cancer, GI Cancer, Tumor Imaging",
+        "note": "If you have cancer and want specialized treatment at lower cost than Beijing or Shanghai, Tianjin Ca"
+      },
+      {
+        "citySlug": "tianjin",
+        "cityName": "Tianjin",
+        "name": "Tianjin University of Traditional Chinese Medicine First Affiliated Hospital — 天津中医药大学第一附属医院",
+        "address": "88 Changjiang Road, Nankai District, Tianjin",
+        "phone": "+86-22-2798-7000",
+        "url": "https://www.tjtcm.com/",
+        "siteName": "www.tjtcm.com",
+        "specialties": "Traditional Chinese Medicine, Acupuncture, Integrative Medicine, Rehabilitation, Cardiology, Dermatology, Pain Management",
+        "note": "Excellent for patients interested in combining Western medicine with Traditional Chinese Medicine — "
+      }
+    ]
+  }
+]
