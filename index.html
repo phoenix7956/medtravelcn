@@ -350,12 +350,34 @@
 </section>
 
 <section class="cta-section" id="contact">
-    <div class="container">
-        <h2>Ready to explore your medical options in China?</h2>
-        <p>Browse any city above. Each page has real hospital info, pricing, and direct booking instructions.</p>
-        <p style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">This website is an information resource only. Always verify pricing and availability directly with the hospital.</p>
+    <div class="container" style="max-width:560px;">
+        <h2>Leave a Message</h2>
+        <p style="margin-bottom:20px;opacity:0.9;">Have a question or want to start planning your medical trip? Send us a message — we reply within 24 hours.</p>
+        <form onsubmit="this.submitter.disabled=true;this.submitter.textContent='Sending...';return true;">
+            <div style="display:grid;gap:12px;">
+                <input type="text" id="msg-name" placeholder="Your name (optional)" style="padding:12px 16px;border-radius:8px;border:none;font-size:1em;width:100%;box-sizing:border-box;">
+                <input type="email" id="msg-email" placeholder="Your email (optional)" style="padding:12px 16px;border-radius:8px;border:none;font-size:1em;width:100%;box-sizing:border-box;">
+                <textarea id="msg-text" rows="4" placeholder="Your message..." style="padding:12px 16px;border-radius:8px;border:none;font-size:1em;width:100%;box-sizing:border-box;resize:vertical;" required></textarea>
+                <button type="submit" style="padding:14px 28px;background:#e74c3c;color:white;border:none;border-radius:25px;font-size:1em;font-weight:700;cursor:pointer;width:fit-content;">Send Message →</button>
+            </div>
+        </form>
     </div>
 </section>
+<script>
+document.querySelector('#contact form').onsubmit = function(e) {
+    e.preventDefault();
+    var name = document.getElementById('msg-name').value || 'Anonymous';
+    var email = document.getElementById('msg-email').value || 'no email';
+    var text = document.getElementById('msg-text').value;
+    var body = 'Message from: ' + name + ' (' + email + ')\n\n' + text;
+    var subject = encodeURIComponent('MedTravelCN Message');
+    var encodedBody = encodeURIComponent(body);
+    window.location.href = 'mailto:contact@medtravelcn.net?subject=' + subject + '&body=' + encodedBody;
+    this.submitter.disabled = false;
+    this.submitter.textContent = 'Sent!';
+    setTimeout(function(){ document.querySelector('#contact [type=submit]').textContent = 'Send Message →'; }, 3000);
+};
+</script>
 
 <footer>
     <div class="container">
