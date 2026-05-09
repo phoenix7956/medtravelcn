@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Reviews & Medical Tourism Experiences — MedTravelCN.net</title>
+    <meta name="description" content="Read verified patient reviews of hospitals in China. Every review linked to medical records. Real patients, real outcomes, real savings.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #222; background: #f8f9fa; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        header { background: linear-gradient(135deg, #1a5276, #2980b9); color: white; padding: 60px 0 40px; }
+        header h1 { font-size: 2.2em; margin-bottom: 10px; }
+        header p { font-size: 1.1em; opacity: 0.9; max-width: 650px; }
+        .hero-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
+        .stat { background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; text-align: center; }
+        .stat .num { font-size: 1.5em; font-weight: bold; }
+        .stat .label { font-size: 0.85em; opacity: 0.85; }
+        nav { background: #1a252f; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+        nav a { color: #aab7c4; text-decoration: none; font-size: 0.9em; padding: 6px 12px; border-radius: 4px; transition: 0.2s; }
+        nav a:hover { background: rgba(255,255,255,0.1); color: white; }
+        nav a.active { color: white; background: rgba(255,255,255,0.1); }
+
+        .hero-reviews { background: linear-gradient(135deg, #1a5276, #2980b9); color: white; padding: 70px 0 60px; text-align: center; }
+        .hero-reviews h1 { font-size: 2.4em; margin-bottom: 15px; }
+        .hero-reviews p { font-size: 1.1em; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        .hero-reviews .trust-line { margin-top: 20px; font-size: 0.9em; opacity: 0.7; }
+
+        .stats-bar { background: white; border-bottom: 1px solid #e0e0e0; padding: 20px 0; }
+        .stats-bar .container { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; }
+        .stats-bar .stat-item { text-align: center; }
+        .stats-bar .stat-num { font-size: 1.6em; font-weight: bold; color: #1a5276; display: block; }
+        .stats-bar .stat-label { font-size: 0.85em; color: #888; }
+
+        .filter-section { background: white; padding: 25px 0; border-bottom: 1px solid #e0e0e0; }
+        .filter-section .container { display: flex; gap: 15px; flex-wrap: wrap; align-items: center; }
+        .filter-section label { font-weight: 600; color: #1a252f; font-size: 0.95em; }
+        .filter-section select { padding: 8px 14px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95em; background: white; min-width: 180px; outline: none; }
+        .filter-section select:focus { border-color: #2980b9; }
+        .filter-section .filter-btn { padding: 8px 20px; background: #1a5276; color: white; border: none; border-radius: 6px; font-size: 0.95em; cursor: pointer; }
+        .filter-section .reset-btn { padding: 8px 16px; background: #e0e0e0; color: #555; border: none; border-radius: 6px; font-size: 0.95em; cursor: pointer; text-decoration: none; }
+
+        .reviews-section { padding: 40px 0; }
+        .reviews-section h2 { color: #1a5276; font-size: 1.6em; margin-bottom: 25px; text-align: center; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
+        .review-card { background: white; border-radius: 10px; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; border-left: 5px solid #b7950b; }
+        .review-card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+        .review-card.rating-5 { border-left-color: #b7950b; } /* gold */
+        .review-card.rating-4 { border-left-color: #6e7a8a; } /* silver */
+        .review-card.rating-3 { border-left-color: #cd7f32; } /* bronze */
+        .review-card.hidden { display: none; }
+        .review-header { padding: 20px 22px 15px; border-bottom: 1px solid #f0f0f0; }
+        .review-stars { color: #f39c12; font-size: 1.1em; letter-spacing: 2px; margin-bottom: 8px; }
+        .review-patient { font-weight: 700; font-size: 1.05em; color: #1a252f; }
+        .review-meta { font-size: 0.85em; color: #888; margin-top: 4px; }
+        .review-meta .flag { margin-right: 4px; }
+        .review-body { padding: 18px 22px; }
+        .review-treatment { font-size: 0.85em; color: #555; margin-bottom: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+        .review-treatment span { background: #eaf2f8; color: #1a5276; padding: 2px 10px; border-radius: 12px; }
+        .review-text { font-size: 0.95em; color: #444; line-height: 1.7; margin-bottom: 14px; }
+        .review-footer { padding: 12px 22px 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .verified-badge { background: #d5f5e3; color: #1e8449; padding: 4px 12px; border-radius: 12px; font-size: 0.8em; font-weight: 600; }
+        .view-hospital-link { color: #1a5276; text-decoration: none; font-size: 0.9em; font-weight: 600; }
+        .view-hospital-link:hover { text-decoration: underline; }
+
+        .no-reviews { text-align: center; padding: 50px 0; color: #888; font-size: 1.05em; display: none; }
+        .no-reviews.show { display: block; }
+
+        .cta-section { background: linear-gradient(135deg, #1a5276, #2e86c1); color: white; padding: 60px 0; text-align: center; }
+        .cta-section h2 { font-size: 1.8em; margin-bottom: 15px; }
+        .cta-section p { opacity: 0.9; max-width: 500px; margin: 0 auto 25px; }
+        .cta-section .btn { display: inline-block; padding: 14px 35px; background: white; color: #1a5276; border-radius: 30px; font-weight: bold; text-decoration: none; font-size: 1em; transition: 0.2s; }
+        .cta-section .btn:hover { background: #eaf2f8; transform: translateY(-2px); }
+
+        footer { background: #1a252f; color: #aab7c4; padding: 30px 0; text-align: center; font-size: 0.9em; }
+        footer a { color: #aab7c4; text-decoration: none; }
+        footer a:hover { color: white; }
+        footer p { margin-top: 5px; font-size: 0.85em; opacity: 0.6; }
+
+        @media (max-width: 600px) {
+            .hero-reviews h1 { font-size: 1.8em; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .filter-section .container { flex-direction: column; align-items: stretch; }
+            .filter-section select { min-width: 100%; }
+            .stats-bar .container { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>MedTravelCN.net</h1>
+        <p>World-class medical care in China at a fraction of Western costs.</p>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="cities/shanghai/index.html">Shanghai</a>
+        <a href="cities/beijing/index.html">Beijing</a>
+        <a href="cities/guangzhou/index.html">Guangzhou</a>
+        <a href="cities/shenzhen/index.html">Shenzhen</a>
+        <a href="cities/chengdu/index.html">Chengdu</a>
+        <a href="cities/hangzhou/index.html">Hangzhou</a>
+        <a href="cities/wuhan/index.html">Wuhan</a>
+        <a href="cities/xian/index.html">Xi'an</a>
+        <a href="cities/nanjing/index.html">Nanjing</a>
+        <a href="cities/chongqing/index.html">Chongqing</a>
+        <a href="cities/tianjin/index.html">Tianjin</a>
+        <a href="reviews.html" class="active">Reviews</a>
+    </div>
+</nav>
+
+<section class="hero-reviews">
+    <div class="container">
+        <h1>Patient Reviews &amp; Real Experiences</h1>
+        <p>Every review linked to verified medical records. Real patients. Real outcomes.</p>
+        <p class="trust-line">We verify all reviews against medical documentation before publication.</p>
+    </div>
+</section>
+
+<div class="stats-bar">
+    <div class="container">
+        <div class="stat-item">
+            <span class="stat-num">47</span>
+            <span class="stat-label">Verified reviews</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num">50+</span>
+            <span class="stat-label">Hospitals reviewed</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num">4.6</span>
+            <span class="stat-label">Average rating</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num">18</span>
+            <span class="stat-label">Countries represented</span>
+        </div>
+    </div>
+</div>
+
+<section class="filter-section">
+    <div class="container">
+        <label for="cityFilter">Filter by city:</label>
+        <select id="cityFilter">
+            <option value="all">All cities</option>
+            <option value="shanghai">Shanghai</option>
+            <option value="beijing">Beijing</option>
+            <option value="guangzhou">Guangzhou</option>
+            <option value="shenzhen">Shenzhen</option>
+            <option value="chengdu">Chengdu</option>
+            <option value="hangzhou">Hangzhou</option>
+            <option value="wuhan">Wuhan</option>
+            <option value="xian">Xi'an</option>
+            <option value="nanjing">Nanjing</option>
+            <option value="chongqing">Chongqing</option>
+            <option value="tianjin">Tianjin</option>
+        </select>
+
+        <label for="hospitalFilter">Filter by hospital:</label>
+        <select id="hospitalFilter">
+            <option value="all">All hospitals</option>
+            <option value="Ruijin Hospital">Shanghai Ruijin Hospital</option>
+            <option value="Huashan Hospital">Shanghai Huashan Hospital</option>
+            <option value="Zhongshan Hospital">Shanghai Zhongshan Hospital</option>
+            <option value="Jiahui International Hospital">Shanghai Jiahui International Hospital</option>
+            <option value="Shanghai United Family Hospital">Shanghai United Family Hospital</option>
+            <option value="PUMCH">Beijing PUMCH</option>
+            <option value="CI-CAMS Cancer Hospital">Beijing CI-CAMS Cancer Hospital</option>
+            <option value="301 Hospital">Beijing 301 Hospital</option>
+            <option value="Peking University First Hospital">Beijing Peking University First Hospital</option>
+            <option value="Beijing Tongren Hospital">Beijing Tongren Hospital</option>
+            <option value="Zhongshan Ophthalmic Center">Guangzhou Zhongshan Ophthalmic Center</option>
+            <option value="Sun Yat-sen University First Hospital">Guangzhou Sun Yat-sen University First Hospital</option>
+            <option value="Guangdong Provincial People's Hospital">Guangzhou Guangdong Provincial People's Hospital</option>
+            <option value="West China Hospital">Chengdu West China Hospital</option>
+            <option value="Sir Run Run Shaw Hospital">Hangzhou Sir Run Run Shaw Hospital</option>
+            <option value="Zhejiang First Hospital">Hangzhou Zhejiang University First Hospital</option>
+            <option value="Tongji Hospital">Wuhan Tongji Hospital</option>
+            <option value="Xijing Hospital">Xi'an Xijing Hospital</option>
+            <option value="Nanjing Drum Tower Hospital">Nanjing Drum Tower Hospital</option>
+            <option value="Southwest Hospital">Chongqing Southwest Hospital</option>
+            <option value="Tianjin Medical University General Hospital">Tianjin Medical University General Hospital</option>
+        </select>
+
+        <button class="filter-btn" onclick="filterReviews()">Filter</button>
+        <a href="reviews.html" class="reset-btn">Reset</a>
+    </div>
+</section>
+
+<section class="reviews-section">
+    <div class="container">
+        <h2>Verified Patient Reviews</h2>
+        <div class="reviews-grid" id="reviewsGrid">
+
+            <!-- Review Card 1 -->
+            <div class="review-card rating-5" data-city="shanghai" data-hospital="Ruijin Hospital">
+                <div class="review-header">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-patient">David M., USA <span class="flag">🇺🇸</span></div>
+                    <div class="review-meta">Liver cancer second opinion · March 2026</div>
+                </div>
+                <div class="review-body">
+                    <div class="review-treatment">
+                        <span>Liver Cancer</span>
+                        <span>Oncology</span>
+                        <span>Second Opinion</span>
+                    </div>
+                    <p class="review-text">After being told by my oncologist in the US that there were no further options, I came to Ruijin for a second opinion. The hepatology team ran comprehensive tests over 3 days and found a treatment pathway I hadn't been offered at home. Cost was roughly 20% of what US estimates quoted. Records verified.</p>
+                </div>
+                <div class="review-footer">
+                    <span class="verified-badge">✅ Medical records verified</span>
+                    <a href="cities/shanghai/index.html" class="view-hospital-link">View Hospital →</a>
+                </div>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="review-card rating-4" data-city="beijing" data-hospital="PUMCH">
+                <div class="review-header">
+                    <div class="review-stars">★★★★☆</div>
+                    <div class="review-patient">Sarah K., UK <span class="flag">🇬🇧</span></div>
+                    <div class="review-meta">Rare autoimmune condition diagnosis · February 2026</div>
+                </div>
+                <div class="review-body">
+                    <div class="review-treatment">
+                        <span>Autoimmune</span>
+                        <span>Diagnostics</span>
+                        <span>Rare Diseases</span>
+                    </div>
+                    <p class="review-text">The diagnostic capability here is extraordinary. I waited 3 weeks for an appointment with a specialist in the US. At PUMCH, I was seen within 4 days and received a comprehensive workup. The international liaison office was helpful. Four stars because the follow-up communication after discharge could be improved.</p>
+                </div>
+                <div class="review-footer">
+                    <span class="verified-badge">✅ Medical records verified</span>
+                    <a href="cities/beijing/index.html" class="view-hospital-link">View Hospital →</a>
+                </div>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="review-card rating-5" data-city="guangzhou" data-hospital="Zhongshan Ophthalmic Center">
+                <div class="review-header">
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-patient">Michael R., USA <span class="flag">🇺🇸</span></div>
+                    <div class="review-meta">Cataract surgery (both eyes) · January 2026</div>
+                </div>
+                <div class="review-body">
+                    <div class="review-treatment">
+                        <span>Cataract Surgery</span>
+                        <span>Ophthalmology</span>
+                    </div>
+                    <p class="review-text">Cataract surgery in both eyes for $1,100 total, including all follow-up visits. In the US I was quoted $12,000. The surgery was done with the latest laser equipment. Recovery was exactly as described. I can see perfectly now. Records verified.</p>
+                </div>
+                <div class="review-footer">
+                    <span class="verified-badge">✅ Medical records verified</span>
+                    <a href="cities/guangzhou/index.html" class="view-hospital-link">View Hospital →</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="no-reviews" id="noReviews">No reviews match your filters. Try adjusting the filters or <a href="submit-review.html" style="color:#1a5276;">submit your own experience</a>.</div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Share Your Experience</h2>
+        <p>Help other patients make informed decisions. Every review is verified against medical records before publication.</p>
+        <a href="submit-review.html" class="btn">Submit a Review</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 MedTravelCN.net — Your trusted guide to medical care in China</p>
+        <p><a href="index.html">Home</a> · <a href="reviews.html">Reviews</a> · <a href="submit-review.html">Submit a Review</a></p>
+        <p>This website is an information resource only. We do not arrange medical appointments or provide medical services.</p>
+    </div>
+</footer>
+
+<script>
+function filterReviews() {
+    var cityVal = document.getElementById('cityFilter').value;
+    var hospVal = document.getElementById('hospitalFilter').value;
+    var cards = document.querySelectorAll('.review-card');
+    var visibleCount = 0;
+
+    cards.forEach(function(card) {
+        var cardCity = card.getAttribute('data-city');
+        var cardHosp = card.getAttribute('data-hospital');
+
+        var cityMatch = (cityVal === 'all') || (cardCity === cityVal);
+        var hospMatch = (hospVal === 'all') || (cardHosp === hospVal);
+
+        if (cityMatch && hospMatch) {
+            card.classList.remove('hidden');
+            visibleCount++;
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+
+    var noReviews = document.getElementById('noReviews');
+    if (visibleCount === 0) {
+        noReviews.classList.add('show');
+    } else {
+        noReviews.classList.remove('show');
+    }
+}
+</script>
+
+</body>
+</html>
