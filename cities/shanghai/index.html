@@ -554,5 +554,15 @@
 .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(231,76,60,0.5); }
 </style>
 
+<script>
+(function(){
+  var p = window.location.pathname;
+  var page = 'home';
+  var m = p.match(/\/cities\/([^/]+)/);
+  if (m) page = m[1];
+  else { var m2 = p.match(/\/([^/]+)\.html$/); if (m2) page = m2[1] === 'index' ? 'home' : m2[1]; }
+  fetch('/api/track?page=' + encodeURIComponent(page), {cache:'no-store'}).catch(function(){});
+})();
+</script>
 </body>
 </html>

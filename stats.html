@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChinaMedGuide Stats</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; margin: 0; padding: 32px; }
+    h1 { color: #60a5fa; font-size: 24px; margin-bottom: 8px; }
+    .subtitle { color: #64748b; margin-bottom: 32px; }
+    .total { font-size: 48px; font-weight: 700; color: #60a5fa; margin-bottom: 32px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+    .card { background: #1e293b; border-radius: 12px; padding: 20px; }
+    .card-label { font-size: 13px; color: #94a3b8; margin-bottom: 8px; text-transform: capitalize; }
+    .card-value { font-size: 32px; font-weight: 700; color: #f8fafc; }
+    .loading { color: #64748b; }
+    .error { color: #f87171; background: #7f1d1d; padding: 12px; border-radius: 8px; }
+    .updated { color: #64748b; font-size: 13px; margin-top: 24px; }
+    button { background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; margin-top: 16px; }
+    button:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <h1>📊 ChinaMedGuide</h1>
+  <p class="subtitle">浏览统计数据（仅内部可见）</p>
+
+  <div id="total-block" class="total loading">加载中...</div>
+
+  <div id="grid" class="grid"></div>
+
+  <div id="updated" class="updated"></div>
+  <button onclick="load()">🔄 刷新</button>
+
+  <script>
+    const PAGE_NAMES = {
+      home: '首页',
+      faq: 'FAQ',
+      'how-it-works': '使用指南',
+      reviews: '用户评价',
+      'submit-review': '提交评价',
+      beijing: '北京',
+      chengdu: '成都',
+      chongqing: '重庆',
+      guangzhou: '广州',
+      hangzhou: '杭州',
+      nanjing: '南京',
+      shanghai: '上海',
+      shenzhen: '深圳',
+      tianjin: '天津',
+      wuhan: '武汉',
+      xian: '西安',
+    };
+
+    async function load() {
+      try {
+        const res = await fetch('/api/stats');
+        if (!res.ok) throw new Error('API error: ' + res.status);
+        const data = await res.json();
+
+        document.getElementById('total-block').innerHTML = '总浏览 <span style="color:#f8fafc">' + data.total.toLocaleString() + '</span>';
+        document.getElementById('updated').textContent = '最后更新: ' + new Date().toLocaleString('zh-CN');
+
+        const grid = document.getElementById('grid');
+        grid.innerHTML = '';
+
+        // Sort by views descending
+        const sorted = Object.entries(data.pages).sort((a, b) => b[1] - a[1]);
+
+        for (const [page, views] of sorted) {
+          const div = document.createElement('div');
+          div.className = 'card';
+          div.innerHTML = `
+            <div class="card-label">${PAGE_NAMES[page] || page}</div>
+            <div class="card-value">${Number(views).toLocaleString()}</div>
+          `;
+          grid.appendChild(div);
+        }
+      } catch (e) {
+        document.getElementById('total-block').innerHTML = '<span class="error">❌ ' + e.message + '</span>';
+      }
+    }
+
+    load();
+    setInterval(load, 30000); // Auto-refresh every 30s
+  </script>
+<script>
+(function(){
+  var p = window.location.pathname;
+  var page = 'home';
+  var m = p.match(/\/cities\/([^/]+)/);
+  if (m) page = m[1];
+  else { var m2 = p.match(/\/([^/]+)\.html$/); if (m2) page = m2[1] === 'index' ? 'home' : m2[1]; }
+  fetch('/api/track?page=' + encodeURIComponent(page), {cache:'no-store'}).catch(function(){});
+})();
+</script>
+</body>
+</html>
