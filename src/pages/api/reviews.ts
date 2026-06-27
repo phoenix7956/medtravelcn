@@ -1,8 +1,8 @@
 // src/pages/api/reviews.ts
-// POST: submit a new review (writes to SQLite)
+// POST: submit a new review (writes to Vercel KV in prod, SQLite in dev)
 // GET: list approved reviews
 import type { APIRoute } from 'astro';
-import { insertReview, getApprovedReviews } from '~/lib/db';
+import { insertReview, getApprovedReviews, storageMode } from '~/lib/db';
 
 export const POST: APIRoute = async ({ request, redirect }) => {
   const formData = await request.formData();
@@ -23,7 +23,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
     return new Response('Review too short: please write at least 50 characters.', { status: 400 });
   }
 
-  insertReview({
+  await insertReview({
     city_slug,
     hospital_name,
     rating,
@@ -39,8 +39,13 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 export const GET: APIRoute = async ({ url }) => {
   const citySlug = url.searchParams.get('city');
   const limit = parseInt(url.searchParams.get('limit') || '50');
-  const reviews = getApprovedReviews(limit);
-  return new Response(JSON.stringify(citySlug ? reviews.filter(r => r.city_slug === citySlug) : reviews, null, 2), {
+  const allReviews = await getApprovedReviews(limit);
+  const filtered = citySlug ? allReviews.filter(r => r.city_slug === citySlug) : allReviews;
+  return new Response(JSON.stringify({
+    mode: storageMode(),
+    count: filtered.length,
+    reviews: filtered,
+  }, null, 2), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
   });

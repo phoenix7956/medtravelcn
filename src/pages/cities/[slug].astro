@@ -18,9 +18,9 @@ if (!city) {
 }
 
 const hospitals = getHospitalsByCity(slug!);
-const reviews = getReviewsByCity(slug!, 5);
+const reviews = await getReviewsByCity(slug!, 5);
 
-incrementView(`city-${slug}`);
+await incrementView(`city-${slug}`);
 ---
 <Base
   title={city.meta_title || `${city.name} Hospitals for Foreign Patients | MedTravelCN`}

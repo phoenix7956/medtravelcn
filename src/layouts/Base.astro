@@ -16,7 +16,7 @@ const { title, description = 'World-class medical care in China at a fraction of
 const cities = getAllCities();
 const hospitals = getAllHospitals();
 const totalHospitals = hospitals.length;
-const todayViews = getViews(page) as number;
+const todayViews = (await getViews(page)) as number;
 ---
 <!DOCTYPE html>
 <html lang="en">

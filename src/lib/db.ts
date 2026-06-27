@@ -1,11 +1,19 @@
 // src/lib/db.ts
-// SQLite database helper - shared across all pages
+// Storage layer:
+// - Cities / hospitals / SQLite (static data, baked into build)
+// - Reviews / views → Vercel KV (dynamic, serverless fs is readonly)
+// - Dev mode (no KV env vars) → fall back to SQLite for both
+
 import Database from 'better-sqlite3';
 import { join } from 'node:path';
+import { kv } from '@vercel/kv';
 
 // Use process.cwd() so dev (cwd=project root) and built chunks resolve
 // to the same data/ directory regardless of chunk location.
 const DB_PATH = join(process.cwd(), 'data', 'medtravelcn.db');
+
+// Detect Vercel KV (production) vs SQLite fallback (local dev)
+const USE_KV = !!(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
 
 let _db: Database.Database | null = null;
 
@@ -16,6 +24,10 @@ export function getDB(): Database.Database {
     _db.pragma('foreign_keys = ON');
   }
   return _db;
+}
+
+export function storageMode(): 'kv' | 'sqlite' {
+  return USE_KV ? 'kv' : 'sqlite';
 }
 
 export interface City {
@@ -86,18 +98,49 @@ export function getAllHospitals(): Hospital[] {
 }
 
 export function getApprovedReviews(limit = 50): Review[] {
+  if (USE_KV) {
+    // KV stores reviews as keys like "review:1234" with JSON value
+    return getReviewsFromKV(limit);
+  }
   return getDB()
     .prepare('SELECT * FROM reviews WHERE approved = 1 ORDER BY created_at DESC LIMIT ?')
     .all(limit) as Review[];
 }
 
 export function getReviewsByCity(citySlug: string, limit = 20): Review[] {
+  if (USE_KV) {
+    return getReviewsFromKV(limit, citySlug);
+  }
   return getDB()
     .prepare('SELECT * FROM reviews WHERE city_slug = ? AND approved = 1 ORDER BY created_at DESC LIMIT ?')
     .all(citySlug, limit) as Review[];
 }
 
 export function insertReview(review: Omit<Review, 'id' | 'created_at' | 'approved'>): number {
+  if (USE_KV) {
+    const id = Date.now() + Math.floor(Math.random() * 1000);
+    const fullReview: Review = {
+      id,
+      created_at: new Date().toISOString(),
+      approved: 1,
+      ...review,
+    };
+    // Use await in caller - kv.set is async
+    // We need to wrap in async; here return a Promise<number> instead
+    return kv
+      .set(`review:${id}`, JSON.stringify(fullReview))
+      .then(() => {
+        // Also push id to a sorted set for fast listing
+        return kv.zadd('reviews:all', { score: -id, member: String(id) });
+      })
+      .then(() => {
+        if (review.city_slug) {
+          return kv.zadd(`reviews:city:${review.city_slug}`, { score: -id, member: String(id) });
+        }
+        return 0;
+      })
+      .then(() => id) as unknown as number;
+  }
   const stmt = getDB().prepare(`
     INSERT INTO reviews (city_slug, hospital_name, rating, author, email, country, content, approved)
     VALUES (?, ?, ?, ?, ?, ?, ?, 1)
@@ -112,6 +155,16 @@ export function insertReview(review: Omit<Review, 'id' | 'created_at' | 'approve
     review.content
   );
   return info.lastInsertRowid as number;
+}
+
+async function getReviewsFromKV(limit: number, citySlug?: string): Promise<Review[]> {
+  const setKey = citySlug ? `reviews:city:${citySlug}` : 'reviews:all';
+  const ids = (await kv.zrange(setKey, 0, limit - 1)) as string[];
+  if (!ids || ids.length === 0) return [];
+  const reviews = await Promise.all(
+    ids.map(id => kv.get<string>(`review:${id}`).then(v => v ? JSON.parse(v) as Review : null))
+  );
+  return reviews.filter((r): r is Review => r !== null);
 }
 
 export function searchHospitals(query: string): Hospital[] {
@@ -130,7 +183,10 @@ export function searchHospitals(query: string): Hospital[] {
     .all(q, q, q, q) as Hospital[];
 }
 
-export function incrementView(page: string): number {
+export function incrementView(page: string): number | Promise<number> {
+  if (USE_KV) {
+    return kv.incr(`views:${page}`) as Promise<number>;
+  }
   const stmt = getDB().prepare(`
     INSERT INTO views (page, count) VALUES (?, 1)
     ON CONFLICT(page) DO UPDATE SET count = count + 1
@@ -140,7 +196,22 @@ export function incrementView(page: string): number {
   return row?.count ?? 0;
 }
 
-export function getViews(page?: string): Record<string, number> | number {
+export function getViews(page?: string): Record<string, number> | number | Promise<Record<string, number>> | Promise<number> {
+  if (USE_KV) {
+    if (page) {
+      return kv.get<number>(`views:${page}`).then(v => v ?? 0) as Promise<number>;
+    }
+    return kv.keys('views:*').then(async (keys) => {
+      const result: Record<string, number> = {};
+      await Promise.all(
+        (keys as string[]).map(async k => {
+          const v = await kv.get<number>(k);
+          result[k.replace(/^views:/, '')] = v ?? 0;
+        })
+      );
+      return result;
+    }) as Promise<Record<string, number>>;
+  }
   if (page) {
     const row = getDB().prepare('SELECT count FROM views WHERE page = ?').get(page) as { count: number } | undefined;
     return row?.count ?? 0;

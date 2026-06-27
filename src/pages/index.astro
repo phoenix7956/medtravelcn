@@ -6,7 +6,7 @@ import CityCard from '~/components/CityCard.astro';
 import { getAllCities, getHospitalCount, incrementView } from '~/lib/db';
 
 // Track this page view
-incrementView('home');
+await incrementView('home');
 
 const cities = getAllCities();
 const citiesWithCounts = cities.map(c => ({
