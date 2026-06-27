@@ -1,0 +1,121 @@
+---
+// src/pages/faq.astro
+// FAQ - uses Base layout (footer/nav/CTA updates apply automatically)
+import Base from '~/layouts/Base.astro';
+
+const faqs = [
+  {
+    q: 'Is it safe to get medical treatment in China?',
+    a: `Yes — many Chinese hospitals are among the best in the world, particularly in major cities like Beijing, Shanghai, Guangzhou, and Chengdu. Top hospitals like Peking Union Medical College Hospital, Ruijin Hospital, and West China Hospital serve international patients with internationally trained doctors, JCI accreditation, and dedicated foreign patient departments.
+
+As with any medical travel, do your research, choose a reputable hospital with an international patient center, and consider using a medical liaison service for guidance.`
+  },
+  {
+    q: 'How much does treatment cost compared to my home country?',
+    a: `In most cases, treatment in China costs 40–80% less than in the US, UK, Canada, or Australia — even accounting for travel and accommodation. Common examples:
+
+| Procedure | Typical Cost in China | vs. US |
+|-----------|----------------------|--------|
+| Knee replacement | $5,000–$12,000 | US: $35,000–$50,000 |
+| Cardiac bypass | $15,000–$30,000 | US: $70,000–$120,000 |
+| Cataract surgery | $600–$1,500 | US: $5,000–$8,000 |
+| MRI scan | $80–$200 | US: $1,500–$3,000 |
+| Dental implants | $800–$2,000 per tooth | US: $3,000–$5,000 |
+
+Prices vary by hospital, surgeon, and materials. Always get a formal quote before proceeding.`
+  },
+  {
+    q: 'Do I need a visa for medical treatment in China?',
+    a: `Yes. A tourist visa (L visa) is typically sufficient for most medical treatments. Some hospitals can provide a medical invitation letter which helps with the visa application. For longer-term treatments or stays over 30 days, you may need a Medical Stay visa (M visa) — your hospital can advise.
+
+Tip: Check the Chinese embassy website for the latest visa requirements for your country.`
+  },
+  {
+    q: 'Will there be a language barrier?',
+    a: `Most top hospitals have international patient departments with English-speaking staff. We also recommend using a medical liaison service — they can accompany you to appointments, translate medical documents, and help with hospital paperwork.
+
+Bring a translation app (like Google Translate with offline Chinese packages) for everyday situations outside the hospital.`
+  },
+  {
+    q: 'How do I pay for treatment?',
+    a: `Most hospitals accept:
+- International credit cards (Visa, Mastercard) — usually with a 2–3% foreign transaction fee
+- Bank transfers (wire transfer to hospital account, arranged in advance)
+- Cash (CNY) — some smaller clinics prefer this
+- Alipay / WeChat Pay — if you have a Chinese bank account or phone number
+
+Confirm payment methods with your hospital before arrival. Deposits are usually required upfront.`
+  },
+  {
+    q: 'How do I book an appointment?',
+    a: `Options:
+1. Directly via the hospital's website — most major hospitals have English-language booking forms or WeChat/mini-program booking
+2. Through the hospital's international patient center — email or call their international department
+3. Through us — send us a message with your procedure, preferred city, and timeline, and we'll help connect you
+
+We recommend booking at least 2–4 weeks in advance for specialist consultations and elective procedures.`
+  },
+  {
+    q: 'What should I bring?',
+    a: `- Passport (valid 6+ months)
+- All medical records in English or Chinese (reports, scans, lab results)
+- List of current medications
+- Insurance documents (if applicable)
+- Credit/debit card + some cash in CNY
+- Adaptor plug (China uses Type A/I plugs, 220V)
+- Toiletries and any specific medications you need (some may not be available)`
+  },
+  {
+    q: 'What about follow-up care after I return home?',
+    a: `Ask your Chinese hospital for:
+- Complete medical records in English (discharge summary, operative reports, prescriptions)
+- Digital copies of all imaging/scans on USB or CD
+- A detailed follow-up care plan
+- Contact details of your treating physician for remote consultation if needed
+
+Share these with your local doctor back home so they can continue your care seamlessly.`
+  },
+  {
+    q: 'Can I get a medical evacuation if something goes wrong?',
+    a: `For emergencies, call 120 (China's ambulance/emergency number). Major cities have internationally accredited hospitals with emergency departments.
+
+We strongly recommend purchasing international health insurance that covers medical evacuation before your trip, especially for elective procedures.`
+  },
+  {
+    q: 'How long do I need to stay for a procedure?',
+    a: `Depends on the procedure:
+- Minor procedures / diagnostics (MRI, endoscopy, eye surgery): 2–7 days
+- Major surgery (knee replacement, cardiac): 2–4 weeks including recovery in-country
+- Dental implants: May require 2 visits (4–6 weeks apart) for implant + crown
+
+Your surgeon can give you an estimated timeline after your initial consultation.`
+  },
+  {
+    q: 'Is my medical information kept confidential?',
+    a: `Chinese hospitals maintain strict patient confidentiality. Your medical records and personal information are protected under Chinese privacy laws. We also do not share any user information with third parties.`
+  },
+];
+---
+<Base
+  title="FAQ — Medical Tourism to China | MedTravelCN"
+  description="Common questions about medical treatment in China: safety, costs, visas, language, payment, follow-up care, and more."
+  page="faq"
+>
+  <h1>Frequently Asked Questions</h1>
+  <p style="font-size: 1.05em; color: #555;">Everything international patients ask before coming to China for medical care. Can't find your answer? Email <a href="mailto:hello@medtravelcn.net">hello@medtravelcn.net</a> — we reply within 24 hours.</p>
+
+  <div style="margin: 30px 0;">
+    {faqs.map((faq, i) => (
+      <details style="background: white; padding: 22px 26px; border-radius: 10px; margin: 14px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer;">
+        <summary style="font-weight: 600; color: #1a5276; font-size: 1.08em; outline: none;">{i + 1}. {faq.q}</summary>
+        <div style="margin-top: 14px; color: #444; line-height: 1.8; white-space: pre-wrap; font-size: 0.96em;">{faq.a}</div>
+      </details>
+    ))}
+  </div>
+
+  <div style="margin-top: 40px; padding: 28px; background: #eaf2f8; border-left: 4px solid #2980b9; border-radius: 8px;">
+    <h3 style="margin-top: 0; color: #1a5276;">Still have questions?</h3>
+    <p style="margin: 8px 0;">Our team helps international patients connect with the right hospital. Free guidance, no upfront cost.</p>
+    <a href="/submit-review/" style="display: inline-block; margin-top: 12px; padding: 11px 28px; background: #2980b9; color: white; border-radius: 6px; font-weight: 600;">Get in Touch →</a>
+  </div>
+</Base>

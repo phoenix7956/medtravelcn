@@ -1,0 +1,100 @@
+---
+// src/pages/how-it-works.astro
+// How It Works - process overview using Base layout
+import Base from '~/layouts/Base.astro';
+import { getAllCities } from '~/lib/db';
+
+const cities = getAllCities();
+---
+<Base
+  title="How It Works — Medical Tourism to China | MedTravelCN"
+  description="A step-by-step guide to planning your medical trip to China: from initial research to follow-up care at home."
+  page="how-it-works"
+>
+  <h1>How It Works</h1>
+  <p style="font-size: 1.05em; color: #555;">Planning a medical trip to China involves five stages. Here's what to expect at each step.</p>
+
+  <div style="margin: 40px 0;">
+    {[
+      {
+        step: 1,
+        title: 'Research & Compare',
+        days: '1–2 weeks',
+        desc: `Browse our ${cities.length} major cities and 49+ verified hospitals. Compare specialties, costs, and wait times. Read real patient reviews to understand what others experienced at each hospital.
+
+Look for hospitals with:
+- JCI (Joint Commission International) accreditation
+- Dedicated international patient departments
+- English-speaking coordinators
+- Verified reviews from your country/region`
+      },
+      {
+        step: 2,
+        title: 'Contact Hospitals',
+        days: '1–2 weeks',
+        desc: `Reach out to 2–3 hospitals for comparison. Most have English-speaking international patient coordinators who respond within 24–48 hours.
+
+Share:
+- Your medical condition and treatment needed
+- Recent medical records (translated to English if needed)
+- Insurance status
+- Preferred travel dates
+
+Request a written treatment plan with itemized costs before committing.`
+      },
+      {
+        step: 3,
+        title: 'Plan Your Trip',
+        days: '2–4 weeks',
+        desc: `Once you select a hospital, plan logistics:
+- Visa: Apply for L (tourist) or M (medical) visa. Hospital can provide invitation letter.
+- Flights: Book 2–4 weeks ahead; many hospitals are near international airports.
+- Accommodation: Hospital can recommend nearby hotels or service apartments.
+- Local transport: Most hospitals arrange airport pickup for international patients.
+- Travel insurance: Purchase coverage that includes medical evacuation.`
+      },
+      {
+        step: 4,
+        title: 'Receive Treatment',
+        days: 'Procedure-dependent',
+        desc: `On arrival:
+- Hospital international team typically meets you at the airport
+- Translation and coordination support throughout
+- Treatment timeline depends on procedure (see FAQ for common durations)
+- Most major hospitals accept international credit cards, wire transfers, and sometimes insurance direct billing
+
+Tip: Bring a companion for major procedures — emotional support helps recovery.`
+      },
+      {
+        step: 5,
+        title: 'Recovery & Follow-up',
+        days: '1–4 weeks',
+        desc: `Before returning home, request from your hospital:
+- Complete medical records in English
+- Digital copies of all imaging (USB/CD)
+- Detailed follow-up care plan
+- Direct contact for remote consultation
+
+Share these with your local doctor for continuity of care. Many hospitals offer remote follow-up via video call at no extra cost.`
+      },
+    ].map(({ step, title, days, desc }) => (
+      <div style="background: white; padding: 28px 32px; border-radius: 12px; margin: 18px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; gap: 20px;">
+        <div style="flex-shrink: 0; width: 60px; height: 60px; background: linear-gradient(135deg, #1a5276, #2980b9); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6em; font-weight: 700;">{step}</div>
+        <div style="flex: 1;">
+          <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 8px;">
+            <h2 style="margin: 0; color: #1a5276; font-size: 1.4em;">{title}</h2>
+            <span style="background: #eaf2f8; color: #1a5276; padding: 3px 12px; border-radius: 20px; font-size: 0.85em;">⏱ {days}</span>
+          </div>
+          <p style="margin: 0; color: #444; line-height: 1.8; white-space: pre-wrap; font-size: 0.97em;">{desc}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div style="margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #1a5276, #2e86c1); color: white; border-radius: 12px; text-align: center;">
+    <h2 style="color: white; margin-top: 0;">Ready to Start?</h2>
+    <p style="opacity: 0.92; margin-bottom: 20px;">Browse {cities.length} cities and 49+ hospitals, or get a free quote from our team.</p>
+    <a href="/" style="display: inline-block; background: #f39c12; color: white; padding: 13px 36px; border-radius: 6px; font-weight: 700; margin: 0 6px;">Browse Cities</a>
+    <a href="/submit-review/" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 13px 36px; border-radius: 6px; font-weight: 700; margin: 0 6px;">Contact Us</a>
+  </div>
+</Base>
