@@ -103,11 +103,7 @@ vercel --prod --yes
 
 ## 已知限制
 
-- **Vercel serverless 函数不能写本地 SQLite**(只读 fs)。生产部署后:
-  - 评论 POST 写入会失败(因为 Vercel fs 是只读的临时空间)
-  - 浏览量统计也类似
-- **修法**: 评论 / 浏览量改用 Vercel KV(已装 @vercel/kv) 或 Vercel Postgres
-- 短期方案: 评论改用 Vercel KV, 浏览量也走 KV(2 个 endpoint 改 5 行)
-- 或者: 部署到自有服务器(支持 fs 写), 简单很多
-
-如果老板用 Vercel 部署,我先把评论和浏览量迁到 Vercel KV(已装包,免费 tier 30MB 够用)。
+- ~~**Vercel serverless 函数不能写本地 SQLite**~~ ✅ 已修
+  - 评论 / 浏览量自动走 Vercel KV(prod)或 SQLite fallback(dev)
+  - 老板部署时只需确保 Vercel KV 在项目里(默认有,免费 tier 30MB 够用)
+  - 检测: `KV_REST_API_URL` env var 存在 → KV mode,否则 SQLite fallback
