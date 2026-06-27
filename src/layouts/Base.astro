@@ -1,0 +1,187 @@
+---
+// src/layouts/Base.astro
+// Single source of truth for header/nav/footer/CTA.
+// Change once → applies to ALL pages.
+import { getAllCities, getViews, getAllHospitals } from '~/lib/db';
+
+interface Props {
+  title: string;
+  description?: string;
+  page?: string; // for view tracking
+  showHero?: boolean;
+}
+
+const { title, description = 'World-class medical care in China at a fraction of Western costs.', page = 'home', showHero = false } = Astro.props;
+
+const cities = getAllCities();
+const hospitals = getAllHospitals();
+const totalHospitals = hospitals.length;
+const todayViews = getViews(page) as number;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={`https://medtravelcn.net${Astro.url.pathname}`}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={`https://medtravelcn.net${Astro.url.pathname}`}>
+  <meta property="og:site_name" content="MedTravelCN">
+  <meta property="og:image" content="https://medtravelcn.net/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="robots" content="index, follow">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #222; background: #f8f9fa; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    a { color: #2980b9; text-decoration: none; }
+    a:hover { color: #1a5276; }
+
+    header { background: linear-gradient(135deg, #1a5276, #2980b9); color: white; padding: 60px 0 40px; }
+    header h1 { font-size: 2.4em; margin-bottom: 12px; }
+    header p { font-size: 1.05em; opacity: 0.92; max-width: 680px; }
+    .hero-stats { display: flex; gap: 30px; margin-top: 28px; flex-wrap: wrap; }
+    .hero-stats .stat .num { font-size: 2em; font-weight: 700; color: #f9e79f; display: block; line-height: 1; }
+    .hero-stats .stat .label { font-size: 0.85em; opacity: 0.85; margin-top: 4px; }
+
+    nav { background: #1a252f; padding: 14px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    nav .container { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; align-items: center; }
+    nav a { color: #aab7c4; padding: 6px 14px; border-radius: 4px; font-size: 0.9em; transition: 0.2s; }
+    nav a:hover { background: rgba(255,255,255,0.1); color: white; }
+
+    main.content { padding: 50px 0; }
+    h1, h2, h3 { color: #1a5276; }
+    h2 { font-size: 1.8em; margin: 35px 0 18px; }
+    h3 { font-size: 1.3em; margin: 25px 0 12px; }
+    p { margin-bottom: 14px; color: #444; }
+
+    .city-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; margin: 25px 0; }
+    .city-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: 0.25s; }
+    .city-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+    .city-card .card-header { background: linear-gradient(135deg, #1a5276, #2980b9); color: white; padding: 20px; }
+    .city-card .card-header h3 { color: white; margin: 0; font-size: 1.4em; }
+    .city-card .card-header .cn { opacity: 0.85; font-size: 0.95em; margin-top: 4px; }
+    .city-card .card-body { padding: 18px 20px; }
+    .city-card .card-body .meta { font-size: 0.88em; color: #666; margin-bottom: 10px; }
+    .city-card .card-body .meta strong { color: #1a5276; }
+    .city-card .card-body .stats { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; font-size: 0.85em; }
+    .city-card .card-body .stat-pill { background: #eaf2f8; color: #1a5276; padding: 4px 12px; border-radius: 20px; }
+    .city-card .card-link { display: block; text-align: center; padding: 12px; background: #f0f4f8; color: #2980b9; font-weight: 600; }
+    .city-card .card-link:hover { background: #eaf2f8; }
+
+    .hospital-card { background: white; border-radius: 10px; padding: 22px 26px; margin: 18px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #2980b9; }
+    .hospital-card h3 { color: #1a5276; margin-top: 0; }
+    .hospital-card .meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; font-size: 0.88em; color: #666; }
+    .hospital-card .meta span { background: #f0f4f8; padding: 3px 12px; border-radius: 20px; }
+    .hospital-card .info { font-size: 0.92em; color: #555; margin: 8px 0; }
+    .hospital-card .info a { color: #2980b9; word-break: break-all; }
+    .hospital-card .info strong { color: #1a5276; }
+    .hospital-card .actions { display: flex; gap: 12px; margin-top: 14px; }
+    .hospital-card .actions a { display: inline-block; padding: 8px 18px; border-radius: 6px; font-size: 0.9em; font-weight: 600; }
+    .btn-primary { background: #2980b9; color: white; }
+    .btn-primary:hover { background: #1a5276; }
+    .btn-secondary { background: #ecf0f1; color: #1a5276; }
+    .btn-secondary:hover { background: #d5dbdb; }
+
+    .cta-banner { background: linear-gradient(135deg, #1a5276, #2e86c1); color: white; padding: 50px 30px; border-radius: 12px; text-align: center; margin: 50px 0 30px; }
+    .cta-banner h3 { color: white; font-size: 1.6em; margin-bottom: 12px; }
+    .cta-banner p { color: rgba(255,255,255,0.92); font-size: 1.02em; margin-bottom: 22px; }
+    .cta-banner .btn-cta { display: inline-block; background: #f39c12; color: white; padding: 13px 36px; border-radius: 6px; font-weight: 700; font-size: 1em; }
+    .cta-banner .btn-cta:hover { background: #e67e22; color: white; }
+
+    footer { background: #1a252f; color: #aab7c4; padding: 40px 0 20px; margin-top: 60px; }
+    footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
+    footer h4 { color: white; margin-bottom: 12px; font-size: 1.05em; }
+    footer ul { list-style: none; }
+    footer ul li { padding: 4px 0; }
+    footer ul li a { color: #aab7c4; font-size: 0.9em; }
+    footer ul li a:hover { color: white; }
+    footer .copyright { text-align: center; padding-top: 24px; border-top: 1px solid #34495e; margin-top: 24px; font-size: 0.85em; color: #7f8c8d; }
+    @media (max-width: 768px) { header h1 { font-size: 1.8em; } nav .container { gap: 6px; } nav a { font-size: 0.82em; padding: 4px 8px; } .hero-stats { gap: 18px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>MedTravelCN.net — Medical Tourism to China</h1>
+      <p>World-class healthcare at 50-80% below Western prices. No wait times. Direct booking with hospitals. Trusted by patients from 90+ countries.</p>
+      {showHero && (
+        <div class="hero-stats">
+          <div class="stat"><span class="num">{cities.length}</span><span class="label">major cities</span></div>
+          <div class="stat"><span class="num">{totalHospitals}</span><span class="label">verified hospitals</span></div>
+          <div class="stat"><span class="num">90+</span><span class="label">countries served</span></div>
+          <div class="stat"><span class="num">70%</span><span class="label">avg savings vs Western prices</span></div>
+        </div>
+      )}
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="/">Home</a>
+      {cities.slice(0, 30).map(c => <a href={`/cities/${c.slug}/`}>{c.name}</a>)}
+      <a href="/reviews/">Reviews</a>
+      <a href="/submit-review/">Submit Review</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/how-it-works/">How It Works</a>
+    </div>
+  </nav>
+
+  <main class="content">
+    <div class="container">
+      <slot />
+    </div>
+  </main>
+
+  <div class="container">
+    <div class="cta-banner">
+      <h3>Ready to Plan Your Medical Trip to China?</h3>
+      <p>Browse {cities.length} cities and {totalHospitals}+ verified hospitals. Free quote, English-speaking coordinators, no upfront cost.</p>
+      <a href="/submit-review/" class="btn-cta">Get Started →</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>
+        <h4>MedTravelCN</h4>
+        <p style="color: #aab7c4; font-size: 0.9em;">Trusted medical tourism guide to China's top hospitals.</p>
+        <p style="color: #aab7c4; font-size: 0.85em; margin-top: 8px;">Views on this page: {todayViews}</p>
+      </div>
+      <div>
+        <h4>Top Cities</h4>
+        <ul>
+          {cities.slice(0, 8).map(c => <li><a href={`/cities/${c.slug}/`}>{c.name}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/how-it-works/">How It Works</a></li>
+          <li><a href="/reviews/">Patient Reviews</a></li>
+          <li><a href="/submit-review/">Submit Review</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>hello@medtravelcn.net</li>
+          <li>+1 (650) 308-6788</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        © 2026 MedTravelCN. Verified hospital information. Always consult a licensed medical professional.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

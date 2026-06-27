@@ -1,5 +1,23 @@
 {
+  "name": "medtravelcn",
+  "type": "module",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "node scripts/init-db.mjs && node scripts/migrate.mjs && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "db:init": "node scripts/init-db.mjs",
+    "db:migrate": "node scripts/migrate.mjs",
+    "db:reset": "rm -f data/medtravelcn.db && npm run db:init && npm run db:migrate"
+  },
   "dependencies": {
-    "@vercel/kv": "^2.0.0"
+    "@astrojs/node": "^11.0.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@vercel/kv": "^2.0.0",
+    "astro": "^7.0.3",
+    "better-sqlite3": "^12.11.1",
+    "typescript": "^6.0.3"
   }
 }

@@ -1,0 +1,103 @@
+---
+// src/pages/submit-review.astro
+// Review submission form
+import Base from '~/layouts/Base.astro';
+import { getAllCities } from '~/lib/db';
+
+const cities = getAllCities();
+const url = new URL(Astro.request.url);
+const presetCity = url.searchParams.get('city') || '';
+const presetHospital = url.searchParams.get('hospital') || '';
+
+let success = url.searchParams.get('success') === '1';
+---
+<Base
+  title="Submit a Patient Review — MedTravelCN"
+  description="Share your medical tourism experience in China. All reviews are verified against medical records before publication."
+  page="submit-review"
+>
+  <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+    <h1>Share Your Experience</h1>
+    <p style="font-size: 1.05em; color: #555;">
+      Help future patients make informed decisions. All reviews are moderated before publication.
+    </p>
+  </div>
+
+  {success && (
+    <div style="background: #d4edda; border-left: 4px solid #28a745; padding: 18px 22px; border-radius: 8px; margin: 24px 0; color: #155724;">
+      <strong>✅ Thank you!</strong> Your review has been submitted and will appear on the site after moderation.
+    </div>
+  )}
+
+  <div style="background: white; padding: 36px 40px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); max-width: 700px; margin: 30px auto;">
+    <form method="POST" action="/api/reviews">
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; font-weight: 600; color: #1a252f; margin-bottom: 6px;">City <span style="color: #c0392b;">*</span></label>
+        <select name="city_slug" required style="width: 100%; padding: 11px 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95em;">
+          <option value="">Select a city...</option>
+          {cities.map(c => <option value={c.slug} selected={c.slug === presetCity}>{c.name}</option>)}
+        </select>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; font-weight: 600; color: #1a252f; margin-bottom: 6px;">Hospital / Treatment</label>
+        <input type="text" name="hospital_name" value={presetHospital} placeholder="e.g. Shanghai Ruijin Hospital" style="width: 100%; padding: 11px 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95em;">
+        <div style="font-size: 0.82em; color: #888; margin-top: 4px;">Which hospital or treatment did you receive?</div>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; font-weight: 600; color: #1a252f; margin-bottom: 6px;">Rating <span style="color: #c0392b;">*</span></label>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          {[1, 2, 3, 4, 5].map(n => (
+            <label style="cursor: pointer; font-size: 1.6em; color: #d0d0d0;">
+              <input type="radio" name="rating" value={n} required style="display: none;" />
+              <span style="display: inline-block;">☆</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; font-weight: 600; color: #1a252f; margin-bottom: 6px;">Your Name <span style="color: #c0392b;">*</span></label>
+        <input type="text" name="author" required placeholder="First name or nickname" style="width: 100%; padding: 11px 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95em;">
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+        <div>
+          <label style="display: block; font-weight: 600; color: #1a252f; margin-bottom: 6px;">Email <span style="color: #888; font-weight: 400; font-size: 0.88em;">(optional)</span></label>
+          <input type="email" name="email" placeholder="For verification only — not published" style="width: 100%; padding: 11px 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95em;">
+        </div>
+        <div>
+          <label style="display: block; font-weight: 600; color: #1a252f; margin-bottom: 6px;">Country <span style="color: #888; font-weight: 400; font-size: 0.88em;">(optional)</span></label>
+          <input type="text" name="country" placeholder="e.g. USA, UK" style="width: 100%; padding: 11px 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95em;">
+        </div>
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <label style="display: block; font-weight: 600; color: #1a252f; margin-bottom: 6px;">Your Review <span style="color: #c0392b;">*</span></label>
+        <textarea name="content" required rows="6" placeholder="Share details about your experience: what treatment, what was the process like, costs, communication, accommodation, follow-up care..." style="width: 100%; padding: 11px 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.95em; resize: vertical;"></textarea>
+        <div style="font-size: 0.82em; color: #888; margin-top: 4px;">Min 50 characters. Be honest and specific — future patients rely on your experience.</div>
+      </div>
+
+      <button type="submit" style="width: 100%; background: #2980b9; color: white; padding: 14px; border: none; border-radius: 6px; font-size: 1.05em; font-weight: 600; cursor: pointer;">Submit Review</button>
+
+      <p style="font-size: 0.85em; color: #888; margin-top: 14px; text-align: center;">
+        By submitting, you confirm this is your genuine experience. Reviews containing defamatory or unverifiable claims will not be published.
+      </p>
+    </form>
+  </div>
+</Base>
+
+<script is:inline>
+  // Simple star rating UI
+  document.querySelectorAll('input[name="rating"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      const val = parseInt(e.target.value);
+      const labels = e.target.closest('div').querySelectorAll('label span');
+      labels.forEach((s, i) => {
+        s.textContent = i < val ? '★' : '☆';
+        s.style.color = i < val ? '#f39c12' : '#d0d0d0';
+      });
+    });
+  });
+</script>

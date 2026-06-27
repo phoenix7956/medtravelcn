@@ -1,0 +1,77 @@
+---
+// src/pages/cities/[slug].astro
+// Dynamic city page - automatically generated for every city in database
+export const prerender = true;
+
+import Base from '~/layouts/Base.astro';
+import HospitalCard from '~/components/HospitalCard.astro';
+import { getAllCities, getCity, getHospitalsByCity, getReviewsByCity, incrementView } from '~/lib/db';
+
+export function getStaticPaths() {
+  return getAllCities().map(c => ({ params: { slug: c.slug } }));
+}
+
+const { slug } = Astro.params;
+const city = getCity(slug!);
+if (!city) {
+  return Astro.redirect('/');
+}
+
+const hospitals = getHospitalsByCity(slug!);
+const reviews = getReviewsByCity(slug!, 5);
+
+incrementView(`city-${slug}`);
+---
+<Base
+  title={city.meta_title || `${city.name} Hospitals for Foreign Patients | MedTravelCN`}
+  description={city.meta_description || `Top international-standard hospitals in ${city.name}, China. Browse verified hospitals, compare costs, and book your medical trip.`}
+  page={`city-${slug}`}
+>
+  <h1>{city.name} Hospitals for Foreign Patients</h1>
+  <p style="font-size: 1.05em; color: #555;">Complete guide to international-standard hospitals in {city.name}, China — verified, English-friendly, and accepting foreign patients.</p>
+
+  <div class="hero-stats" style="display: flex; gap: 30px; margin: 30px 0; flex-wrap: wrap; padding: 24px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+    <div><span style="font-size: 1.8em; font-weight: 700; color: #1a5276; display: block;">{hospitals.length}</span><span style="font-size: 0.85em; color: #666;">Verified Hospitals</span></div>
+    {city.avg_cost && <div><span style="font-size: 1.4em; font-weight: 700; color: #1a5276; display: block;">{city.avg_cost}</span><span style="font-size: 0.85em; color: #666;">Typical Procedure Cost</span></div>}
+    {city.wait_time && <div><span style="font-size: 1.4em; font-weight: 700; color: #1a5276; display: block;">{city.wait_time}</span><span style="font-size: 0.85em; color: #666;">Appointment Wait</span></div>}
+    {city.growth && <div><span style="font-size: 1.4em; font-weight: 700; color: #1a5276; display: block;">{city.growth}</span><span style="font-size: 0.85em; color: #666;">Foreign Patients</span></div>}
+  </div>
+
+  {city.intro && (
+    <section style="background: white; padding: 28px 32px; border-radius: 10px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+      <h2 style="margin-top: 0;">Why Medical Tourists Choose {city.name}</h2>
+      <p style="font-size: 1.02em; color: #444;">{city.intro}</p>
+    </section>
+  )}
+
+  <h2 id="hospitals">Top Hospitals That Accept Foreign Patients</h2>
+  <p>These {hospitals.length} hospitals in {city.name} are verified to accept international patients. Each has been reviewed for English-speaking staff, international patient services, and quality standards.</p>
+
+  {hospitals.map(h => <HospitalCard hospital={h} />)}
+
+  {reviews.length > 0 && (
+    <section style="margin-top: 50px;">
+      <h2>Patient Reviews from {city.name}</h2>
+      {reviews.map(r => (
+        <div style="background: white; padding: 22px; border-radius: 10px; margin: 14px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="color: #1a5276;">{r.author}{r.country && ` (${r.country})`}</strong>
+            <span style="color: #f39c12; font-size: 1.05em;">{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</span>
+          </div>
+          {r.hospital_name && <p style="font-size: 0.88em; color: #666; margin-bottom: 6px;">Treatment: {r.hospital_name}</p>}
+          <p style="font-size: 0.95em; color: #444; margin: 0;">{r.content}</p>
+          <p style="font-size: 0.8em; color: #999; margin-top: 8px;">{new Date(r.created_at).toLocaleDateString('en-US')}</p>
+        </div>
+      ))}
+      <p style="margin-top: 20px;"><a href={`/submit-review/?city=${slug}`} class="btn-primary" style="display: inline-block; padding: 10px 24px; background: #2980b9; color: white; border-radius: 6px; font-weight: 600;">📝 Share Your Experience</a></p>
+    </section>
+  )}
+
+  <h2 style="margin-top: 50px;">How to Schedule an Appointment</h2>
+  <ol style="background: white; padding: 24px 24px 24px 50px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+    <li style="margin-bottom: 10px;"><strong>Contact the hospital directly</strong> — most major hospitals have English-speaking coordinators; phone numbers are listed on each hospital card above</li>
+    <li style="margin-bottom: 10px;"><strong>Confirm payment methods</strong> — major hospitals accept wire transfers, Alipay, WeChat Pay, and some accept international insurance; confirm before arrival</li>
+    <li style="margin-bottom: 10px;"><strong>Request a treatment plan</strong> — share your medical records in advance for an accurate quote and timeline</li>
+    <li style="margin-bottom: 10px;"><strong>Arrange visa & accommodation</strong> — most hospitals provide invitation letters for medical visa applications</li>
+  </ol>
+</Base>

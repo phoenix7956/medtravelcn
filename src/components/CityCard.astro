@@ -1,0 +1,30 @@
+---
+// src/components/CityCard.astro
+// City card used in homepage grid and other lists
+import type { City } from '~/lib/db';
+
+interface Props {
+  city: City;
+  hospitalCount?: number;
+}
+
+const { city, hospitalCount } = Astro.props;
+---
+<a href={`/cities/${city.slug}/`} class="city-card">
+  <div class="card-header">
+    <h3>{city.name}</h3>
+    {city.chinese_name && <div class="cn">{city.chinese_name}</div>}
+  </div>
+  <div class="card-body">
+    <div class="meta">
+      {city.region && <span><strong>Region:</strong> {city.region}</span>}
+    </div>
+    {city.intro && <p style="font-size: 0.92em; color: #555; margin-top: 8px;">{city.intro.slice(0, 110)}{city.intro.length > 110 ? '…' : ''}</p>}
+    <div class="stats">
+      {hospitalCount !== undefined && <span class="stat-pill">🏥 {hospitalCount} hospitals</span>}
+      {city.avg_cost && <span class="stat-pill">💰 {city.avg_cost}</span>}
+      {city.wait_time && <span class="stat-pill">⏱ {city.wait_time}</span>}
+    </div>
+  </div>
+  <div class="card-link">View Hospitals →</div>
+</a>

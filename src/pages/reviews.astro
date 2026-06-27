@@ -1,0 +1,56 @@
+---
+// src/pages/reviews.astro
+// All approved reviews
+import Base from '~/layouts/Base.astro';
+import { getApprovedReviews, getAllCities } from '~/lib/db';
+
+const reviews = getApprovedReviews(100);
+const cities = getAllCities();
+const cityMap = Object.fromEntries(cities.map(c => [c.slug, c.name]));
+---
+<Base
+  title="Patient Reviews — Verified Medical Tourism in China | MedTravelCN"
+  description="Read verified patient reviews of medical treatment in China. Real experiences from real patients at top Chinese hospitals."
+  page="reviews"
+>
+  <h1>Verified Patient Reviews</h1>
+  <p style="font-size: 1.05em; color: #555;">
+    Real reviews from international patients who received medical treatment in China. All reviews are verified against medical records before publication.
+  </p>
+
+  <div style="margin: 30px 0; padding: 18px 24px; background: #eaf2f8; border-left: 4px solid #2980b9; border-radius: 6px;">
+    <p style="margin: 0; color: #1a5276;"><strong>{reviews.length} verified reviews</strong> from patients across {Object.keys(cityMap).length} cities.</p>
+  </div>
+
+  {reviews.length === 0 ? (
+    <div style="background: white; padding: 50px 30px; border-radius: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+      <h2 style="margin-top: 0;">No reviews yet</h2>
+      <p>Be the first to share your medical tourism experience in China.</p>
+      <a href="/submit-review/" style="display: inline-block; margin-top: 20px; padding: 12px 32px; background: #2980b9; color: white; border-radius: 6px; font-weight: 600;">Submit a Review →</a>
+    </div>
+  ) : (
+    <div>
+      {reviews.map(r => (
+        <div style="background: white; padding: 26px 30px; border-radius: 10px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <strong style="color: #1a5276; font-size: 1.05em;">{r.author}</strong>
+              {r.country && <span style="color: #888; margin-left: 8px;">{r.country}</span>}
+              {r.city_slug && <a href={`/cities/${r.city_slug}/`} style="margin-left: 12px; font-size: 0.9em;">📍 {cityMap[r.city_slug] || r.city_slug}</a>}
+            </div>
+            <span style="color: #f39c12; font-size: 1.15em;">{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</span>
+          </div>
+          {r.hospital_name && <p style="font-size: 0.9em; color: #666; margin: 8px 0;">Treatment: <strong>{r.hospital_name}</strong></p>}
+          <p style="font-size: 0.96em; color: #444; margin: 12px 0 0; line-height: 1.7;">{r.content}</p>
+          <p style="font-size: 0.82em; color: #999; margin-top: 12px;">{new Date(r.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        </div>
+      ))}
+    </div>
+  )}
+
+  <div style="margin-top: 40px; padding: 30px; background: white; border-radius: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+    <h2 style="margin-top: 0;">Have a Story to Share?</h2>
+    <p>Help future patients make informed decisions. Submit your experience — all reviews are moderated before publication.</p>
+    <a href="/submit-review/" style="display: inline-block; margin-top: 16px; padding: 13px 36px; background: #f39c12; color: white; border-radius: 6px; font-weight: 700;">Submit Your Review →</a>
+  </div>
+</Base>

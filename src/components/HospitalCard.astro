@@ -1,0 +1,39 @@
+---
+// src/components/HospitalCard.astro
+// Hospital card used in city pages
+import type { Hospital } from '~/lib/db';
+
+interface Props {
+  hospital: Hospital;
+}
+
+const { hospital } = Astro.props;
+const specialties = hospital.specialties ? hospital.specialties.split(',').slice(0, 4).map(s => s.trim()) : [];
+---
+<div class="hospital-card">
+  <h3>{hospital.name}</h3>
+  {specialties.length > 0 && (
+    <div class="meta">
+      {specialties.map(s => <span>{s}</span>)}
+    </div>
+  )}
+  {hospital.address && (
+    <div class="info">
+      <strong>📍 Address:</strong> {hospital.address}
+    </div>
+  )}
+  {hospital.phone && (
+    <div class="info">
+      <strong>📞 Phone:</strong> <a href={`tel:${hospital.phone}`}>{hospital.phone}</a>
+    </div>
+  )}
+  {hospital.url && (
+    <div class="info">
+      <strong>🌐 Website:</strong> <a href={hospital.url} target="_blank" rel="noopener noreferrer">{hospital.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a>
+    </div>
+  )}
+  <div class="actions">
+    {hospital.url && <a href={hospital.url} target="_blank" rel="noopener noreferrer" class="btn-primary">Visit Hospital Website →</a>}
+    <a href={`/submit-review/?hospital=${encodeURIComponent(hospital.name)}&city=${hospital.city_slug}`} class="btn-secondary">📝 Share Experience</a>
+  </div>
+</div>
