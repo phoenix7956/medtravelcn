@@ -603,5 +603,350 @@
         "note": "Excellent for patients interested in combining Western medicine with Traditional Chinese Medicine — "
       }
     ]
+  },
+  {
+    "city": "suzhou",
+    "cityName": "Suzhou",
+    "hospitals": [
+      {
+        "citySlug": "suzhou",
+        "cityName": "Suzhou",
+        "name": "First Affiliated Hospital of Soochow University (苏州大学附属第一医院)",
+        "address": "899 Pinghai Road, Gusu District",
+        "phone": "+86-512-6797-3000",
+        "url": "https://fyy.sdfey.cn/",
+        "siteName": "fyy.sdfey.cn",
+        "specialties": "Hematology, Oncology, Orthopedics, Cardiovascular, General Surgery",
+        "note": ""
+      },
+      {
+        "citySlug": "suzhou",
+        "cityName": "Suzhou",
+        "name": "Children's Hospital of Soochow University (苏州大学附属儿童医院)",
+        "address": "92 Zhongnan Street, Suzhou Industrial Park",
+        "phone": "+86-512-8069-3500",
+        "url": "https://www.szetyy.com/",
+        "siteName": "www.szetyy.com",
+        "specialties": "Pediatrics, Neonatology, Pediatric Surgery, Cardiology",
+        "note": ""
+      },
+      {
+        "citySlug": "suzhou",
+        "cityName": "Suzhou",
+        "name": "Suzhou Dushu Lake Hospital (苏州市独墅湖医院)",
+        "address": "9 Chongwen Road, Suzhou Industrial Park",
+        "phone": "+86-512-6758-0000",
+        "url": "https://www.szdushuhu.com/",
+        "siteName": "www.szdushuhu.com",
+        "specialties": "General Medicine, Oncology, Surgery, Rehabilitation",
+        "note": ""
+      },
+      {
+        "citySlug": "suzhou",
+        "cityName": "Suzhou",
+        "name": "Suzhou Municipal Hospital (North Branch) (苏州市立医院(北区))",
+        "address": "242 Guangji Road, Gusu District",
+        "phone": "+86-512-6236-4000",
+        "url": "https://www.szsmh.cn/",
+        "siteName": "www.szsmh.cn",
+        "specialties": "General Medicine, OB/GYN, Pediatrics",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "city": "xiamen",
+    "cityName": "Xiamen",
+    "hospitals": [
+      {
+        "citySlug": "xiamen",
+        "cityName": "Xiamen",
+        "name": "First Affiliated Hospital of Xiamen University (厦门大学附属第一医院)",
+        "address": "55 Zhenhai Road, Siming District",
+        "phone": "+86-592-213-2222",
+        "url": "https://www.xmfh.cn/",
+        "siteName": "www.xmfh.cn",
+        "specialties": "Cardiology, Oncology, Surgery, JCI-Accredited International Department",
+        "note": ""
+      },
+      {
+        "citySlug": "xiamen",
+        "cityName": "Xiamen",
+        "name": "Zhongshan Hospital Xiamen University (厦门大学附属中山医院)",
+        "address": "201 Hubin South Road, Siming District",
+        "phone": "+86-592-229-2000",
+        "url": "https://www.xmzs.com/",
+        "siteName": "www.xmzs.com",
+        "specialties": "Cardiovascular, Oncology, Endocrinology, Hepatobiliary Surgery",
+        "note": ""
+      },
+      {
+        "citySlug": "xiamen",
+        "cityName": "Xiamen",
+        "name": "Xiamen Hospital of Traditional Chinese Medicine (厦门市中医院)",
+        "address": "1739 Xianyue Road, Siming District",
+        "phone": "+86-592-557-9000",
+        "url": "https://www.xmtcm.com/",
+        "siteName": "www.xmtcm.com",
+        "specialties": "TCM, Acupuncture, Rehabilitation, Integrative Medicine",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "city": "qingdao",
+    "cityName": "Qingdao",
+    "hospitals": [
+      {
+        "citySlug": "qingdao",
+        "cityName": "Qingdao",
+        "name": "The Affiliated Hospital of Qingdao University (青岛大学附属医院)",
+        "address": "59 Haiyun Road, Shinan District",
+        "phone": "+86-532-8291-1818",
+        "url": "https://www.qyfy.cn/",
+        "siteName": "www.qyfy.cn",
+        "specialties": "Oncology, Cardiovascular, Neurology, General Surgery",
+        "note": ""
+      },
+      {
+        "citySlug": "qingdao",
+        "cityName": "Qingdao",
+        "name": "Qingdao Municipal Hospital (青岛市市立医院)",
+        "address": "1 Jiaozhou Road, Shibei District",
+        "phone": "+86-532-8271-6868",
+        "url": "https://www.qdslyy.cn/",
+        "siteName": "www.qdslyy.cn",
+        "specialties": "General Medicine, Surgery, Pediatrics, Geriatrics",
+        "note": ""
+      },
+      {
+        "citySlug": "qingdao",
+        "cityName": "Qingdao",
+        "name": "Qingdao Central Hospital (青岛市中心医院)",
+        "address": "127 Siliu Middle Road, Shibei District",
+        "phone": "+86-532-8485-5180",
+        "url": "https://www.qdzxyy.cn/",
+        "siteName": "www.qdzxyy.cn",
+        "specialties": "Cardiology, Oncology, Hematology, Trauma Care",
+        "note": ""
+      },
+      {
+        "citySlug": "qingdao",
+        "cityName": "Qingdao",
+        "name": "Qilu Hospital Qingdao Branch (山东大学齐鲁医院青岛院区)",
+        "address": "758 Hefei Road, Shibei District",
+        "phone": "+86-532-6685-0066",
+        "url": "https://www.qlyyqd.com/",
+        "siteName": "www.qlyyqd.com",
+        "specialties": "Neurology, Cardiovascular, Oncology, General Medicine",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "city": "changsha",
+    "cityName": "Changsha",
+    "hospitals": [
+      {
+        "citySlug": "changsha",
+        "cityName": "Changsha",
+        "name": "Xiangya Hospital Central South University (中南大学湘雅医院)",
+        "address": "87 Xiangya Road, Kaifu District",
+        "phone": "+86-731-8432-8888",
+        "url": "https://www.xiangya.com.cn/",
+        "siteName": "www.xiangya.com.cn",
+        "specialties": "Neurology, Oncology, Cardiovascular, Endocrinology, Transplant",
+        "note": ""
+      },
+      {
+        "citySlug": "changsha",
+        "cityName": "Changsha",
+        "name": "Second Xiangya Hospital (中南大学湘雅二医院)",
+        "address": "139 Renmin Middle Road, Changsha",
+        "phone": "+86-731-8529-5555",
+        "url": "https://www.xyeyy.com/",
+        "siteName": "www.xyeyy.com",
+        "specialties": "Cardiology, Endocrinology, Psychiatry, Hematology",
+        "note": ""
+      },
+      {
+        "citySlug": "changsha",
+        "cityName": "Changsha",
+        "name": "Third Xiangya Hospital (中南大学湘雅三医院)",
+        "address": "138 Tongzipo Road, Yuelu District",
+        "phone": "+86-731-8861-8888",
+        "url": "https://www.xy3yy.com/",
+        "siteName": "www.xy3yy.com",
+        "specialties": "General Medicine, Surgery, OB/GYN, Pediatrics",
+        "note": ""
+      },
+      {
+        "citySlug": "changsha",
+        "cityName": "Changsha",
+        "name": "Hunan Provincial People's Hospital (湖南省人民医院)",
+        "address": "61 Jiefang West Road, Furong District",
+        "phone": "+86-731-8392-9999",
+        "url": "http://www.hnsrmyy.com/",
+        "siteName": "www.hnsrmyy.com",
+        "specialties": "General Medicine, Cardiology, Hepatobiliary Surgery, Neurology",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "city": "harbin",
+    "cityName": "Harbin",
+    "hospitals": [
+      {
+        "citySlug": "harbin",
+        "cityName": "Harbin",
+        "name": "First Affiliated Hospital of Harbin Medical University (哈尔滨医科大学附属第一医院)",
+        "address": "23 Youzheng Street, Nangang District",
+        "phone": "+86-451-8555-5000",
+        "url": "https://www.54md.com/",
+        "siteName": "www.54md.com",
+        "specialties": "Cardiology, Neurology, Oncology, Organ Transplant",
+        "note": ""
+      },
+      {
+        "citySlug": "harbin",
+        "cityName": "Harbin",
+        "name": "Second Affiliated Hospital of Harbin Medical University (哈尔滨医科大学附属第二医院)",
+        "address": "246 Xuefu Road, Nangang District",
+        "phone": "+86-451-8660-5614",
+        "url": "https://www.hyd2yydy.com/",
+        "siteName": "www.hyd2yydy.com",
+        "specialties": "Cardiovascular, Hematology, General Surgery, Emergency Medicine",
+        "note": ""
+      },
+      {
+        "citySlug": "harbin",
+        "cityName": "Harbin",
+        "name": "Heilongjiang Provincial Hospital (黑龙江省医院)",
+        "address": "82 Zhongshan Road, Xiangfang District",
+        "phone": "+86-451-8802-5555",
+        "url": "http://www.hljhospital.org/",
+        "siteName": "www.hljhospital.org",
+        "specialties": "General Medicine, Oncology, Surgery, Geriatrics",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "city": "kunming",
+    "cityName": "Kunming",
+    "hospitals": [
+      {
+        "citySlug": "kunming",
+        "cityName": "Kunming",
+        "name": "First Affiliated Hospital of Kunming Medical University (昆明医科大学第一附属医院)",
+        "address": "295 Xichang Road, Wuhua District",
+        "phone": "+86-871-6532-8888",
+        "url": "https://www.ydyy.cn/",
+        "siteName": "www.ydyy.cn",
+        "specialties": "Oncology, Cardiovascular, Neurology, Hepatobiliary Surgery",
+        "note": ""
+      },
+      {
+        "citySlug": "kunming",
+        "cityName": "Kunming",
+        "name": "Second Affiliated Hospital of Kunming Medical University (昆明医科大学第二附属医院)",
+        "address": "374 Dianmian Avenue, Wuhua District",
+        "phone": "+86-871-6535-1281",
+        "url": "https://www.kyfeyy.com/",
+        "siteName": "www.kyfeyy.com",
+        "specialties": "General Medicine, Surgery, OB/GYN, Pediatrics",
+        "note": ""
+      },
+      {
+        "citySlug": "kunming",
+        "cityName": "Kunming",
+        "name": "The First People's Hospital of Yunnan (云南省第一人民医院)",
+        "address": "157 Jinbi Road, Wuhua District",
+        "phone": "+86-871-6362-5241",
+        "url": "http://www.ypfph.com/",
+        "siteName": "www.ypfph.com",
+        "specialties": "General Medicine, Cardiology, Oncology, Critical Care",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "city": "jinan",
+    "cityName": "Jinan",
+    "hospitals": [
+      {
+        "citySlug": "jinan",
+        "cityName": "Jinan",
+        "name": "Qilu Hospital of Shandong University (山东大学齐鲁医院)",
+        "address": "107 Wenhua West Road, Lixia District",
+        "phone": "+86-531-8216-9111",
+        "url": "https://www.qiluhospital.com/",
+        "siteName": "www.qiluhospital.com",
+        "specialties": "Neurology, Cardiology, Oncology, General Surgery",
+        "note": ""
+      },
+      {
+        "citySlug": "jinan",
+        "cityName": "Jinan",
+        "name": "Shandong Provincial Hospital (山东省立医院)",
+        "address": "324 Jingwu Road, Huaiyin District",
+        "phone": "+86-531-8793-8911",
+        "url": "http://www.sph.com.cn/",
+        "siteName": "www.sph.com.cn",
+        "specialties": "Cardiovascular, Neurology, Geriatrics, Organ Transplant",
+        "note": ""
+      },
+      {
+        "citySlug": "jinan",
+        "cityName": "Jinan",
+        "name": "The Second Hospital of Shandong University (山东大学第二医院)",
+        "address": "247 Beiyuan Street, Tianqiao District",
+        "phone": "+86-531-8587-5000",
+        "url": "http://www.sdey.net/",
+        "siteName": "www.sdey.net",
+        "specialties": "General Medicine, Oncology, OB/GYN, Pediatrics",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "city": "dalian",
+    "cityName": "Dalian",
+    "hospitals": [
+      {
+        "citySlug": "dalian",
+        "cityName": "Dalian",
+        "name": "First Affiliated Hospital of Dalian Medical University (大连医科大学附属第一医院)",
+        "address": "222 Zhongshan Road, Xigang District",
+        "phone": "+86-411-8363-5963",
+        "url": "http://www.dyyy.xin/",
+        "siteName": "www.dyyy.xin",
+        "specialties": "Oncology, Cardiology, Neurology, Surgery",
+        "note": ""
+      },
+      {
+        "citySlug": "dalian",
+        "cityName": "Dalian",
+        "name": "Second Affiliated Hospital of Dalian Medical University (大连医科大学附属第二医院)",
+        "address": "467 Zhongshan Road, Shahekou District",
+        "phone": "+86-411-8467-1291",
+        "url": "http://www.dy2y.cn/",
+        "siteName": "www.dy2y.cn",
+        "specialties": "Cardiovascular, General Surgery, Ophthalmology, Pediatrics",
+        "note": ""
+      },
+      {
+        "citySlug": "dalian",
+        "cityName": "Dalian",
+        "name": "Dalian Municipal Central Hospital (大连市中心医院)",
+        "address": "42 Xuehai Street, Zhongshan District",
+        "phone": "+86-411-8441-2000",
+        "url": "http://www.dlzxyy.cn/",
+        "siteName": "www.dlzxyy.cn",
+        "specialties": "General Medicine, Surgery, Oncology, Critical Care",
+        "note": ""
+      }
+    ]
   }
 ]

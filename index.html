@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedTravelCN.net — Medical Tourism to China</title>
-    <meta name="description" content="Discover world-class medical care in China at a fraction of Western costs. Browse hospitals in 11 major cities, compare prices, and book your medical trip.">
+    <meta name="description" content="Discover world-class medical care in China at a fraction of Western costs. Browse hospitals in 19 major cities across all regions, compare prices, and book your medical trip.">
     <link rel="canonical" href="https://medtravelcn.net/">
     <meta property="og:title" content="MedTravelCN.net — Medical Tourism to China">
-    <meta property="og:description" content="Discover world-class medical care in China at a fraction of Western costs. Browse hospitals in 11 major cities, compare prices, and book your medical trip.">
+    <meta property="og:description" content="Discover world-class medical care in China at a fraction of Western costs. Browse hospitals in 19 major cities across all regions, compare prices, and book your medical trip.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://medtravelcn.net/">
     <meta property="og:site_name" content="MedTravelCN">
     <meta property="og:image" content="https://medtravelcn.net/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MedTravelCN.net — Medical Tourism to China">
-    <meta name="twitter:description" content="Discover world-class medical care in China at a fraction of Western costs. Browse hospitals in 11 major cities, compare prices, and book your medical trip.">
+    <meta name="twitter:description" content="Discover world-class medical care in China at a fraction of Western costs. Browse hospitals in 19 major cities across all regions, compare prices, and book your medical trip.">
     <meta name="robots" content="index, follow">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -100,12 +100,12 @@
     <div class="container">
         <h1>Medical Tourism to China</h1>
         <p>World-class healthcare at 50-80% below Western prices. No wait times. Direct booking with hospitals. Trusted by patients from 90+ countries.</p>
-        <div class="tagline">One website. 11 cities. Real hospitals. Real prices. More cities added regularly.</div>
+        <div class="tagline">One website. 19 cities. Real hospitals. Real prices. Constantly expanding.</div>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Search cities, hospitals, procedures... (e.g. Shanghai, MRI, oncology, knee)" oninput="showResults()" onblur="setTimeout(hideResults,200)" autocomplete="off">
             <button>🔍</button>
         </div>
-        <div class="search-hint">💡 Try: Shanghai, Beijing, MRI, knee, oncology, cataract, cardiac, plastic surgery, dental</div>
+        <div class="search-hint">💡 Try: Shanghai, Beijing, Suzhou, Xiamen, Changsha, MRI, knee, oncology, cataract, transplant</div>
         <div class="search-results" id="searchResults"></div>
         <div class="hero-stats">
             <div class="stat"><span class="num">70%</span><span class="label">avg savings vs Western prices</span></div>
@@ -276,16 +276,86 @@
                     <span class="hospitals-count">4 hospitals</span>
                 </div>
             </a>
-            <div class="city-card" style="background: linear-gradient(135deg, #f8f9fa, #e8eef3); cursor: default;">
-                <div class="card-header" style="background: linear-gradient(135deg, #888, #aaa);">
-                    <div class="city-name">More Cities Coming</div>
-                    <div class="city-name-en">南京 · 武汉 · 西安 · 重庆 · and more</div>
+            <a href="cities/suzhou/index.html" class="city-card">
+                <div class="card-header">
+                    <div class="city-name">Suzhou</div>
+                    <div class="city-name-en">苏州 · East China</div>
                 </div>
                 <div class="card-body">
-                    <p class="specialties">We're actively adding more cities and hospitals. Contact us if you need a specific city or hospital.</p>
-                    <span class="hospitals-count" style="background:#e8eef3; color:#666;">🚀 Expanding</span>
+                    <p class="specialties">Hematology · Oncology · Pediatrics · Biotech Specialty · 30 min from Shanghai</p>
+                    <span class="hospitals-count">4 hospitals</span>
                 </div>
-            </div>
+            </a>
+            <a href="cities/xiamen/index.html" class="city-card">
+                <div class="card-header">
+                    <div class="city-name">Xiamen</div>
+                    <div class="city-name-en">厦门 · East China</div>
+                </div>
+                <div class="card-body">
+                    <p class="specialties">JCI-Accredited · TCM · Gateway for SE Asian & Filipino Patients</p>
+                    <span class="hospitals-count">3 hospitals</span>
+                </div>
+            </a>
+            <a href="cities/qingdao/index.html" class="city-card">
+                <div class="card-header">
+                    <div class="city-name">Qingdao</div>
+                    <div class="city-name-en">青岛 · East China</div>
+                </div>
+                <div class="card-body">
+                    <p class="specialties">Korean-Friendly · German Heritage · Direct Ferry to South Korea & Japan</p>
+                    <span class="hospitals-count">4 hospitals</span>
+                </div>
+            </a>
+            <a href="cities/changsha/index.html" class="city-card">
+                <div class="card-header">
+                    <div class="city-name">Changsha</div>
+                    <div class="city-name-en">长沙 · Central China</div>
+                </div>
+                <div class="card-body">
+                    <p class="specialties">Xiangya Hospital · Yale-China Heritage · Among China's lowest tier-3 prices</p>
+                    <span class="hospitals-count">4 hospitals</span>
+                </div>
+            </a>
+            <a href="cities/harbin/index.html" class="city-card">
+                <div class="card-header">
+                    <div class="city-name">Harbin</div>
+                    <div class="city-name-en">哈尔滨 · Northeast China</div>
+                </div>
+                <div class="card-body">
+                    <p class="specialties">Russian-Friendly · Cross-Border Care · Lowest Tier-3 Prices in Major Cities</p>
+                    <span class="hospitals-count">3 hospitals</span>
+                </div>
+            </a>
+            <a href="cities/kunming/index.html" class="city-card">
+                <div class="card-header">
+                    <div class="city-name">Kunming</div>
+                    <div class="city-name-en">昆明 · Southwest China</div>
+                </div>
+                <div class="card-body">
+                    <p class="specialties">ASEAN Gateway · Direct Flights from Bangkok/SG/KL · Mild Climate</p>
+                    <span class="hospitals-count">3 hospitals</span>
+                </div>
+            </a>
+            <a href="cities/jinan/index.html" class="city-card">
+                <div class="card-header">
+                    <div class="city-name">Jinan</div>
+                    <div class="city-name-en">济南 · East China</div>
+                </div>
+                <div class="card-body">
+                    <p class="specialties">Qilu Hospital (1890) · Shandong Medical Hub · Korean/Russian Patient Pipeline</p>
+                    <span class="hospitals-count">3 hospitals</span>
+                </div>
+            </a>
+            <a href="cities/dalian/index.html" class="city-card">
+                <div class="card-header">
+                    <div class="city-name">Dalian</div>
+                    <div class="city-name-en">大连 · Northeast China</div>
+                </div>
+                <div class="card-body">
+                    <p class="specialties">Japanese/Korean-Friendly · Direct Ferry to Japan & Korea · Coastal Climate</p>
+                    <span class="hospitals-count">3 hospitals</span>
+                </div>
+            </a>
         </div>
         <div class="no-results" id="noResults">No results found. More cities and hospitals coming soon — contact us for specific requests.</div>
         <div class="more-cities-bar">🔥 More cities added regularly</div>
