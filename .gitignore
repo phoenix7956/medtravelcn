@@ -17,3 +17,7 @@ dist/
 
 # OS
 Thumbs.dbdata/.gitkeep
+
+# SQLite WAL mode temp files
+data/*.db-shm
+data/*.db-wal

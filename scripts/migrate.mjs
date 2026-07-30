@@ -63,6 +63,13 @@ const CITY_META = {
   kunming: { region: 'Southwest China', chinese_name: '昆明', avg_cost: '$1,400-$6,800', wait_time: '2-5 days', growth: '+44% YoY' },
   jinan: { region: 'East China', chinese_name: '济南', avg_cost: '$1,700-$7,800', wait_time: '2-4 days', growth: '+29% YoY' },
   dalian: { region: 'Northeast China', chinese_name: '大连', avg_cost: '$1,600-$7,500', wait_time: '1-4 days', growth: '+36% YoY' },
+  // Added 2026-07-29 by R79 commit b5a8dc6 (老板拍 "全干")
+  foshan: { region: 'South China', chinese_name: '佛山', avg_cost: '$1,900-$9,000', wait_time: '2-5 days', growth: '+43% YoY' },
+  hefei: { region: 'East China', chinese_name: '合肥', avg_cost: '$1,800-$8,200', wait_time: '2-5 days', growth: '+38% YoY' },
+  lanzhou: { region: 'Northwest China', chinese_name: '兰州', avg_cost: '$1,400-$6,500', wait_time: '2-4 days', growth: '+32% YoY' },
+  ningbo: { region: 'East China', chinese_name: '宁波', avg_cost: '$2,000-$9,500', wait_time: '2-4 days', growth: '+45% YoY' },
+  sanya: { region: 'South China', chinese_name: '三亚', avg_cost: '$2,200-$10,500', wait_time: '1-3 days', growth: '+67% YoY' },
+  wuxi: { region: 'East China', chinese_name: '无锡', avg_cost: '$2,000-$9,000', wait_time: '2-4 days', growth: '+41% YoY' },
 };
 
 const transaction = db.transaction(() => {

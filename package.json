@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/init-db.mjs && node scripts/migrate.mjs && astro build",
+    "build": "node scripts/export-db-to-search-index.mjs && node scripts/init-db.mjs && node scripts/migrate.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "db:export": "node scripts/export-db-to-search-index.mjs",
     "db:init": "node scripts/init-db.mjs",
     "db:migrate": "node scripts/migrate.mjs",
     "db:reset": "rm -f data/medtravelcn.db && npm run db:init && npm run db:migrate"
