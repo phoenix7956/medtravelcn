@@ -280,6 +280,46 @@
     ]
   },
   {
+    "city": "dongguan",
+    "cityName": "Dongguan",
+    "chinese_name": "东莞",
+    "region": "South China",
+    "intro": "Dongguan is a major manufacturing hub in the Pearl River Delta between Guangzhou and Shenzhen, with a dense network of tertiary hospitals. Known for cardiology, oncology, and orthopedic surgery, the city attracts international patients seeking high-quality care with short wait times and competitive pricing.",
+    "avg_cost": "$1,400-$6,800",
+    "wait_time": "1-3 days",
+    "growth": "+72% YoY",
+    "hospitals": [
+      {
+        "name": "Dongguan People's Hospital (东莞市人民医院)",
+        "specialties": "Cardiology, Oncology, General Surgery, Nephrology, Neurology",
+        "address": "3 Xinzhong Road, Guancheng District",
+        "phone": "+86-769-2222-2222",
+        "url": "http://www.dgph.com/"
+      },
+      {
+        "name": "Dongguan Tung Wah Hospital (东莞东华医院)",
+        "specialties": "Cardiothoracic Surgery, Orthopedics, General Medicine, Pediatrics, Emergency Care",
+        "address": "3 Dongcheng East Road, Dongcheng District",
+        "phone": "+86-769-2233-3333",
+        "url": "http://www.tungwah.org/"
+      },
+      {
+        "name": "Dongguan Third People's Hospital (东莞市第三人民医院)",
+        "specialties": "Cardiology, Neurology, Oncology, Rehabilitation, Pulmonology",
+        "address": "1 Xiangxi Road, Songshan Lake",
+        "phone": "+86-769-2288-8888",
+        "url": "http://www.dgsyy.com/"
+      },
+      {
+        "name": "Dongguan Kanghua Hospital (东莞康华医院)",
+        "specialties": "Oncology, Cardiology, Orthopedics, General Surgery, Organ Transplant",
+        "address": "1000 Donghua East Road, Houjie",
+        "phone": "+86-769-2888-9999",
+        "url": "http://www.kanghuahospital.com/"
+      }
+    ]
+  },
+  {
     "city": "foshan",
     "cityName": "Foshan",
     "chinese_name": "佛山",
@@ -383,6 +423,46 @@
         "cityName": "Guangzhou",
         "siteName": "www.gzsums.edu.cn",
         "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      }
+    ]
+  },
+  {
+    "city": "guiyang",
+    "cityName": "Guiyang",
+    "chinese_name": "贵阳",
+    "region": "Southwest China",
+    "intro": "Guiyang is the capital of Guizhou province and a rapidly growing medical hub in Southwest China. Known for traditional Chinese medicine combined with modern oncology and respiratory medicine, the city's high-altitude climate offers specialized rehabilitation programs.",
+    "avg_cost": "$900-$4,500",
+    "wait_time": "1-3 days",
+    "growth": "+52% YoY",
+    "hospitals": [
+      {
+        "name": "Guizhou Provincial People's Hospital (贵州省人民医院)",
+        "specialties": "Oncology, Cardiology, Pulmonology, General Surgery, Nephrology",
+        "address": "83 East Zhongshan Road, Nanming District",
+        "phone": "+86-851-8527-3111",
+        "url": "http://www.gz5055.cn/"
+      },
+      {
+        "name": "The Affiliated Hospital of Guizhou Medical University (贵州医科大学附属医院)",
+        "specialties": "General Medicine, Oncology, Emergency Medicine, Infectious Diseases, Pulmonology",
+        "address": "28 Guiyi Street, Yunyan District",
+        "phone": "+86-851-8677-3111",
+        "url": "http://www.gmcah.cn/"
+      },
+      {
+        "name": "Guiyang First People's Hospital (贵阳市第一人民医院)",
+        "specialties": "Cardiology, Orthopedics, General Surgery, Nephrology, Endocrinology",
+        "address": "97 Bo'ai Road, Nanming District",
+        "phone": "+86-851-8581-3333",
+        "url": "http://www.gy1y.cn/"
+      },
+      {
+        "name": "Guizhou Provincial Tumor Hospital (贵州省肿瘤医院)",
+        "specialties": "Surgical Oncology, Medical Oncology, Radiation Oncology, Hematology, Pathology",
+        "address": "1 Beijing Road, Yunyan District",
+        "phone": "+86-851-8651-1111",
+        "url": "http://www.gzszlyy.cn/"
       }
     ]
   },
@@ -658,6 +738,46 @@
     ]
   },
   {
+    "city": "nanchang",
+    "cityName": "Nanchang",
+    "chinese_name": "南昌",
+    "region": "East China",
+    "intro": "Nanchang is the capital of Jiangxi province and home to the renowned Xiangya Medical Cluster (Jiangxi Medical College-affiliated hospitals). Known for hematology, oncology, and organ transplantation, the city's hospitals serve patients from surrounding provinces with competitive pricing and modern facilities.",
+    "avg_cost": "$1,100-$5,800",
+    "wait_time": "1-4 days",
+    "growth": "+45% YoY",
+    "hospitals": [
+      {
+        "name": "The First Affiliated Hospital of Nanchang University (南昌大学第一附属医院)",
+        "specialties": "Hematology, Oncology, Organ Transplantation, Cardiology, General Surgery",
+        "address": "17 Yongwai Main Street, Donghu District",
+        "phone": "+86-791-8869-2790",
+        "url": "http://www.cdyfy.com/"
+      },
+      {
+        "name": "Jiangxi Provincial People's Hospital (江西省人民医院)",
+        "specialties": "Cardiology, Oncology, Neurology, Endocrinology, Geriatrics",
+        "address": "92 Aiguo Road, Donghu District",
+        "phone": "+86-791-8689-5555",
+        "url": "http://www.jxsrmyy.cn/"
+      },
+      {
+        "name": "The Second Affiliated Hospital of Nanchang University (南昌大学第二附属医院)",
+        "specialties": "Cardiology, Neurology, Oncology, General Surgery, Pediatrics",
+        "address": "1 Minde Road, Donghu District",
+        "phone": "+86-791-8630-0000",
+        "url": "http://www.ndefy.cn/"
+      },
+      {
+        "name": "Jiangxi Cancer Hospital (江西省肿瘤医院)",
+        "specialties": "Surgical Oncology, Medical Oncology, Radiation Oncology, Hematology, Proton Therapy",
+        "address": "519 Beijing East Road, Qingyunpu District",
+        "phone": "+86-791-8831-3333",
+        "url": "http://www.jxch.cn/"
+      }
+    ]
+  },
+  {
     "city": "nanjing",
     "cityName": "Nanjing",
     "chinese_name": "南京",
@@ -928,6 +1048,46 @@
     ]
   },
   {
+    "city": "shenyang",
+    "cityName": "Shenyang",
+    "chinese_name": "沈阳",
+    "region": "Northeast China",
+    "intro": "Shenyang is the capital of Liaoning province and the medical hub for Northeast China. Home to China Medical University's flagship hospitals, the city offers advanced oncology, transplantation, and complex surgical care with internationally trained physicians and established foreign patient services.",
+    "avg_cost": "$1,300-$6,000",
+    "wait_time": "2-4 days",
+    "growth": "+55% YoY",
+    "hospitals": [
+      {
+        "name": "The First Hospital of China Medical University (中国医大一院)",
+        "specialties": "Oncology, Cardiology, General Surgery, Liver Transplant, Infectious Diseases",
+        "address": "155 Nanjing North Street, Heping District",
+        "phone": "+86-24-8328-3000",
+        "url": "https://www.cmu1h.com/"
+      },
+      {
+        "name": "Shengjing Hospital of China Medical University (盛京医院)",
+        "specialties": "Pediatrics, Obstetrics, Oncology, General Surgery, Organ Transplant",
+        "address": "36 Sanhao Street, Heping District",
+        "phone": "+86-24-96615",
+        "url": "https://www.sj-hospital.org/"
+      },
+      {
+        "name": "The General Hospital of Northern Theater Command (北部战区总医院)",
+        "specialties": "General Medicine, Oncology, Cardiology, Neurology, Trauma Surgery",
+        "address": "83 Wenhua Road, Shenhe District",
+        "phone": "+86-24-2885-6666",
+        "url": "http://www.plagh.cn/"
+      },
+      {
+        "name": "Liaoning Cancer Hospital & Institute (辽宁省肿瘤医院)",
+        "specialties": "Surgical Oncology, Medical Oncology, Radiation Oncology, Proton Therapy, Hematology",
+        "address": "44 Xiaoheyan Road, Dadong District",
+        "phone": "+86-24-2431-5555",
+        "url": "http://www.lnszl.com/"
+      }
+    ]
+  },
+  {
     "city": "shenzhen",
     "cityName": "Shenzhen",
     "chinese_name": "深圳",
@@ -995,6 +1155,46 @@
     ]
   },
   {
+    "city": "shijiazhuang",
+    "cityName": "Shijiazhuang",
+    "chinese_name": "石家庄",
+    "region": "North China",
+    "intro": "Shijiazhuang is the capital of Hebei province and a major medical center serving northern China. The city is known for ophthalmology, cardiovascular surgery, and pharmaceutical research, with Hebei Medical University-affiliated hospitals providing affordable specialized care.",
+    "avg_cost": "$1,000-$5,000",
+    "wait_time": "1-3 days",
+    "growth": "+48% YoY",
+    "hospitals": [
+      {
+        "name": "Hebei Medical University First Hospital (河北医科大学第一医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, Nephrology, Hematology",
+        "address": "89 Donggang Road, Yuhua District",
+        "phone": "+86-311-8591-7000",
+        "url": "http://www.jyyy1.com/"
+      },
+      {
+        "name": "Hebei Provincial People's Hospital (河北省人民医院)",
+        "specialties": "Cardiovascular Surgery, Oncology, Neurology, Endocrinology, General Surgery",
+        "address": "348 Heping West Road, Xinhua District",
+        "phone": "+86-311-8598-9639",
+        "url": "http://www.hbpphosp.cn/"
+      },
+      {
+        "name": "Hebei Eye Hospital (河北省眼科医院)",
+        "specialties": "Ophthalmology, Optometry, Retinal Surgery, Cataract Surgery, Glaucoma",
+        "address": "9 Tianshan Street, Qiaoxi District",
+        "phone": "+86-311-8523-7890",
+        "url": "http://www.hbeye.cn/"
+      },
+      {
+        "name": "The Second Hospital of Hebei Medical University (河北医科大学第二医院)",
+        "specialties": "General Medicine, Cardiology, Neurosurgery, Oncology, Pulmonology",
+        "address": "215 Heping West Road, Xinhua District",
+        "phone": "+86-311-6600-2000",
+        "url": "http://www.hb2h.com/"
+      }
+    ]
+  },
+  {
     "city": "suzhou",
     "cityName": "Suzhou",
     "chinese_name": "苏州",
@@ -1047,6 +1247,46 @@
         "cityName": "Suzhou",
         "siteName": "fyy.sdfey.cn",
         "note": ""
+      }
+    ]
+  },
+  {
+    "city": "taiyuan",
+    "cityName": "Taiyuan",
+    "chinese_name": "太原",
+    "region": "North China",
+    "intro": "Taiyuan is the capital of Shanxi province and a major industrial hub in North China. Shanxi Bethune Hospital and other provincial hospitals offer advanced oncology, cardiac surgery, and organ transplantation with lower costs than Beijing/Shanghai. Coal-mining medicine and occupational disease treatment are regional specialties.",
+    "avg_cost": "$1,000-$5,500",
+    "wait_time": "1-3 days",
+    "growth": "+38% YoY",
+    "hospitals": [
+      {
+        "name": "Shanxi Bethune Hospital (山西白求恩医院)",
+        "specialties": "Oncology, Hematology, Cardiac Surgery, Organ Transplantation, General Surgery",
+        "address": "99 Longcheng Street, Xiaodian District",
+        "phone": "+86-351-217-1111",
+        "url": "http://www.sxdyy.org/"
+      },
+      {
+        "name": "Shanxi Provincial People's Hospital (山西省人民医院)",
+        "specialties": "Cardiology, Neurology, Oncology, Nephrology, Pulmonology",
+        "address": "29 Shuangtasi Street, Yingze District",
+        "phone": "+86-351-496-0000",
+        "url": "http://www.sxsrmyy.com/"
+      },
+      {
+        "name": "First Hospital of Shanxi Medical University (山西医科大学第一医院)",
+        "specialties": "General Medicine, Pulmonology, Cardiology, Endocrinology, Infectious Diseases",
+        "address": "85 Jiefang South Road, Yingze District",
+        "phone": "+86-351-463-9114",
+        "url": "http://www.sydyy.net.cn/"
+      },
+      {
+        "name": "Taiyuan Central Hospital (太原市中心医院)",
+        "specialties": "General Medicine, Orthopedics, Neurosurgery, Oncology, Rehabilitation",
+        "address": "5 Dong San Dao Xiang, Xinghualing District",
+        "phone": "+86-351-565-6000",
+        "url": "http://www.tzchospital.cn/"
       }
     ]
   },

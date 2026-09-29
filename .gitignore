@@ -21,3 +21,6 @@ Thumbs.dbdata/.gitkeep
 # SQLite WAL mode temp files
 data/*.db-shm
 data/*.db-wal
+
+# R142: 备份文件不入库
+*.bak-*
