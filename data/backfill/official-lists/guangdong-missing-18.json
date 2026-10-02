@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "note": "广东官方 25 家涉外试点医院中，库内缺失的 18 家（来源：粤卫健委等 2026-03-26 公布名单）",
+    "source_urls": ["https://www.gd.gov.cn/zwgk/zdlyxxgkzl/ylws/content/post_4875453.html"],
+    "cert_year": 2026
+  },
+  "new_hospitals": [
+    { "city_slug": "guangzhou", "chinese_name": "广东省妇幼保健院",       "name": "Guangdong Women and Children's Medical Center", "specialties": "Maternal and Child Health, Neonatology, Pediatrics", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "中山大学孙逸仙纪念医院", "name": "Sun Yat-sen Memorial Hospital of the Second Sun Yat-sen University of Medical Sciences", "specialties": "Oncology, General Surgery, Internal Medicine", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "中山大学附属第三医院",   "name": "Third Affiliated Hospital of Sun Yat-sen University", "specialties": "Orthopedics, Dermatology, Rheumatology", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "中山大学肿瘤防治中心",   "name": "Sun Yat-sen University Cancer Center", "specialties": "Oncology, Radiotherapy, Medical Oncology", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "中山大学附属口腔医院",   "name": "Hospital of Stomatology, Sun Yat-sen University", "specialties": "Dentistry, Oral Surgery, Orthodontics, Oral Oncology", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "中山大学附属第六医院",   "name": "Sixth Affiliated Hospital of Sun Yat-sen University", "specialties": "Rheumatology, Urology, Orthopedics", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "南方医科大学南方医院",   "name": "Nanfang Hospital, Southern Medical University", "specialties": "General Surgery, Oncology, Nephrology", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "南方医科大学珠江医院",   "name": "Zhujiang Hospital, Southern Medical University", "specialties": "Oncology, Neurology, Cardiovascular", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "广东省中医院",           "name": "Guangdong Provincial Hospital of Traditional Chinese Medicine", "specialties": "Traditional Chinese Medicine, Acupuncture, Rehabilitation", "type": "hospital", "certified": true },
+    { "city_slug": "shantou",   "chinese_name": "汕头大学医学院第一附属医院", "name": "First Affiliated Hospital of Shantou University Medical College", "specialties": "General Surgery, Oncology, Cardiovascular", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "广州市第一人民医院",     "name": "Guangzhou First Municipal Hospital", "specialties": "Respiratory, Cardiovascular, Gastroenterology", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "广州医科大学附属妇女儿童医疗中心", "name": "Women and Children's Medical Center, Guangzhou Medical University", "specialties": "Obstetrics, Gynecology, Pediatrics, Neonatology", "type": "hospital", "certified": true },
+    { "city_slug": "shenzhen",  "chinese_name": "南方医科大学深圳医院",   "name": "Shenzhen Hospital, Southern Medical University", "specialties": "General Medicine, Oncology, Rehabilitation", "type": "hospital", "certified": true },
+    { "city_slug": "shenzhen",  "chinese_name": "中山大学附属第五医院",   "name": "Fifth Affiliated Hospital of Sun Yat-sen University", "specialties": "Oncology, General Surgery, ENT", "type": "hospital", "certified": true },
+    { "city_slug": "zhuhai",    "chinese_name": "珠海市人民医院",         "name": "Zhuhai People's Hospital", "specialties": "General Medicine, Oncology, Pediatrics", "type": "hospital", "certified": true },
+    { "city_slug": "guangzhou", "chinese_name": "广东祈福医院",           "name": "Guangdong Clifford Hospital", "specialties": "Oncology, Cardiology, Orthopedics", "type": "hospital", "certified": true, "note": "民营" },
+    { "city_slug": "foshan",    "chinese_name": "佛山复星禅诚医院",       "name": "Foshan Fosun Chancheng Hospital", "specialties": "Oncology, General Surgery, Rehabilitation", "type": "hospital", "certified": true, "note": "民营" }
+  ]
+}

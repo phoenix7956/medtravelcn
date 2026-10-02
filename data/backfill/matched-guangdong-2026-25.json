@@ -1,0 +1,93 @@
+[
+  {
+    "id": 30,
+    "foreign_access": "certified",
+    "cert_level": "广东省首批国际医疗服务试点医院",
+    "cert_source": "广东省卫生健康委、广东省医保局、广东省药监局（2026-03-26）",
+    "cert_year": 2026,
+    "international_dept": "yes",
+    "emergency_24h": "yes",
+    "insurance_direct": "unknown",
+    "source_url": "https://www.gd.gov.cn/zwgk/zdlyxxgkzl/ylws/content/post_4875453.html",
+    "maintainer": "xieguanzhi",
+    "note": "广东省人民医院"
+  },
+  {
+    "id": 29,
+    "foreign_access": "certified",
+    "cert_level": "广东省首批国际医疗服务试点医院",
+    "cert_source": "广东省卫生健康委、广东省医保局、广东省药监局（2026-03-26）",
+    "cert_year": 2026,
+    "international_dept": "yes",
+    "emergency_24h": "yes",
+    "insurance_direct": "unknown",
+    "source_url": "https://www.gd.gov.cn/zwgk/zdlyxxgkzl/ylws/content/post_4875453.html",
+    "maintainer": "xieguanzhi",
+    "note": "undefined（越秀院区、南沙院区）"
+  },
+  {
+    "id": 31,
+    "foreign_access": "certified",
+    "cert_level": "广东省首批国际医疗服务试点医院",
+    "cert_source": "广东省卫生健康委、广东省医保局、广东省药监局（2026-03-26）",
+    "cert_year": 2026,
+    "international_dept": "yes",
+    "emergency_24h": "yes",
+    "insurance_direct": "unknown",
+    "source_url": "https://www.gd.gov.cn/zwgk/zdlyxxgkzl/ylws/content/post_4875453.html",
+    "maintainer": "xieguanzhi",
+    "note": "暨南大学附属第一医院"
+  },
+  {
+    "id": 32,
+    "foreign_access": "certified",
+    "cert_level": "广东省首批国际医疗服务试点医院",
+    "cert_source": "广东省卫生健康委、广东省医保局、广东省药监局（2026-03-26）",
+    "cert_year": 2026,
+    "international_dept": "yes",
+    "emergency_24h": "yes",
+    "insurance_direct": "unknown",
+    "source_url": "https://www.gd.gov.cn/zwgk/zdlyxxgkzl/ylws/content/post_4875453.html",
+    "maintainer": "xieguanzhi",
+    "note": "广州医科大学附属第一医院"
+  },
+  {
+    "id": 90,
+    "foreign_access": "certified",
+    "cert_level": "广东省首批国际医疗服务试点医院",
+    "cert_source": "广东省卫生健康委、广东省医保局、广东省药监局（2026-03-26）",
+    "cert_year": 2026,
+    "international_dept": "yes",
+    "emergency_24h": "yes",
+    "insurance_direct": "unknown",
+    "source_url": "https://www.gd.gov.cn/zwgk/zdlyxxgkzl/ylws/content/post_4875453.html",
+    "maintainer": "xieguanzhi",
+    "note": "深圳市人民医院"
+  },
+  {
+    "id": 91,
+    "foreign_access": "certified",
+    "cert_level": "广东省首批国际医疗服务试点医院",
+    "cert_source": "广东省卫生健康委、广东省医保局、广东省药监局（2026-03-26）",
+    "cert_year": 2026,
+    "international_dept": "yes",
+    "emergency_24h": "yes",
+    "insurance_direct": "unknown",
+    "source_url": "https://www.gd.gov.cn/zwgk/zdlyxxgkzl/ylws/content/post_4875453.html",
+    "maintainer": "xieguanzhi",
+    "note": "北京大学深圳医院"
+  },
+  {
+    "id": 93,
+    "foreign_access": "certified",
+    "cert_level": "广东省首批国际医疗服务试点医院",
+    "cert_source": "广东省卫生健康委、广东省医保局、广东省药监局（2026-03-26）",
+    "cert_year": 2026,
+    "international_dept": "yes",
+    "emergency_24h": "yes",
+    "insurance_direct": "unknown",
+    "source_url": "https://www.gd.gov.cn/zwgk/zdlyxxgkzl/ylws/content/post_4875453.html",
+    "maintainer": "xieguanzhi",
+    "note": "undefined（与30余家保险机构直付）"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "list_name": "广东省首批国际医疗服务试点医院",
+    "announced_by": "广东省卫生健康委、广东省医保局、广东省药监局",
+    "announced_date": "2026-03-26",
+    "period": "2026-2027",
+    "note": "严格实行国际医疗与基本医疗资源物理隔离；费用仅限自费或国际商业保险，不纳入基本医保",
+    "source_urls": [
+      "https://www.gd.gov.cn/zwgk/zdlyxxgkzl/ylws/content/post_4875453.html",
+      "https://news.qq.com/rain/a/20260330A08KMX00"
+    ],
+    "extracted_from": "广东省人民政府门户网站 + 腾讯新闻（名单完整列举）"
+  },
+  "hospitals": [
+    { "zh": "广东省人民医院",                          "city": "guangzhou" },
+    { "zh": "广东省妇幼保健院",                        "city": "guangzhou" },
+    { "zh": "中山大学附属第一医院",                    "city": "guangzhou", "note": "越秀院区、南沙院区" },
+    { "zh": "中山大学孙逸仙纪念医院",                  "city": "guangzhou" },
+    { "zh": "中山大学附属第三医院",                    "city": "guangzhou" },
+    { "zh": "中山大学中山眼科中心",                    "city": "guangzhou" },
+    { "zh": "中山大学肿瘤防治中心",                    "city": "guangzhou" },
+    { "zh": "中山大学附属口腔医院",                    "city": "guangzhou" },
+    { "zh": "中山大学附属第六医院",                    "city": "guangzhou" },
+    { "zh": "南方医科大学南方医院",                    "city": "guangzhou" },
+    { "zh": "南方医科大学珠江医院",                    "city": "guangzhou" },
+    { "zh": "暨南大学附属第一医院",                    "city": "guangzhou" },
+    { "zh": "广东省中医院",                            "city": "guangzhou", "note": "知名中医院" },
+    { "zh": "汕头大学医学院第一附属医院",              "city": "shantou" },
+    { "zh": "广州医科大学附属第一医院",                "city": "guangzhou" },
+    { "zh": "广州市第一人民医院",                      "city": "guangzhou" },
+    { "zh": "广州医科大学附属妇女儿童医疗中心",        "city": "guangzhou" },
+    { "zh": "深圳市人民医院",                          "city": "shenzhen" },
+    { "zh": "北京大学深圳医院",                        "city": "shenzhen" },
+    { "zh": "香港大学深圳医院",                        "city": "shenzhen", "note": "与30余家保险机构直付" },
+    { "zh": "南方医科大学深圳医院",                    "city": "shenzhen" },
+    { "zh": "中山大学附属第五医院",                    "city": "shenzhen" },
+    { "zh": "珠海市人民医院",                          "city": "zhuhai" },
+    { "zh": "广东祈福医院",                            "city": "guangzhou", "note": "民营" },
+    { "zh": "佛山复星禅诚医院",                        "city": "foshan", "note": "民营" }
+  ]
+}
