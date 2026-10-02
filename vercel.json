@@ -1,1 +1,3 @@
-{"name":"medtravelcn","public":true}
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json"
+}

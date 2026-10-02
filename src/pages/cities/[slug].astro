@@ -1,23 +1,22 @@
 ---
 // src/pages/cities/[slug].astro
 // Dynamic city page - automatically generated for every city in database
-export const prerender = true;
+// 2026-10-02: 取消 prerender —— 原先 build 时烤死 31 城，新增城市/医院线上不出现
+// 改为 SSR：每次请求实时读库（postgres / snapshot / sqlite 自动切换，见 src/lib/store.ts）
+export const prerender = false;
 
 import Base from '~/layouts/Base.astro';
 import HospitalCard from '~/components/HospitalCard.astro';
-import { getAllCities, getCity, getHospitalsByCity, getReviewsByCity, incrementView } from '~/lib/db';
-
-export function getStaticPaths() {
-  return getAllCities().map(c => ({ params: { slug: c.slug } }));
-}
+import { allCities, oneCity, hospitalsOf, searchHospitals } from '~/lib/store';
+import { getReviewsByCity, incrementView } from '~/lib/db';
 
 const { slug } = Astro.params;
-const city = getCity(slug!);
+const city = await oneCity(slug!);
 if (!city) {
   return Astro.redirect('/');
 }
 
-const hospitals = getHospitalsByCity(slug!);
+const hospitals = await hospitalsOf(slug!);
 const reviews = await getReviewsByCity(slug!, 5);
 
 await incrementView(`city-${slug}`);

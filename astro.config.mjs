@@ -1,10 +1,12 @@
 import { defineConfig } from 'astro/config';
-import node from '@astrojs/node';
+import vercel from '@astrojs/vercel';
 
-// https://astro.build/config
+// Vercel 部署配置
+// - serverless: 原生适配 Vercel Function（better-sqlite3 只读打包进函数）
+// - 本地 dev 仍用 node adapter，见下方的注释切换说明
 export default defineConfig({
   output: 'server',
-  adapter: node({ mode: 'standalone' }),
+  adapter: vercel(),
   server: { port: 4321, host: true },
   vite: {
     ssr: {

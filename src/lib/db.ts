@@ -17,8 +17,32 @@ const USE_KV = !!(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
 
 let _db: Database.Database | null = null;
 
+// Vercel serverless 无法使用 better-sqlite3（SqliteError / native ABI 不匹配），
+// 生产环境改读 build 时生成的 src/data/snapshot.json；本地 dev 仍走 SQLite。
+const IS_VERCEL = !!process.env.VERCEL;
+const _viewCounts: Record<string, number> = {};
+let _json: { cities: any[]; hospitals: any[] } | null = null;
+
+function loadSnapshot(): { cities: any[]; hospitals: any[] } {
+  if (_json) return _json;
+  const { readFileSync, existsSync } = require('node:fs') as typeof import('node:fs');
+  const candidates = [
+    join(process.cwd(), 'src', 'data', 'snapshot.json'),
+    join(process.cwd(), 'data', 'snapshot.json'),
+    join(process.cwd(), '..', 'src', 'data', 'snapshot.json'),
+  ];
+  for (const p of candidates) {
+    if (existsSync(p)) {
+      _json = JSON.parse(readFileSync(p, 'utf-8'));
+      return _json!;
+    }
+  }
+  throw new Error(`snapshot.json not found. Tried: ${candidates.join(', ')}`);
+}
+
 export function getDB(): Database.Database {
   if (!_db) {
+    if (IS_VERCEL) throw new Error('SQLite unavailable on Vercel; use snapshot accessors.');
     _db = new Database(DB_PATH);
     _db.pragma('journal_mode = WAL');
     _db.pragma('foreign_keys = ON');
@@ -26,8 +50,71 @@ export function getDB(): Database.Database {
   return _db;
 }
 
-export function storageMode(): 'kv' | 'sqlite' {
-  return USE_KV ? 'kv' : 'sqlite';
+// ---- 生产（Vercel）读快照；本地读 SQLite ----
+function rows<T>(sql: string, args: any[] = []): T[] {
+  if (IS_VERCEL) {
+    const s = loadSnapshot();
+    if (sql.includes('FROM cities')) {
+      if (sql.includes('WHERE slug = ?')) {
+        return [s.cities.find((c: any) => c.slug === args[0])].filter(Boolean) as T[];
+      }
+      if (sql.includes('COUNT')) {
+        return [{ c: s.cities.length } as unknown as T];
+      }
+      return s.cities as T[];
+    }
+    if (sql.includes('FROM hospitals')) {
+      let h = s.hospitals;
+      if (sql.includes('city_slug = ?')) {
+        const slug = args[0];
+        if (sql.includes('COUNT')) return [{ c: h.filter((x: any) => x.city_slug === slug).length } as unknown as T];
+        h = h.filter((x: any) => x.city_slug === slug);
+        if (sql.includes('ORDER BY city_slug, sort_order')) {
+          h = [...h].sort((a: any, b: any) => a.city_slug.localeCompare(b.city_slug) || a.sort_order - b.sort_order);
+        } else {
+          h = [...h].sort((a: any, b: any) => a.sort_order - b.sort_order || a.id - b.id);
+        }
+        return h as T[];
+      }
+      if (sql.includes('COUNT')) return [{ c: h.length } as unknown as T];
+      if (sql.includes('LIKE')) {
+        const q = String(args[0] || '').toLowerCase();
+        const cities = new Map(s.cities.map((c: any) => [c.slug, c]));
+        return h
+          .filter((x: any) =>
+            [x.name, x.specialties, x.chinese_name, cities.get(x.city_slug)?.name]
+              .some((v) => (v || '').toLowerCase().includes(q))
+          )
+          .slice(0, 30) as T[];
+      }
+      return [...h].sort((a: any, b: any) =>
+        a.city_slug.localeCompare(b.city_slug) || a.sort_order - b.sort_order
+      ) as T[];
+    }
+    if (sql.includes('FROM reviews')) {
+      if (sql.includes('approved = 1')) {
+        const limit = (args[1] as number) || 50;
+        const list = (args[0] && !Number.isNaN(args[0] as number)
+          ? _json!.reviews || []
+          : _json!.reviews || []).slice(0, limit);
+        return list as T[];
+      }
+      return [] as T[];
+    }
+    if (sql.includes('FROM views')) {
+      if (sql.includes('WHERE page = ?')) {
+        return [{ count: _viewCounts[args[0]] || 0 } as unknown as T];
+      }
+      return Object.entries(_viewCounts).map(([page, count]) => ({ page, count })) as T[];
+    }
+    return [] as T[];
+  }
+  return getDB().prepare(sql).all(...args) as T[];
+}
+
+export function storageMode(): 'kv' | 'sqlite-readonly' | 'sqlite' {
+  if (USE_KV) return 'kv';
+  return IS_VERCEL ? 'sqlite-readonly' : 'sqlite';
 }
 
 export interface City {
@@ -73,28 +160,29 @@ export interface Review {
 }
 
 export function getAllCities(): City[] {
-  return getDB().prepare('SELECT * FROM cities ORDER BY name').all() as City[];
+  return rows<City>("SELECT * FROM cities ORDER BY name");
 }
 
 export function getCity(slug: string): City | undefined {
-  return getDB().prepare('SELECT * FROM cities WHERE slug = ?').get(slug) as City | undefined;
+  return rows<City>('SELECT * FROM cities WHERE slug = ?', [slug])[0];
 }
 
 export function getHospitalsByCity(citySlug: string): Hospital[] {
-  return getDB()
-    .prepare('SELECT * FROM hospitals WHERE city_slug = ? ORDER BY sort_order, id')
-    .all(citySlug) as Hospital[];
+  return rows<Hospital>(
+    'SELECT * FROM hospitals WHERE city_slug = ? ORDER BY sort_order, id',
+    [citySlug]
+  );
 }
 
 export function getHospitalCount(citySlug: string): number {
-  const row = getDB()
-    .prepare('SELECT COUNT(*) as c FROM hospitals WHERE city_slug = ?')
-    .get(citySlug) as { c: number };
-  return row.c;
+  return rows<{ c: number }>(
+    'SELECT COUNT(*) as c FROM hospitals WHERE city_slug = ?',
+    [citySlug]
+  )[0].c;
 }
 
 export function getAllHospitals(): Hospital[] {
-  return getDB().prepare('SELECT * FROM hospitals ORDER BY city_slug, sort_order').all() as Hospital[];
+  return rows<Hospital>('SELECT * FROM hospitals ORDER BY city_slug, sort_order');
 }
 
 export function getApprovedReviews(limit = 50): Review[] {
@@ -102,18 +190,22 @@ export function getApprovedReviews(limit = 50): Review[] {
     // KV stores reviews as keys like "review:1234" with JSON value
     return getReviewsFromKV(limit);
   }
-  return getDB()
-    .prepare('SELECT * FROM reviews WHERE approved = 1 ORDER BY created_at DESC LIMIT ?')
-    .all(limit) as Review[];
+  if (IS_VERCEL) return [] as Review[];
+  return rows<Review>(
+    'SELECT * FROM reviews WHERE approved = 1 ORDER BY created_at DESC LIMIT ?',
+    [limit]
+  );
 }
 
 export function getReviewsByCity(citySlug: string, limit = 20): Review[] {
   if (USE_KV) {
     return getReviewsFromKV(limit, citySlug);
   }
-  return getDB()
-    .prepare('SELECT * FROM reviews WHERE city_slug = ? AND approved = 1 ORDER BY created_at DESC LIMIT ?')
-    .all(citySlug, limit) as Review[];
+  if (IS_VERCEL) return [] as Review[];
+  return rows<Review>(
+    'SELECT * FROM reviews WHERE city_slug = ? AND approved = 1 ORDER BY created_at DESC LIMIT ?',
+    [citySlug, limit]
+  );
 }
 
 export function insertReview(review: Omit<Review, 'id' | 'created_at' | 'approved'>): number {
@@ -140,6 +232,10 @@ export function insertReview(review: Omit<Review, 'id' | 'created_at' | 'approve
         return 0;
       })
       .then(() => id) as unknown as number;
+  }
+  // Vercel 无 KV 时无法持久化评论，抛出可读错误
+  if (IS_VERCEL) {
+    throw new Error('Reviews unavailable in this environment (read-only storage).');
   }
   const stmt = getDB().prepare(`
     INSERT INTO reviews (city_slug, hospital_name, rating, author, email, country, content, approved)
@@ -169,8 +265,8 @@ async function getReviewsFromKV(limit: number, citySlug?: string): Promise<Revie
 
 export function searchHospitals(query: string): Hospital[] {
   const q = `%${query.toLowerCase()}%`;
-  return getDB()
-    .prepare(`
+  return rows<Hospital>(
+    `
       SELECT h.* FROM hospitals h
       LEFT JOIN cities c ON h.city_slug = c.slug
       WHERE LOWER(h.name) LIKE ?
@@ -179,13 +275,19 @@ export function searchHospitals(query: string): Hospital[] {
          OR LOWER(c.name) LIKE ?
       ORDER BY c.name, h.sort_order
       LIMIT 30
-    `)
-    .all(q, q, q, q) as Hospital[];
+    `,
+    [q, q, q, q]
+  );
 }
 
 export function incrementView(page: string): number | Promise<number> {
   if (USE_KV) {
     return kv.incr(`views:${page}`) as Promise<number>;
+  }
+  // Vercel：SQLite 只读，计数存内存
+  if (IS_VERCEL) {
+    _viewCounts[page] = (_viewCounts[page] || 0) + 1;
+    return _viewCounts[page];
   }
   const stmt = getDB().prepare(`
     INSERT INTO views (page, count) VALUES (?, 1)
@@ -213,11 +315,10 @@ export function getViews(page?: string): Record<string, number> | number | Promi
     }) as Promise<Record<string, number>>;
   }
   if (page) {
-    const row = getDB().prepare('SELECT count FROM views WHERE page = ?').get(page) as { count: number } | undefined;
-    return row?.count ?? 0;
+    return rows<{ count: number }>('SELECT count FROM views WHERE page = ?', [page])[0]?.count ?? 0;
   }
-  const rows = getDB().prepare('SELECT page, count FROM views').all() as { page: string; count: number }[];
+  const rowsOut = rows<{ page: string; count: number }>('SELECT page, count FROM views');
   const result: Record<string, number> = {};
-  rows.forEach(r => { result[r.page] = r.count; });
+  rowsOut.forEach(r => { result[r.page] = r.count; });
   return result;
 }

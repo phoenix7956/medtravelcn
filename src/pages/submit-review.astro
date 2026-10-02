@@ -2,9 +2,9 @@
 // src/pages/submit-review.astro
 // Review submission form
 import Base from '~/layouts/Base.astro';
-import { getAllCities } from '~/lib/db';
+import { allCities } from '~/lib/store';
 
-const cities = getAllCities();
+const cities = await allCities();
 const url = new URL(Astro.request.url);
 const presetCity = url.searchParams.get('city') || '';
 const presetHospital = url.searchParams.get('hospital') || '';

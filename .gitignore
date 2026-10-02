@@ -24,3 +24,10 @@ data/*.db-wal
 
 # R142: 备份文件不入库
 *.bak-*
+
+# 快照是 SSR 数据源，必须入库（Vercel 部署时要打进函数包）
+!src/data/snapshot.json
+
+# 本地报告不入库
+reports/
+docs/SCHEMA*.md.bak

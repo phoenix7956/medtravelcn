@@ -282,12 +282,12 @@
   {
     "city": "dongguan",
     "cityName": "Dongguan",
-    "chinese_name": "东莞",
-    "region": "South China",
-    "intro": "Dongguan is a major manufacturing hub in the Pearl River Delta between Guangzhou and Shenzhen, with a dense network of tertiary hospitals. Known for cardiology, oncology, and orthopedic surgery, the city attracts international patients seeking high-quality care with short wait times and competitive pricing.",
-    "avg_cost": "$1,400-$6,800",
-    "wait_time": "1-3 days",
-    "growth": "+72% YoY",
+    "chinese_name": null,
+    "region": null,
+    "intro": null,
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
     "hospitals": [
       {
         "name": "Dongguan People's Hospital (东莞市人民医院)",
@@ -429,12 +429,12 @@
   {
     "city": "guiyang",
     "cityName": "Guiyang",
-    "chinese_name": "贵阳",
-    "region": "Southwest China",
-    "intro": "Guiyang is the capital of Guizhou province and a rapidly growing medical hub in Southwest China. Known for traditional Chinese medicine combined with modern oncology and respiratory medicine, the city's high-altitude climate offers specialized rehabilitation programs.",
-    "avg_cost": "$900-$4,500",
-    "wait_time": "1-3 days",
-    "growth": "+52% YoY",
+    "chinese_name": null,
+    "region": null,
+    "intro": null,
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
     "hospitals": [
       {
         "name": "Guizhou Provincial People's Hospital (贵州省人民医院)",
@@ -740,12 +740,12 @@
   {
     "city": "nanchang",
     "cityName": "Nanchang",
-    "chinese_name": "南昌",
-    "region": "East China",
-    "intro": "Nanchang is the capital of Jiangxi province and home to the renowned Xiangya Medical Cluster (Jiangxi Medical College-affiliated hospitals). Known for hematology, oncology, and organ transplantation, the city's hospitals serve patients from surrounding provinces with competitive pricing and modern facilities.",
-    "avg_cost": "$1,100-$5,800",
-    "wait_time": "1-4 days",
-    "growth": "+45% YoY",
+    "chinese_name": null,
+    "region": null,
+    "intro": null,
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
     "hospitals": [
       {
         "name": "The First Affiliated Hospital of Nanchang University (南昌大学第一附属医院)",
@@ -1050,12 +1050,12 @@
   {
     "city": "shenyang",
     "cityName": "Shenyang",
-    "chinese_name": "沈阳",
-    "region": "Northeast China",
-    "intro": "Shenyang is the capital of Liaoning province and the medical hub for Northeast China. Home to China Medical University's flagship hospitals, the city offers advanced oncology, transplantation, and complex surgical care with internationally trained physicians and established foreign patient services.",
-    "avg_cost": "$1,300-$6,000",
-    "wait_time": "2-4 days",
-    "growth": "+55% YoY",
+    "chinese_name": null,
+    "region": null,
+    "intro": null,
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
     "hospitals": [
       {
         "name": "The First Hospital of China Medical University (中国医大一院)",
@@ -1157,12 +1157,12 @@
   {
     "city": "shijiazhuang",
     "cityName": "Shijiazhuang",
-    "chinese_name": "石家庄",
-    "region": "North China",
-    "intro": "Shijiazhuang is the capital of Hebei province and a major medical center serving northern China. The city is known for ophthalmology, cardiovascular surgery, and pharmaceutical research, with Hebei Medical University-affiliated hospitals providing affordable specialized care.",
-    "avg_cost": "$1,000-$5,000",
-    "wait_time": "1-3 days",
-    "growth": "+48% YoY",
+    "chinese_name": null,
+    "region": null,
+    "intro": null,
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
     "hospitals": [
       {
         "name": "Hebei Medical University First Hospital (河北医科大学第一医院)",
@@ -1253,12 +1253,12 @@
   {
     "city": "taiyuan",
     "cityName": "Taiyuan",
-    "chinese_name": "太原",
-    "region": "North China",
-    "intro": "Taiyuan is the capital of Shanxi province and a major industrial hub in North China. Shanxi Bethune Hospital and other provincial hospitals offer advanced oncology, cardiac surgery, and organ transplantation with lower costs than Beijing/Shanghai. Coal-mining medicine and occupational disease treatment are regional specialties.",
-    "avg_cost": "$1,000-$5,500",
-    "wait_time": "1-3 days",
-    "growth": "+38% YoY",
+    "chinese_name": null,
+    "region": null,
+    "intro": null,
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
     "hospitals": [
       {
         "name": "Shanxi Bethune Hospital (山西白求恩医院)",

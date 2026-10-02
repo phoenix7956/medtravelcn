@@ -3,16 +3,16 @@
 // Homepage - dynamically renders city grid from SQLite
 import Base from '~/layouts/Base.astro';
 import CityCard from '~/components/CityCard.astro';
-import { getAllCities, getHospitalCount, incrementView } from '~/lib/db';
+import { incrementView } from '~/lib/db';
+import { allCities, hospitalCount, hospitalsOf } from '~/lib/store';
 
 // Track this page view
 await incrementView('home');
 
-const cities = getAllCities();
-const citiesWithCounts = cities.map(c => ({
-  city: c,
-  count: getHospitalCount(c.slug),
-}));
+const cities = await allCities();
+const citiesWithCounts = await Promise.all(
+  cities.map(async c => ({ city: c, count: await hospitalCount(c.slug) }))
+);
 ---
 <Base
   title="MedTravelCN.net — Medical Tourism to China"

@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/export-db-to-search-index.mjs && node scripts/init-db.mjs && node scripts/migrate.mjs && astro build",
+    "build": "node scripts/gen-snapshot.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "db:export": "node scripts/export-db-to-search-index.mjs",
@@ -16,14 +16,23 @@
     "db:migrate": "node scripts/migrate.mjs",
     "db:provenance": "node scripts/add-provenance.mjs",
     "db:verify": "node scripts/verify-sync.mjs",
-    "db:reset": "rm -f data/medtravelcn.db && npm run db:init && npm run db:migrate"
+    "db:reset": "rm -f data/medtravelcn.db && npm run db:init && npm run db:migrate",
+    "db:snapshot": "node scripts/gen-snapshot.mjs",
+    "build:local": "node scripts/gen-snapshot.mjs && node scripts/export-db-to-search-index.mjs && node scripts/init-db.mjs && node scripts/migrate.mjs && astro build",
+    "db:pg:init": "node scripts/init-postgres.mjs",
+    "data:quality": "node scripts/data-quality.mjs"
   },
   "dependencies": {
     "@astrojs/node": "^11.0.0",
+    "@astrojs/vercel": "^11.0.11",
     "@types/better-sqlite3": "^7.6.13",
     "@vercel/kv": "^2.0.0",
     "astro": "^7.0.3",
     "better-sqlite3": "12.11.1",
+    "pg": "^8.23.0",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.23.1"
   }
 }

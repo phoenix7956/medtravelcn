@@ -2,9 +2,9 @@
 // src/pages/how-it-works.astro
 // How It Works - process overview using Base layout
 import Base from '~/layouts/Base.astro';
-import { getAllCities } from '~/lib/db';
+import { allCities } from '~/lib/store';
 
-const cities = getAllCities();
+const cities = await allCities();
 ---
 <Base
   title="How It Works — Medical Tourism to China | MedTravelCN"
