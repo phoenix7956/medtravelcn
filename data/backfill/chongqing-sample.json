@@ -1,0 +1,41 @@
+[
+  {
+    "id": 15,
+    "foreign_access": "certified",
+    "cert_level": "涉外医疗服务医院",
+    "cert_source": "重庆市卫生健康委员会办公室关于公布重庆市首批涉外医疗服务机构名单的通知（2024-12-06）",
+    "cert_year": 2024,
+    "international_dept": "yes",
+    "emergency_24h": "yes",
+    "insurance_direct": "unknown",
+    "source_url": "https://wsjkw.cq.gov.cn/zwgk_242/wsjklymsxx/ylws_266434/yzgl_266435/gzxx/202412/t20241206_13870161_wap.html",
+    "maintainer": "xieguanzhi",
+    "note": "重庆医大附一，官方首批涉外名单（5 家医院之一），验收有效期至 2027-11"
+  },
+  {
+    "id": 14,
+    "foreign_access": "restricted",
+    "cert_level": null,
+    "cert_source": null,
+    "cert_year": null,
+    "international_dept": "no",
+    "emergency_24h": "yes",
+    "insurance_direct": "unknown",
+    "source_url": "https://wsjkw.cq.gov.cn/zwgk_242/wsjklymsxx/ylws_266434/yzgl_266435/gzxx/202412/t20241206_13870161_wap.html",
+    "maintainer": "xieguanzhi",
+    "note": "陆军军医大学附属西南医院，军队医院。出现在涉外名单征求意见稿的抄送单位中，但未列入正式名单。对外国患者属受限——需专项审批。急诊对地方开放 24h。"
+  },
+  {
+    "id": 16,
+    "foreign_access": "restricted",
+    "cert_level": null,
+    "cert_source": null,
+    "cert_year": null,
+    "international_dept": "no",
+    "emergency_24h": "yes",
+    "insurance_direct": "unknown",
+    "source_url": "https://wsjkw.cq.gov.cn/zwgk_242/wsjklymsxx/ylws_266434/yzgl_266435/gzxx/202412/t20241206_13870161_wap.html",
+    "maintainer": "xieguanzhi",
+    "note": "陆军特色医学中心（大坪医院），军队医院。同西南医院：征求意见稿抄送，未入正式名单，外国患者受限。创伤救治能力强（战创伤中心），急诊 24h 开放。"
+  }
+]

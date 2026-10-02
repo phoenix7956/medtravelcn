@@ -20,7 +20,10 @@
     "db:snapshot": "node scripts/gen-snapshot.mjs",
     "build:local": "node scripts/gen-snapshot.mjs && node scripts/export-db-to-search-index.mjs && node scripts/init-db.mjs && node scripts/migrate.mjs && astro build",
     "db:pg:init": "node scripts/init-postgres.mjs",
-    "data:quality": "node scripts/data-quality.mjs"
+    "data:quality": "node scripts/data-quality.mjs",
+    "meta:stats": "node scripts/backfill-hospital-meta.mjs --stats",
+    "meta:list": "node scripts/backfill-hospital-meta.mjs --list",
+    "meta:apply": "node scripts/backfill-hospital-meta.mjs --file"
   },
   "dependencies": {
     "@astrojs/node": "^11.0.0",

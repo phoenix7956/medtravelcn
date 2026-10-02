@@ -1,0 +1,24 @@
+[
+  {
+    "_comment": "复制此对象，按医院逐条填。id 从 --list 拿。",
+    "_id 说明": "id 是 hospitals 表主键，不是医院编号",
+    "id": 123,
+    "foreign_access": "certified",
+    "_foreign_access 可选值": [
+      "certified        = 在省市卫健委涉外医疗服务机构名单内",
+      "open             = 官网确认接收外国患者，无特殊门槛",
+      "appointment_only = 需提前预约/走国际部流程",
+      "restricted       = 军警医院，外国患者基本无法自行就医",
+      "unknown          = 查不到（默认，绝不猜）"
+    ],
+    "cert_level": "试点医院",
+    "cert_source": "粤卫通函〔2026〕XX号",
+    "cert_year": 2026,
+    "insurance_direct": "yes",
+    "emergency_24h": "yes",
+    "international_dept": "yes",
+    "source_url": "https://官方批文或医院国际部页面",
+    "maintainer": "xieguanzhi",
+    "note": "补充说明"
+  }
+]
