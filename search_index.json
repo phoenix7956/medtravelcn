@@ -1,5 +1,85 @@
 [
   {
+    "city": "baoding",
+    "cityName": "Baoding",
+    "chinese_name": "保定",
+    "region": "North China",
+    "intro": "Baoding in Hebei province is a growing medical center serving the Beijing-Tianjin-Hebei cluster, home to Baoding First Central Hospital and multiple tertiary hospitals offering affordable specialized care.",
+    "avg_cost": "$500-$2,500",
+    "wait_time": "1-3 days",
+    "growth": "+32% YoY",
+    "hospitals": [
+      {
+        "name": "Baoding First Central Hospital (保定市第一中心医院)",
+        "specialties": "Cardiology, Oncology, Neurology, General Medicine",
+        "address": "285 Changlong North Street",
+        "phone": "+86-312-219-6969",
+        "url": "http://www.bdfczxyy.com/"
+      },
+      {
+        "name": "Baoding People's Hospital (保定市人民医院)",
+        "specialties": "General Medicine, Surgery, Cardiology, OB/GYN",
+        "address": "289 Changlong North Street, Baoding",
+        "phone": "+86-312-219-6195",
+        "url": "http://www.bdsrm.com.cn/"
+      },
+      {
+        "name": "Baoding Central Hospital (保定市中心医院)",
+        "specialties": "Cardiology, Neurology, Oncology, General Medicine",
+        "address": "201 Changlong South Street",
+        "phone": "+86-312-232-2902",
+        "url": "http://www.bdcy.com.cn/"
+      },
+      {
+        "name": "Baoding TCM Hospital (保定市中医医院)",
+        "specialties": "TCM, Rehabilitation, General Medicine, Oncology (TCM)",
+        "address": "66 Zhongshan Road, Baoding",
+        "phone": "+86-312-221-3122",
+        "url": "http://www.bdzzy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "beihai",
+    "cityName": "Beihai",
+    "chinese_name": "北海",
+    "region": "South China",
+    "intro": "Beihai, a coastal city in Guangxi, is the gateway to the Sino-ASEAN medical corridor. Known for affordable general care and traditional Chinese medicine combined with modern oncology, the city is a popular destination for international patients seeking cost-effective specialized treatment.",
+    "avg_cost": "$600-$3,500",
+    "wait_time": "1-3 days",
+    "growth": "+30% YoY",
+    "hospitals": [
+      {
+        "name": "Beihai Central Hospital (北海市人民医院)",
+        "specialties": "General Medicine, Cardiology, Neurology, Oncology, TCM",
+        "address": "21 Beibu Avenue, Haikou District",
+        "phone": "+86-779-202-3111",
+        "url": "http://www.beihaihospital.com.cn/"
+      },
+      {
+        "name": "Beihai TCM Hospital (北海市中医院)",
+        "specialties": "TCM, Rehabilitation, General Medicine",
+        "address": "129 Gaocheng East Road, Chancheng District",
+        "phone": "+86-779-203-3501",
+        "url": "http://www.bhzyy.cn/"
+      },
+      {
+        "name": "Beihai Women & Children's Hospital (北海市妇幼保健院)",
+        "specialties": "Obstetrics & Gynecology, Pediatrics, Women's Health",
+        "address": "103 Xinying Street, Haikou District",
+        "phone": "+86-779-202-2288",
+        "url": "http://www.bhfuyb.com.cn/"
+      },
+      {
+        "name": "Beihai First People's Hospital (北海市一医院)",
+        "specialties": "General Medicine, Surgery, Emergency Medicine",
+        "address": "218 Gaocheng Avenue",
+        "phone": "+86-779-205-3899",
+        "url": "http://www.bh1yy.com.cn/"
+      }
+    ]
+  },
+  {
     "city": "beijing",
     "cityName": "Beijing",
     "chinese_name": "北京",
@@ -276,6 +356,17 @@
         "cityName": "Dalian",
         "siteName": "www.dyyy.xin",
         "note": ""
+      },
+      {
+        "name": "Dalian Women & Children's Hospital (大连市妇产医院)",
+        "specialties": "Obstetrics & Gynecology, Pediatrics, Maternal-Fetal Medicine",
+        "address": "4 Huaxia Road, Zhongshan District, Dalian",
+        "phone": "+86-411-8260-2111",
+        "url": "http://www.dlyy.com.cn/",
+        "citySlug": "dalian",
+        "cityName": "Dalian",
+        "siteName": "www.dyyy.xin",
+        "note": ""
       }
     ]
   },
@@ -356,6 +447,46 @@
         "address": "1 Kuiqi Road, Shunde District",
         "phone": "+86-757-2231-8888",
         "url": "http://www.sdyy.cn/"
+      },
+      {
+        "name": "Foshan Fosun Chancheng Hospital",
+        "specialties": "Oncology, General Surgery, Rehabilitation",
+        "address": null,
+        "phone": null,
+        "url": null
+      }
+    ]
+  },
+  {
+    "city": "fuzhou",
+    "cityName": "Fuzhou",
+    "chinese_name": "福州",
+    "region": "East China",
+    "intro": "Capital of Fujian province, a regional medical hub serving southeastern China. Hosts the Fujian Medical University hospital network with strong neuroscience and hepatobiliary surgery programs. Several thousand overseas Chinese from Southeast Asia trace family ties to Fuzhou.",
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
+    "hospitals": [
+      {
+        "name": "Fujian Provincial People's Hospital (The First Affiliated Hospital of Fujian University of Traditional Chinese Medicine)",
+        "specialties": "Traditional Chinese Medicine, Integrative Medicine, Internal Medicine, Surgery, Nursing, Chronic Disease Management",
+        "address": "602 Middle 817 Road, Taijiang District, Fuzhou, Fujian 350004",
+        "phone": "+86-591-83258135",
+        "url": "https://www.srmyy.com/"
+      },
+      {
+        "name": "The First Affiliated Hospital of Fujian Medical University",
+        "specialties": "Comprehensive tertiary care; National Regional Medical Center (in partnership with Huashan Hospital); 4,500 beds across Chating, Binhai, Aoti and Minnan campuses",
+        "address": "20 Chazhong Road, Taijiang District, Fuzhou, Fujian 350005 (Chating campus)",
+        "phone": "+86-591-87982222",
+        "url": "https://www.fyyy.com/"
+      },
+      {
+        "name": "Fujian Provincial Hospital (Fuzhou University Affiliated Provincial Hospital)",
+        "specialties": "Comprehensive tertiary care; cardiovascular, gastroenterology, hepatobiliary, neurosurgery, oncology, hematology, endocrinology",
+        "address": "134 Dongjie, Gulou District, Fuzhou 350001 (Dongjie campus)",
+        "phone": "+86-591-87557768",
+        "url": "https://fjsl.com.cn/"
       }
     ]
   },
@@ -423,6 +554,138 @@
         "cityName": "Guangzhou",
         "siteName": "www.gzsums.edu.cn",
         "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Guangdong Women and Children's Medical Center",
+        "specialties": "Maternal and Child Health, Neonatology, Pediatrics",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Sun Yat-sen Memorial Hospital of the Second Sun Yat-sen University of Medical Sciences",
+        "specialties": "Oncology, General Surgery, Internal Medicine",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Third Affiliated Hospital of Sun Yat-sen University",
+        "specialties": "Orthopedics, Dermatology, Rheumatology",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Sun Yat-sen University Cancer Center",
+        "specialties": "Oncology, Radiotherapy, Medical Oncology",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Hospital of Stomatology, Sun Yat-sen University",
+        "specialties": "Dentistry, Oral Surgery, Orthodontics, Oral Oncology",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Sixth Affiliated Hospital of Sun Yat-sen University",
+        "specialties": "Rheumatology, Urology, Orthopedics",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Nanfang Hospital, Southern Medical University",
+        "specialties": "General Surgery, Oncology, Nephrology",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Zhujiang Hospital, Southern Medical University",
+        "specialties": "Oncology, Neurology, Cardiovascular",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Guangdong Provincial Hospital of Traditional Chinese Medicine",
+        "specialties": "Traditional Chinese Medicine, Acupuncture, Rehabilitation",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Guangzhou First Municipal Hospital",
+        "specialties": "Respiratory, Cardiovascular, Gastroenterology",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Women and Children's Medical Center, Guangzhou Medical University",
+        "specialties": "Obstetrics, Gynecology, Pediatrics, Neonatology",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
+      },
+      {
+        "name": "Guangdong Clifford Hospital",
+        "specialties": "Oncology, Cardiology, Orthopedics",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "guangzhou",
+        "cityName": "Guangzhou",
+        "siteName": "www.gzsums.edu.cn",
+        "note": "One of Guangzhou's most respected hospitals. Particularly strong in digestive diseases, liver condit"
       }
     ]
   },
@@ -463,6 +726,46 @@
         "address": "1 Beijing Road, Yunyan District",
         "phone": "+86-851-8651-1111",
         "url": "http://www.gzszlyy.cn/"
+      }
+    ]
+  },
+  {
+    "city": "haikou",
+    "cityName": "Haikou",
+    "chinese_name": "海口",
+    "region": "South China",
+    "intro": "Capital of Hainan province and the principal city of the Hainan Free Trade Port. Boasts a tropical climate suited to rehabilitation, a Boao medical tourism pilot zone, and growing international patient services including dedicated International (VIP) Clinics and bilingual coordination.",
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
+    "hospitals": [
+      {
+        "name": "Hainan Provincial People's Hospital",
+        "specialties": "Comprehensive tertiary care; International Precision Medicine Innovation Center (14-story building, ¥724M budget approved 2023)",
+        "address": "19 Xiuhua Road, Xiuying District, Haikou, Hainan 570311",
+        "phone": "+86-898-963399",
+        "url": "https://www.phhp.com.cn/"
+      },
+      {
+        "name": "The First Affiliated Hospital of Hainan Medical University",
+        "specialties": "Comprehensive tertiary care; teaching hospital",
+        "address": "31 Longhua Road, Haikou, Hainan 570102",
+        "phone": "+86-898-66772248",
+        "url": "https://www.hyyfyuan.cn/"
+      },
+      {
+        "name": "Hainan Cancer Hospital (Hainan Medical University Affiliated Cancer Hospital)",
+        "specialties": "Surgical Oncology, Medical Oncology, Radiation Oncology (including proton/heavy-ion), Hematology, Cancer Rehabilitation; positioned as international medical tourism facility",
+        "address": "9 West Changbin 4th Street, Xiuying District, Haikou, Hainan",
+        "phone": "+86-898-36379999",
+        "url": "https://www.hnszlyy.cn/"
+      },
+      {
+        "name": "Haikou People's Hospital",
+        "specialties": "Comprehensive tertiary care; dedicated International (VIP) Clinic with bilingual (Chinese/English) staff",
+        "address": "43 Renmin Avenue, Haikou, Hainan (International Medical Center, Building 3, 2nd Floor)",
+        "phone": "+86-898-66151024",
+        "url": "https://www.haikoumh.com.cn/"
       }
     ]
   },
@@ -564,6 +867,17 @@
         "cityName": "Harbin",
         "siteName": "www.54md.com",
         "note": ""
+      },
+      {
+        "name": "Harbin Children's Hospital (哈尔滨市儿童医院)",
+        "specialties": "Pediatrics, Neonatal Medicine, Pediatric Surgery",
+        "address": "48 Xuefu Road, Harbin",
+        "phone": "+86-451-5368-0111",
+        "url": "http://www.harbinhospital.com/",
+        "citySlug": "harbin",
+        "cityName": "Harbin",
+        "siteName": "www.54md.com",
+        "note": ""
       }
     ]
   },
@@ -604,6 +918,86 @@
         "address": "540 Heping Road, Yaohai District",
         "phone": "+86-551-6223-9999",
         "url": "http://www.hf2yy.cn/"
+      }
+    ]
+  },
+  {
+    "city": "heze",
+    "cityName": "Heze",
+    "chinese_name": "菏泽",
+    "region": "East China",
+    "intro": "Heze in Shandong province is the fastest-growing tertiary medical center in the region, home to Heze Municipal Central Hospital and Heze Medical University hospitals with growing international patient services.",
+    "avg_cost": "$500-$2,500",
+    "wait_time": "1-2 days",
+    "growth": "+35% YoY",
+    "hospitals": [
+      {
+        "name": "Heze Municipal Central Hospital (菏泽市立医院)",
+        "specialties": "General Medicine, Cardiology, Neurology, Oncology",
+        "address": "1999 Jingshan Road, Dancheng District",
+        "phone": "+86-530-536-0345",
+        "url": "http://www.hezeshl.com.cn/"
+      },
+      {
+        "name": "Heze People's Hospital (菏泽市人民医院)",
+        "specialties": "General Medicine, Surgery, OB/GYN, Pediatrics",
+        "address": "127 Gushan Road, Dancheng District",
+        "phone": "+86-530-551-6008",
+        "url": "http://www.hzsrm.com.cn/"
+      },
+      {
+        "name": "Heze Medical University Hospital (菏泽医学高等专科学校附属医院)",
+        "specialties": "General Medicine, Cardiology, Orthopedics",
+        "address": "Heze City, Shandong",
+        "phone": "+86-530-533-0590",
+        "url": "http://www.hzyxy.cn/"
+      },
+      {
+        "name": "Heze TCM Hospital (菏泽市中医医院)",
+        "specialties": "TCM, Rehabilitation, Neurology, Oncology (TCM)",
+        "address": "1666 Jingshan Road, Dancheng District",
+        "phone": "+86-530-531-1009",
+        "url": "http://www.hzzyy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "jiangmen",
+    "cityName": "Jiangmen",
+    "chinese_name": "江门",
+    "region": "South China",
+    "intro": "Jiangmen in Guangdong province is a coastal medical hub adjacent to Macau, home to Jiangmen People's Hospital and Chinese medicine centers, popular for affordable general care and TCM for international patients.",
+    "avg_cost": "$600-$3,000",
+    "wait_time": "1-3 days",
+    "growth": "+28% YoY",
+    "hospitals": [
+      {
+        "name": "Jiangmen People's Hospital (江门市人民医院)",
+        "specialties": "General Medicine, Cardiology, Neurology, Oncology",
+        "address": "77 Renmin West Road, Pengjiang District",
+        "phone": "+86-750-333-8111",
+        "url": "http://www.jmrmyy.com.cn/"
+      },
+      {
+        "name": "Jiangmen Central Hospital (江门市中心医院)",
+        "specialties": "Cardiology, Oncology, Neurology, General Medicine",
+        "address": "66 Jianshang Avenue, Jiangmen",
+        "phone": "+86-750-336-9999",
+        "url": "http://www.jmszx.com.cn/"
+      },
+      {
+        "name": "Jiangmen TCM Hospital (江门市中医院)",
+        "specialties": "TCM, Rehabilitation, General Medicine, Oncology (TCM)",
+        "address": "33 Jianshang Avenue, Jiangmen",
+        "phone": "+86-750-318-3699",
+        "url": "http://www.jmzyy.com.cn/"
+      },
+      {
+        "name": "Jiangmen Women & Children's Hospital (江门市妇幼保健院)",
+        "specialties": "Obstetrics & Gynecology, Pediatrics, Maternal-Fetal Medicine",
+        "address": "100 Fuyou Avenue, Jiangmen",
+        "phone": "+86-750-389-9898",
+        "url": "http://www.jmfy.com.cn/"
       }
     ]
   },
@@ -834,6 +1228,46 @@
     ]
   },
   {
+    "city": "nanning",
+    "cityName": "Nanning",
+    "chinese_name": "南宁",
+    "region": "South China",
+    "intro": "Capital of Guangxi Zhuang Autonomous Region and gateway to ASEAN countries. Several hospitals operate dedicated international departments targeted at ASEAN patients, with English/Thai/Vietnamese language services and direct billing with international insurers.",
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
+    "hospitals": [
+      {
+        "name": "The First People's Hospital of Nanning",
+        "specialties": "Comprehensive tertiary care; dedicated International Medical Department (opened 2026-06-05); ASEAN-targeted services, multilingual team, integrated chronic disease management",
+        "address": "No official English address confirmed in this batch — to be verified",
+        "phone": null,
+        "url": "https://www.nn1yy.com/"
+      },
+      {
+        "name": "The First Affiliated Hospital of Guangxi Medical University",
+        "specialties": "Comprehensive tertiary care (2,750 beds, 20 national clinical key specialties); Pediatrics, Gastroenterology, Ophthalmology, Neurology, Cardiology, Oncology; direct billing with 50+ international insurers",
+        "address": "6 Shuangyong Road, Nanning, Guangxi 530021",
+        "phone": "+86-771-5356592",
+        "url": "https://asean-healthcare.gxmuyfy.cn/"
+      },
+      {
+        "name": "The First Affiliated Hospital of Guangxi University of Chinese Medicine",
+        "specialties": "Traditional Chinese Medicine, Integrative Medicine, Hepatology (TCM), Respiratory, Orthopedics, Cardiovascular, Endocrinology",
+        "address": "89-9 Dongge Road, Nanning, Guangxi 530023 (Dongge campus)",
+        "phone": "+86-771-5602026",
+        "url": "https://www.gxzyy.com.cn/"
+      },
+      {
+        "name": "People's Hospital of Guangxi Zhuang Autonomous Region",
+        "specialties": "Comprehensive tertiary care; dedicated International Medical Services (国际医疗部) with Renowned Specialist/VIP Clinic, Exclusive Inpatient Center (smart wards, floors 24-26 of Building 2), Health Management Center",
+        "address": "No official English address confirmed in this batch — to be verified",
+        "phone": null,
+        "url": "https://www.gxhospital.com/"
+      }
+    ]
+  },
+  {
     "city": "ningbo",
     "cityName": "Ningbo",
     "chinese_name": "宁波",
@@ -926,6 +1360,46 @@
         "cityName": "Qingdao",
         "siteName": "www.qyfy.cn",
         "note": ""
+      }
+    ]
+  },
+  {
+    "city": "quanzhou",
+    "cityName": "Quanzhou",
+    "chinese_name": "泉州",
+    "region": "East China",
+    "intro": "Quanzhou, a coastal city in Fujian province and historic起点 of the Maritime Silk Road, is a major TCM hub in southeastern China. It is the largest city in Fujian by area and home to the Second Affiliated Hospital of Fujian Medical University, a strong general-care and TCM center serving both domestic and international patients at competitive South-Fujian prices.",
+    "avg_cost": "$600-$3,000",
+    "wait_time": "1-3 days",
+    "growth": "+35% YoY",
+    "hospitals": [
+      {
+        "name": "The Second Affiliated Hospital of Fujian Medical University",
+        "specialties": "Comprehensive tertiary care; Quanzhou-based campus serving southern Fujian and the Quanzhou region",
+        "address": "34 North Zhongshan Road, Licheng District, Quanzhou 362000 (Licheng campus)",
+        "phone": "+86-595-22791001",
+        "url": "https://www.fyey.cn/"
+      },
+      {
+        "name": "Quanzhou First Hospital (泉州市第一医院)",
+        "specialties": "General Medicine, Surgery, OB/GYN, Pediatrics, TCM",
+        "address": "24 Jiulong Road, Fengze District, Quanzhou",
+        "phone": "+86-595-2261-000",
+        "url": "http://www.qzfirsthospital.com/"
+      },
+      {
+        "name": "Quanzhou Central Hospital (泉州市第三医院)",
+        "specialties": "Infectious Diseases, Respiratory Medicine, General Medicine",
+        "address": "200 Zengcun Road, Quanzhou",
+        "phone": "+86-595-2255-398",
+        "url": "http://www.qzsdyy.com/"
+      },
+      {
+        "name": "Fujian Affiliated Hospital of Quanzhou University (福建医科大学附属泉州医院)",
+        "specialties": "Cardiology, Oncology, General Medicine, Neurology",
+        "address": "169 Jianshan Road, Quanzhou",
+        "phone": "+86-595-2858-133",
+        "url": "http://www.qzsfyy.cn/"
       }
     ]
   },
@@ -1048,6 +1522,86 @@
     ]
   },
   {
+    "city": "shantou",
+    "cityName": "Shantou",
+    "chinese_name": "汕头",
+    "region": "South China",
+    "intro": "A port city in eastern Guangdong and one of China's earliest special economic zones.",
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
+    "hospitals": [
+      {
+        "name": "First Affiliated Hospital of Shantou University Medical College",
+        "specialties": "General Surgery, Oncology, Cardiovascular",
+        "address": null,
+        "phone": null,
+        "url": null
+      },
+      {
+        "name": "Shantou University Medical College Second Hospital (汕头大学医学院第二附属医院)",
+        "specialties": "Cardiology, Oncology, General Medicine, TCM",
+        "address": "22 Xinxin Avenue, Shantou",
+        "phone": "+86-754-8856-9999",
+        "url": "http://www.sdxue1.com/"
+      },
+      {
+        "name": "Shantou TCM Hospital (汕头市中医医院)",
+        "specialties": "TCM, Rehabilitation, Neurology, General Medicine",
+        "address": "49 Shixi Road, Shantou",
+        "phone": "+86-754-8899-8111",
+        "url": "http://www.stzyy.com.cn/"
+      },
+      {
+        "name": "Shantou Women & Children's Hospital (汕头市妇幼保健院)",
+        "specialties": "Obstetrics & Gynecology, Pediatrics, Maternal-Fetal Medicine",
+        "address": "101 Huanan Avenue, Shantou",
+        "phone": "+86-754-8812-2288",
+        "url": "http://www.stfuyy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "shaoxing",
+    "cityName": "Shaoxing",
+    "chinese_name": "绍兴",
+    "region": "East China",
+    "intro": "Shaoxing in Zhejiang province is home to Shaoxing General Hospital and Shaoxing Hospital (First Affiliated Hospital of Zhejiang University of TCM), known for traditional Chinese medicine and orthopedic care.",
+    "avg_cost": "$700-$3,500",
+    "wait_time": "1-3 days",
+    "growth": "+33% YoY",
+    "hospitals": [
+      {
+        "name": "Shaoxing General Hospital (绍兴市人民医院)",
+        "specialties": "General Medicine, Cardiology, Neurology, Oncology",
+        "address": "100 Shaoxing Avenue, Yuecheng District",
+        "phone": "+86-575-8506-2712",
+        "url": "http://www.sxrm.com.cn/"
+      },
+      {
+        "name": "Shaoxing Hospital - First Affiliated of Zhejiang TCM (绍兴市中医医院)",
+        "specialties": "TCM, Rehabilitation, Neurology, Oncology (TCM)",
+        "address": "181 Shaoxing Avenue, Shaoxing",
+        "phone": "+86-575-8882-2120",
+        "url": "http://www.sxzyy.com.cn/"
+      },
+      {
+        "name": "Shaoxing First Hospital (绍兴市第一医院)",
+        "specialties": "General Medicine, Orthopedics, OB/GYN",
+        "address": "201 Shaoxing Avenue",
+        "phone": "+86-575-8880-5799",
+        "url": "http://www.sx1yy.com.cn/"
+      },
+      {
+        "name": "Shaoxing Central Hospital (绍兴市中心医院)",
+        "specialties": "Cardiology, Neurology, General Medicine",
+        "address": "166 Shaoxing Avenue",
+        "phone": "+86-575-8806-5371",
+        "url": "http://www.sxzx.com.cn/"
+      }
+    ]
+  },
+  {
     "city": "shenyang",
     "cityName": "Shenyang",
     "chinese_name": null,
@@ -1147,6 +1701,28 @@
         "address": "1 Haoye Road, Nanshan District, Shenzhen",
         "phone": "+86-755-8691-3388",
         "url": "https://www.hku-szh.org",
+        "citySlug": "shenzhen",
+        "cityName": "Shenzhen",
+        "siteName": "www.szugh.com.cn",
+        "note": "One of Shenzhen's newest and most modern hospitals. The oncology department is particularly active w"
+      },
+      {
+        "name": "Shenzhen Hospital, Southern Medical University",
+        "specialties": "General Medicine, Oncology, Rehabilitation",
+        "address": null,
+        "phone": null,
+        "url": null,
+        "citySlug": "shenzhen",
+        "cityName": "Shenzhen",
+        "siteName": "www.szugh.com.cn",
+        "note": "One of Shenzhen's newest and most modern hospitals. The oncology department is particularly active w"
+      },
+      {
+        "name": "Fifth Affiliated Hospital of Sun Yat-sen University",
+        "specialties": "Oncology, General Surgery, ENT",
+        "address": null,
+        "phone": null,
+        "url": null,
         "citySlug": "shenzhen",
         "cityName": "Shenzhen",
         "siteName": "www.szugh.com.cn",
@@ -1291,6 +1867,46 @@
     ]
   },
   {
+    "city": "taizhou",
+    "cityName": "Taizhou (Zhejiang)",
+    "chinese_name": "台州(浙江)",
+    "region": "East China",
+    "intro": "Taizhou in Zhejiang province is known for its advanced ophthalmology center (Zhejiang Eye Hospital Taizhou branch) and comprehensive general care, serving both domestic and international patients at competitive prices.",
+    "avg_cost": "$700-$3,500",
+    "wait_time": "1-3 days",
+    "growth": "+38% YoY",
+    "hospitals": [
+      {
+        "name": "Taizhou Central Hospital (台州市中心医院)",
+        "specialties": "Cardiology, Oncology, General Medicine, TCM",
+        "address": "108 Yuedong Avenue, Luqiao District",
+        "phone": "+86-576-8853-1120",
+        "url": "http://www.tzszx.com/"
+      },
+      {
+        "name": "The First People's Hospital of Taizhou (台州市第一人民医院)",
+        "specialties": "General Medicine, Surgery, Neurology, Orthopedics",
+        "address": "1 Xinkou Avenue, Sanning District",
+        "phone": "+86-576-8857-1120",
+        "url": "http://www.tz1yy.com.cn/"
+      },
+      {
+        "name": "Zhejiang Eye Hospital Taizhou Branch (浙江省眼科医院台州院区)",
+        "specialties": "Ophthalmology, Cataract Surgery, Glaucoma, Refractive Surgery",
+        "address": "Taizhou City, Zhejiang",
+        "phone": "+86-576-8853-2900",
+        "url": "http://www.zheye.cn/"
+      },
+      {
+        "name": "Taizhou Maternity & Child Health Hospital (台州市妇女儿童医院)",
+        "specialties": "Obstetrics & Gynecology, Pediatrics, Fetal Medicine",
+        "address": "150 Donghu Avenue",
+        "phone": "+86-576-8853-3319",
+        "url": "http://www.tzfuyy.com.cn/"
+      }
+    ]
+  },
+  {
     "city": "tianjin",
     "cityName": "Tianjin",
     "chinese_name": "天津",
@@ -1343,6 +1959,46 @@
         "cityName": "Tianjin",
         "siteName": "www.tjugh.com.cn",
         "note": "Tianjin's flagship general hospital. Particularly strong in oncology, cardiology, and neurology. Loc"
+      }
+    ]
+  },
+  {
+    "city": "wenzhou",
+    "cityName": "Wenzhou",
+    "chinese_name": "温州",
+    "region": "East China",
+    "intro": "A coastal city in Zhejiang province famous for its overseas Chinese community. Wenzhou's tertiary hospitals have long-standing international patient services including dedicated International Medical Centres, English-speaking staff, and active liaison with US and European consulates.",
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
+    "hospitals": [
+      {
+        "name": "The First Affiliated Hospital of Wenzhou Medical University",
+        "specialties": "Comprehensive tertiary care; designated International Medical Centre with English-speaking staff; cardiology, neurosurgery, ICU, pulmonology",
+        "address": "Nanbaixiang Street, Ouhai District, Wenzhou, Zhejiang 325000 (South Hall location for International Clinic)",
+        "phone": null,
+        "url": "https://www.wzhospital.cn/en/home"
+      },
+      {
+        "name": "The Second Affiliated Hospital of Wenzhou Medical University (Yuying Children's Hospital)",
+        "specialties": "Comprehensive tertiary care; pediatric specialties; oncology cluster, cardiovascular cluster, orthopedics cluster; 4 national clinical key specialties",
+        "address": "109 Xueyuan West Road, Lucheng District, Wenzhou 325027 (Lucheng campus)",
+        "phone": "+86-577-88002682",
+        "url": "https://www.wzhealth.com/"
+      },
+      {
+        "name": "Wenzhou Central Hospital",
+        "specialties": "Comprehensive tertiary care; Famous Doctors' Clinic (30+ departments, English-friendly senior consultants, six appointment channels)",
+        "address": "252 Baili East Road, Lucheng District, Wenzhou 325000 (Bailifang headquarters)",
+        "phone": "+86-577-88070000",
+        "url": "https://www.wzhosp.com/"
+      },
+      {
+        "name": "Eye Hospital of Wenzhou Medical University (Zhejiang Eye Hospital)",
+        "specialties": "Ophthalmology subspecialties (cataract, glaucoma, retina, refractive surgery, pediatric, oculoplastics)",
+        "address": "270 West Xueyuan Road, Wenzhou, Zhejiang",
+        "phone": null,
+        "url": "https://www.wzeye.cn/"
       }
     ]
   },
@@ -1540,6 +2196,246 @@
         "cityName": "Xian",
         "siteName": "www.fmmu.edu.cn",
         "note": "Xijing Hospital's plastic surgery department is nationally renowned — rhinoplasty, facial contouring"
+      }
+    ]
+  },
+  {
+    "city": "xuzhou",
+    "cityName": "Xuzhou",
+    "chinese_name": "徐州",
+    "region": "East China",
+    "intro": "Xuzhou in Jiangsu province is a major medical hub in northern Jiangsu, home to Xuzhou Central Hospital and multiple tertiary hospitals with strong cancer care and cardiology programs.",
+    "avg_cost": "$600-$3,000",
+    "wait_time": "1-3 days",
+    "growth": "+42% YoY",
+    "hospitals": [
+      {
+        "name": "Xuzhou Central Hospital (徐州市中心医院)",
+        "specialties": "General Medicine, Cardiology, Neurology, Oncology",
+        "address": "99 Shuangshen Road, Yunlong District",
+        "phone": "+86-516-8590-2020",
+        "url": "http://www.xzszxyy.com.cn/"
+      },
+      {
+        "name": "Xuzhou First Hospital (徐州市第一医院)",
+        "specialties": "General Medicine, Oncology, Cardiology, Emergency",
+        "address": "99 Daxue Street, Quanshan District",
+        "phone": "+86-516-8396-5017",
+        "url": "http://www.xz1yy.com.cn/"
+      },
+      {
+        "name": "Xuzhou Cancer Hospital (徐州市肿瘤医院)",
+        "specialties": "Surgical Oncology, Medical Oncology, Radiation Oncology",
+        "address": "333 Huiwang Road, Xuzhou",
+        "phone": "+86-516-8389-6008",
+        "url": "http://www.xzlyy.com/"
+      },
+      {
+        "name": "Xuzhou TCM Hospital (徐州市中医医院)",
+        "specialties": "TCM, Rehabilitation, Neurology, General Medicine",
+        "address": "26 Zhongshan East Road, Peking University branch",
+        "phone": "+86-516-8382-0527",
+        "url": "http://www.xzzyy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "yantai",
+    "cityName": "Yantai",
+    "chinese_name": "烟台",
+    "region": "East China",
+    "intro": "Yantai is a coastal city in Shandong province and a leading medical hub in northeastern China, home to Yantai Yuhuangding Hospital and multiple university-affiliated teaching hospitals with strong cardiology and orthopedics programs.",
+    "avg_cost": "$800-$4,000",
+    "wait_time": "1-3 days",
+    "growth": "+45% YoY",
+    "hospitals": [
+      {
+        "name": "Yantai Yuhuangding Hospital (烟台市毓璜顶医院)",
+        "specialties": "Cardiology, Oncology, General Medicine, Emergency",
+        "address": "68 Yuhuangding Road, Laishan District",
+        "phone": "+86-535-624-2790",
+        "url": "http://www.ytdyy.com.cn/"
+      },
+      {
+        "name": "Qingdao University Affiliated Yantai Yuhuangding Hospital",
+        "specialties": "Cardiology, Oncology, Neurology, General Medicine",
+        "address": "68 Yuhuangding Road",
+        "phone": "+86-535-624-2790",
+        "url": "http://www.ytdyy.com.cn/"
+      },
+      {
+        "name": "Yantai Central Hospital (烟台市中心医院)",
+        "specialties": "Cardiology, Orthopedics, General Medicine, Endocrinology",
+        "address": "120 Xueyuan Street, Zhifu District",
+        "phone": "+86-535-625-1100",
+        "url": "http://www.ytcy.com/"
+      },
+      {
+        "name": "Yantai TCM Hospital (烟台市中医医院)",
+        "specialties": "TCM, Rehabilitation, Neurology, General Medicine",
+        "address": "49 Yipin Road, Yantai",
+        "phone": "+86-535-664-1615",
+        "url": "http://www.ytzyy.net/"
+      }
+    ]
+  },
+  {
+    "city": "zhangzhou",
+    "cityName": "Zhangzhou",
+    "chinese_name": "漳州",
+    "region": "South China",
+    "intro": "Zhangzhou in Fujian province is home to Zhangzhou People's Hospital and Fujian TCM hospitals, a growing destination for international patients seeking affordable eye care and general medicine.",
+    "avg_cost": "$600-$3,000",
+    "wait_time": "1-3 days",
+    "growth": "+25% YoY",
+    "hospitals": [
+      {
+        "name": "Zhangzhou People's Hospital (漳州市人民医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, Neurology",
+        "address": "167 Gengshu Road, Huabu District",
+        "phone": "+86-596-258-1615",
+        "url": "http://www.zsrmyy.com.cn/"
+      },
+      {
+        "name": "Zhangzhou Central Hospital (漳州市中医院)",
+        "specialties": "TCM, Rehabilitation, Neurology, General Medicine",
+        "address": "216 Longdu Road, Zhangzhou",
+        "phone": "+86-596-251-8370",
+        "url": "http://www.zczyy.com.cn/"
+      },
+      {
+        "name": "Zhangzhou Women & Children's Hospital (漳州市妇幼保健院)",
+        "specialties": "Obstetrics & Gynecology, Pediatrics, Maternal-Fetal Medicine",
+        "address": "Zhangzhou City, Fujian",
+        "phone": "+86-596-257-9797",
+        "url": "http://www.zzfuyy.com.cn/"
+      },
+      {
+        "name": "Zhangzhou First Hospital (漳州市第一医院)",
+        "specialties": "General Medicine, Surgery, Cardiology",
+        "address": "65 Jianshui Road, Zhangzhou",
+        "phone": "+86-596-269-2999",
+        "url": "http://www.zz1yy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "zhengzhou",
+    "cityName": "Zhengzhou",
+    "chinese_name": "郑州",
+    "region": "Central China",
+    "intro": "Capital of Henan province and a major medical center in central China. Known for traditional Chinese medicine (TCM) combined with modern oncology and cardiovascular surgery. Hosts national TCM international cooperation exchange bases.",
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
+    "hospitals": [
+      {
+        "name": "The First Affiliated Hospital of Henan University of Chinese Medicine",
+        "specialties": "Traditional Chinese Medicine, Integrative Medicine, Oncology, Cardiology, Cerebrovascular Diseases, Pulmonology, Nephrology, Endocrinology, Pediatrics",
+        "address": "19 Renmin Road, Zhengzhou, Henan 450000",
+        "phone": "+86-371-96129",
+        "url": "https://www.hnzhy.com/"
+      },
+      {
+        "name": "Henan Provincial Hospital of Traditional Chinese Medicine (Second Affiliated Hospital of Henan University of Chinese Medicine)",
+        "specialties": "Traditional Chinese Medicine, Orthopedics, Integrative Medicine, Internal Medicine, Surgery, Gynecology, Pediatrics",
+        "address": "6 Dongfeng Road, Zhengzhou, Henan 450002 (headquarters campus)",
+        "phone": "+86-371-60908760",
+        "url": "https://www.hnszyy.com.cn/"
+      },
+      {
+        "name": "The First Affiliated Hospital of Zhengzhou University",
+        "specialties": "Comprehensive tertiary care; National Clinical Key Specialties include Pharmacology, Orthopedics, Gynecology, Cardiology, Neurosurgery, Oncology",
+        "address": "1 East Jianshe Road, Erqi District, Zhengzhou 450052 (He Hospital main campus)",
+        "phone": "+86-371-67966266",
+        "url": "https://www.zdyfy.com/"
+      },
+      {
+        "name": "Henan Provincial People's Hospital",
+        "specialties": "Comprehensive tertiary care; National Clinical Key Specialties across most major departments; large International Medical Center (40+ subspecialty clinics)",
+        "address": "7 Weiwu Road, Zhengzhou, Henan (verified exact street to be confirmed)",
+        "phone": "+86-371-65580014",
+        "url": "https://www.hnsrmyy.net/"
+      }
+    ]
+  },
+  {
+    "city": "zhongshan",
+    "cityName": "Zhongshan",
+    "chinese_name": "中山",
+    "region": "South China",
+    "intro": "Zhongshan in Guangdong province is home to Zhongshan First People's Hospital and Sun Yat-sen Memorial Hospital Zhongshan Branch, a medical hub with growing international patient services in the Pearl River Delta.",
+    "avg_cost": "$800-$4,000",
+    "wait_time": "1-3 days",
+    "growth": "+48% YoY",
+    "hospitals": [
+      {
+        "name": "Zhongshan First People's Hospital (中山市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, Neurology, Oncology",
+        "address": "2 Jianshe Road, Zhongshan",
+        "phone": "+86-760-8838-3111",
+        "url": "http://www.zs1yy.com.cn/"
+      },
+      {
+        "name": "Sun Yat-sen Memorial Hospital Zhongshan Branch (中山医大医学院附属中山医院)",
+        "specialties": "Cardiology, Oncology, General Medicine",
+        "address": "Zhongshan, Guangdong",
+        "phone": "+86-760-8812-7777",
+        "url": "http://www.zhsy.com.cn/"
+      },
+      {
+        "name": "Zhongshan TCM Hospital (中山市中医院)",
+        "specialties": "TCM, Rehabilitation, Neurology, Oncology (TCM)",
+        "address": "88 Jianshui Road, Zhongshan",
+        "phone": "+86-760-8831-2281",
+        "url": "http://www.zszyy.com.cn/"
+      },
+      {
+        "name": "Zhongshan Women & Children's Hospital (中山市妇幼保健院)",
+        "specialties": "Obstetrics & Gynecology, Pediatrics, Maternal-Fetal Medicine",
+        "address": "Zhongshan City, Guangdong",
+        "phone": "+86-760-8811-5577",
+        "url": "http://www.zsfuyy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "zhuhai",
+    "cityName": "Zhuhai",
+    "chinese_name": "珠海",
+    "region": "South China",
+    "intro": "A coastal city in the Greater Bay Area directly adjacent to Macau.",
+    "avg_cost": null,
+    "wait_time": null,
+    "growth": null,
+    "hospitals": [
+      {
+        "name": "Zhuhai People's Hospital",
+        "specialties": "General Medicine, Oncology, Pediatrics",
+        "address": null,
+        "phone": null,
+        "url": null
+      },
+      {
+        "name": "Zhuhai Tumor Hospital (珠海市肿瘤医院)",
+        "specialties": "Surgical Oncology, Medical Oncology, Radiation Oncology, Palliative Care",
+        "address": "1 Lianhua Road, Xiangzhou District, Zhuhai",
+        "phone": "+86-756-338-8888",
+        "url": "http://www.zhsl.com.cn/"
+      },
+      {
+        "name": "Zhuhai TCM Hospital (珠海市中医医院)",
+        "specialties": "TCM, Rehabilitation, Neurology, General Medicine",
+        "address": "66 Wanhua Road, Zhuhai",
+        "phone": "+86-756-251-1120",
+        "url": "http://www.zhzyy.com.cn/"
+      },
+      {
+        "name": "Zhuhai Women & Children's Hospital (珠海市妇幼保健院)",
+        "specialties": "Obstetrics & Gynecology, Pediatrics, Fetal Medicine",
+        "address": "2 Shengwan Avenue, Zhuhai",
+        "phone": "+86-756-881-6161",
+        "url": "http://www.zhfuyy.com.cn/"
       }
     ]
   }

@@ -33,8 +33,21 @@ const cityRows = db.prepare(`
   ORDER BY slug
 `).all();
 
+// 数据库化(2026-10-26)：12 个国际患者字段直接从 DB 导出。
+// 列探测：老库若尚未跑 scripts/init-sqlite-intl.mjs，缺列时自动降级（不挂导出链）。
+// 注意：better-sqlite3 的 prepared statement 在 .all() 之后被 GC 析构时会触发
+// 本机 Node 24 与 native 模块的 cleanup-hook 断言崩溃，故按列探测结果直接
+// 拼 SQL、一次 .all()，不再保留额外的 prepared statement。
+const colRows = db.prepare(`SELECT name FROM pragma_table_info('hospitals')`).all();
+const dbColSet = new Set(colRows.map(r => r.name));
+const NEW_HOSP_COLS = [
+  'jci_certified', 'accepts_international', 'english_departments', 'booking_method',
+  'visa_assist', 'inpatient_standard', 'payment_methods', 'insurance_direct',
+  'interpreter_on_site', 'verified', 'source_url', 'updated_at',
+].filter(c => dbColSet.has(c));
+
 const hospitalRows = db.prepare(`
-  SELECT city_slug, name, chinese_name, specialties, address, phone, url, sort_order
+  SELECT city_slug, name, chinese_name, specialties, address, phone, url, sort_order${NEW_HOSP_COLS.length ? ', ' + NEW_HOSP_COLS.join(', ') : ''}
   FROM hospitals
   ORDER BY city_slug, sort_order
 `).all();

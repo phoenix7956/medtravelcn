@@ -13,11 +13,15 @@ const cities = db.prepare('SELECT * FROM cities ORDER BY name').all();
 const hospitals = db
   .prepare('SELECT * FROM hospitals ORDER BY city_slug, sort_order, id')
   .all();
+const reviews = db
+  .prepare('SELECT * FROM reviews WHERE approved = 1 ORDER BY created_at DESC')
+  .all();
 
 const outDir = join(ROOT, 'src', 'data');
 mkdirSync(outDir, { recursive: true });
 const outFile = join(outDir, 'snapshot.json');
-writeFileSync(outFile, JSON.stringify({ cities, hospitals }, null, 0), 'utf-8');
+writeFileSync(outFile, JSON.stringify({ cities, hospitals, reviews }, null, 0), 'utf-8');
 
 console.log(`✅ snapshot.json written: ${cities.length} cities, ${hospitals.length} hospitals`);
+console.log(`   ${reviews.length} approved reviews included`);
 console.log(`   ${outFile}`);

@@ -144,6 +144,19 @@ export interface Hospital {
   type: string;
   sort_order: number;
   created_at: string;
+  // 国际患者信息（2026-10-26 数据库化补齐；SQLite/Postgres 双端一致）
+  jci_certified?: number | boolean;
+  accepts_international?: number | boolean;
+  english_departments?: string | null;
+  booking_method?: string | null;
+  visa_assist?: number | boolean;
+  inpatient_standard?: string | null;
+  payment_methods?: string | null;
+  insurance_direct?: number | boolean;
+  interpreter_on_site?: number | boolean;
+  verified?: number | boolean;
+  source_url?: string | null;
+  updated_at?: string | null;
 }
 
 export interface Review {

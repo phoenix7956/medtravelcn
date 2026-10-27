@@ -21,17 +21,27 @@ if (!existsSync(DB_PATH) || !existsSync(IDX)) {
   process.exit(1);
 }
 
-const db = new Database(DB_PATH, { readonly: true });
-const c = db.prepare('SELECT COUNT(*) n FROM cities').get().n;
-const h = db.prepare('SELECT COUNT(*) n FROM hospitals').get().n;
-
-let prov = null;
-try {
-  prov = db.prepare('SELECT COUNT(*) n FROM data_provenance').get().n;
-} catch {
-  console.warn('⚠️  data_provenance 表不存在，先跑: npm run db:provenance');
+// better-sqlite3 + Node 24 的 cleanup-hook 断言崩溃（Statement GC 析构时
+// 触发 env==null assertion），解法：把 DB 查询结果在 db.close() 前都取出来，
+// 且不在 close 之后还留着任何 prepared statement 的引用。
+// Node 24 + better-sqlite3 cleanup-hook bug：
+// 任何 Statement 在 GC 析构时若 env 为 null 就会触发 Assertion failed: (env) != nullptr。
+// 根因：模块顶层的 import 持有 statement 引用，close 之后 GC 时 env 已销毁。
+// 解法：把所有查询包进 try/finally，先 close db，再 delete 掉所有 local 引用。
+function dbCounts() {
+  const db = new Database(DB_PATH, { readonly: true });
+  try {
+    const c = db.prepare('SELECT COUNT(*) n FROM cities').get().n;
+    const h = db.prepare('SELECT COUNT(*) n FROM hospitals').get().n;
+    let prov = null;
+    try { prov = db.prepare('SELECT COUNT(*) n FROM data_provenance').get().n; }
+    catch { console.warn('⚠️  data_provenance 表不存在，先跑: npm run db:provenance'); }
+    return { c, h, prov };
+  } finally {
+    db.close();
+  }
 }
-db.close();
+const { c, h, prov } = dbCounts();
 
 const idx = JSON.parse(readFileSync(IDX, 'utf8'));
 const ih = idx.reduce((a, x) => a + (x.hospitals?.length || 0), 0);
