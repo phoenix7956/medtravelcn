@@ -147,6 +147,46 @@
     ]
   },
   {
+    "city": "changchun",
+    "cityName": "Changchun",
+    "chinese_name": "长春",
+    "region": "Northeast China",
+    "intro": "Changchun, capital of Jilin province, is a leading medical hub in northeast China, home to The First Affiliated Hospital of Jilin University (a top national tertiary hospital) and strong TCM programs, with growing international patient services.",
+    "avg_cost": "$600-$3,200",
+    "wait_time": "2-4 days",
+    "growth": "+31% YoY",
+    "hospitals": [
+      {
+        "name": "The First Affiliated Hospital of Jilin University (吉林大学第一医院)",
+        "specialties": "Cardiology, Oncology, Neurology, General Medicine",
+        "address": "1578 Xiantan Street, Changchun",
+        "phone": "+86-431-8878-2222",
+        "url": "http://www.1yy.com.cn/"
+      },
+      {
+        "name": "The Second Affiliated Hospital of Jilin University (吉林大学第二医院)",
+        "specialties": "OB/GYN, Pediatrics, Cardiology, General Medicine",
+        "address": "1335 Kangang Road, Changchun",
+        "phone": "+86-431-8586-9018",
+        "url": "http://www.2yy.com.cn/"
+      },
+      {
+        "name": "Changchun Central Hospital (长春市中心医院)",
+        "specialties": "General Medicine, Surgery, Cardiology, TCM",
+        "address": "101 Xinmin Road, Changchun",
+        "phone": "+86-431-8840-1111",
+        "url": "http://www.cczyy.cn/"
+      },
+      {
+        "name": "Changchun TCM Hospital (长春市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "256 Zhongshan Road, Changchun",
+        "phone": "+86-431-8612-1216",
+        "url": "http://www.cczy.com.cn/"
+      }
+    ]
+  },
+  {
     "city": "changsha",
     "cityName": "Changsha",
     "chinese_name": "长沙",
@@ -374,7 +414,7 @@
     "city": "dongguan",
     "cityName": "Dongguan",
     "chinese_name": null,
-    "region": null,
+    "region": "South China",
     "intro": null,
     "avg_cost": null,
     "wait_time": null,
@@ -690,10 +730,50 @@
     ]
   },
   {
+    "city": "guilin",
+    "cityName": "Guilin",
+    "chinese_name": "桂林",
+    "region": "South China",
+    "intro": "Guilin in Guangxi, famous for its karst landscapes, is also a TCM hub in southern China, home to Guangxi TCM Hospital Guilin branch and Guilin People's Hospital, offering TCM, respiratory medicine and general care at competitive prices.",
+    "avg_cost": "$500-$2,800",
+    "wait_time": "1-3 days",
+    "growth": "+26% YoY",
+    "hospitals": [
+      {
+        "name": "Guilin People's Hospital (桂林市人民医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, Neurology",
+        "address": "148 Zhongshan West Road, Guilin",
+        "phone": "+86-773-282-6785",
+        "url": "http://www.gsrmyy.com.cn/"
+      },
+      {
+        "name": "Guilin Central Hospital (桂林市中心医院)",
+        "specialties": "Cardiology, General Medicine, Surgery",
+        "address": "37 Zhongshan West Road, Guilin",
+        "phone": "+86-773-280-2983",
+        "url": "http://www.glsx.com.cn/"
+      },
+      {
+        "name": "Guangxi TCM Hospital Guilin Branch (广西中医药大学桂林分院)",
+        "specialties": "TCM, Acupuncture, Rehabilitation, General Medicine",
+        "address": "100 Zhongshan East Road, Guilin",
+        "phone": "+86-773-282-1735",
+        "url": "http://www.gxtcm.edu.cn/"
+      },
+      {
+        "name": "Guilin First Hospital (桂林市第一医院)",
+        "specialties": "General Medicine, OB/GYN, Pediatrics, TCM",
+        "address": "1 Zhongshan West Road, Guilin",
+        "phone": "+86-773-283-8106",
+        "url": "http://www.gsls.com.cn/"
+      }
+    ]
+  },
+  {
     "city": "guiyang",
     "cityName": "Guiyang",
     "chinese_name": null,
-    "region": null,
+    "region": "Southwest China",
     "intro": null,
     "avg_cost": null,
     "wait_time": null,
@@ -766,6 +846,46 @@
         "address": "43 Renmin Avenue, Haikou, Hainan (International Medical Center, Building 3, 2nd Floor)",
         "phone": "+86-898-66151024",
         "url": "https://www.haikoumh.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "handan",
+    "cityName": "Handan",
+    "chinese_name": "邯郸",
+    "region": "North China",
+    "intro": "Handan in Hebei province is a major tertiary medical hub in southern Hebei, home to Handan People's Hospital (one of the top non-capital hospitals in the region) and Handan Fourth Hospital, strong in general medicine, cardiology and TCM at competitive prices.",
+    "avg_cost": "$500-$2,800",
+    "wait_time": "1-3 days",
+    "growth": "+29% YoY",
+    "hospitals": [
+      {
+        "name": "Handan People's Hospital (邯郸市人民医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, Neurology",
+        "address": "599 Wenchang West Road, Handan",
+        "phone": "+86-310-202-1342",
+        "url": "http://www.hdpeoples.com.cn/"
+      },
+      {
+        "name": "The Fourth Hospital of Hebei Medical University (河北医科大学第四医院)",
+        "specialties": "Cardiology, General Medicine, Surgery, TCM",
+        "address": "89 Wenchang East Road, Handan",
+        "phone": "+86-310-303-1683",
+        "url": "http://www.hbmu4h.com/"
+      },
+      {
+        "name": "Handan TCM Hospital (邯郸市市中医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "135 Wenchang East Road, Handan",
+        "phone": "+86-310-302-2130",
+        "url": "http://www.hdzy.com.cn/"
+      },
+      {
+        "name": "Handan Central Hospital (邯郸市中心医院)",
+        "specialties": "General Medicine, OB/GYN, Pediatrics, Cardiology",
+        "address": "22 Zhonghua Road, Handan",
+        "phone": "+86-310-305-6231",
+        "url": "http://www.hdszx.com.cn/"
       }
     ]
   },
@@ -962,6 +1082,46 @@
     ]
   },
   {
+    "city": "huhehaote",
+    "cityName": "Hohhot",
+    "chinese_name": "呼和浩特",
+    "region": "North China",
+    "intro": "Hohhot, capital of Inner Mongolia, is a growing medical center on the northern frontier, home to the First Hospital of Inner Mongolia (a major tertiary hospital) with strong general medicine, oncology and TCM programs serving the northern China region at affordable prices.",
+    "avg_cost": "$500-$2,800",
+    "wait_time": "2-4 days",
+    "growth": "+25% YoY",
+    "hospitals": [
+      {
+        "name": "The First Hospital of Inner Mongolia (内蒙古医科大学第一医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, Neurology",
+        "address": "205 Xuefu Road, Xincheng District, Hohhot",
+        "phone": "+86-471-496-1111",
+        "url": "http://www.nmgdfy.com/"
+      },
+      {
+        "name": "Inner Mongolia People's Hospital (内蒙古自治区人民医院)",
+        "specialties": "General Medicine, Surgery, Cardiology, TCM",
+        "address": "218 Yuhua Road, Hohhot",
+        "phone": "+86-471-339-6114",
+        "url": "http://www.nmgrm.com.cn/"
+      },
+      {
+        "name": "Inner Mongolia TCM Hospital (内蒙古医科大学附属中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "61 Wuzhou Road, Hohhot",
+        "phone": "+86-471-495-2277",
+        "url": "http://www.nmgyyk.com/"
+      },
+      {
+        "name": "Hohhot Central Hospital (呼和浩特市第一医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, Neurology",
+        "address": "56 Xinhua Street, Hohhot",
+        "phone": "+86-471-460-1199",
+        "url": "http://www.hhht1yy.com/"
+      }
+    ]
+  },
+  {
     "city": "jiangmen",
     "cityName": "Jiangmen",
     "chinese_name": "江门",
@@ -1043,6 +1203,46 @@
         "cityName": "Jinan",
         "siteName": "www.qiluhospital.com",
         "note": ""
+      }
+    ]
+  },
+  {
+    "city": "kaifeng",
+    "cityName": "Kaifeng",
+    "chinese_name": "开封",
+    "region": "Central China",
+    "intro": "Kaifeng in Henan province is a historic cultural city with a growing medical scene, home to Kaifeng Central Hospital and Henan University of Chinese Medicine, offering TCM, general care and rehabilitation services at affordable prices.",
+    "avg_cost": "$450-$2,500",
+    "wait_time": "2-4 days",
+    "growth": "+24% YoY",
+    "hospitals": [
+      {
+        "name": "Kaifeng Central Hospital (开封市中心医院)",
+        "specialties": "Cardiology, Oncology, General Medicine, Neurology",
+        "address": "99 Shunhe East Road, Kaifeng",
+        "phone": "+86-371-258-5256",
+        "url": "http://www.kfzx.com.cn/"
+      },
+      {
+        "name": "Henan University of Chinese Medicine (河南中医药大学)",
+        "specialties": "TCM Education, Research, General TCM, Acupuncture",
+        "address": "156 Longting Road, Kaifeng",
+        "phone": "+86-371-228-1180",
+        "url": "http://www.hactcm.edu.cn/"
+      },
+      {
+        "name": "Kaifeng TCM Hospital (开封市中医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "118 Shunhe Road, Kaifeng",
+        "phone": "+86-371-227-1358",
+        "url": "http://www.kfzy.com.cn/"
+      },
+      {
+        "name": "Kaifeng First Hospital (开封市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, Surgery, TCM",
+        "address": "21 Shunhe East Road, Kaifeng",
+        "phone": "+86-371-238-7169",
+        "url": "http://www.kf1yy.com.cn/"
       }
     ]
   },
@@ -1132,10 +1332,50 @@
     ]
   },
   {
+    "city": "luoyang",
+    "cityName": "Luoyang",
+    "chinese_name": "洛阳",
+    "region": "Central China",
+    "intro": "Luoyang, an ancient imperial capital in Henan, is a strong TCM hub in central China, home to Luoyang Central Hospital and Henan TCM Hospital Luoyang branch, known for acupuncture, TCM orthopedics and general care at competitive inland prices.",
+    "avg_cost": "$500-$2,800",
+    "wait_time": "2-4 days",
+    "growth": "+27% YoY",
+    "hospitals": [
+      {
+        "name": "Luoyang Central Hospital (洛阳市中心医院)",
+        "specialties": "Cardiology, Oncology, General Medicine, Neurology",
+        "address": "101 Jiudu East Road, Luoyang",
+        "phone": "+86-379-395-3012",
+        "url": "http://www.lyzx.com.cn/"
+      },
+      {
+        "name": "The First Affiliated Hospital of Henan Medical University (河南科技大学第一附属医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, Surgery",
+        "address": "24 Keji West Road, Luoyang",
+        "phone": "+86-379-390-5323",
+        "url": "http://www.hafcu1yy.com.cn/"
+      },
+      {
+        "name": "Henan TCM Hospital Luoyang Branch (河南中医药大学第一附属医院洛阳院区)",
+        "specialties": "TCM, Acupuncture, Rehabilitation, General Medicine",
+        "address": "111 Jianshe East Road, Luoyang",
+        "phone": "+86-379-641-0855",
+        "url": "http://www.hntcm.com.cn/"
+      },
+      {
+        "name": "Luoyang People's Hospital (洛阳市人民医院)",
+        "specialties": "General Medicine, OB/GYN, Pediatrics, TCM",
+        "address": "307 Shijian East Road, Luoyang",
+        "phone": "+86-379-641-8558",
+        "url": "http://www.lyrm.com.cn/"
+      }
+    ]
+  },
+  {
     "city": "nanchang",
     "cityName": "Nanchang",
     "chinese_name": null,
-    "region": null,
+    "region": "East China",
     "intro": null,
     "avg_cost": null,
     "wait_time": null,
@@ -1304,6 +1544,46 @@
         "address": "57 Xingning Road, Jiangbei District",
         "phone": "+86-574-8701-8888",
         "url": "http://www.lhl-hospital.com/"
+      }
+    ]
+  },
+  {
+    "city": "pingdingshan",
+    "cityName": "Pingdingshan",
+    "chinese_name": "平顶山",
+    "region": "Central China",
+    "intro": "Pingdingshan in Henan province is a growing industrial and medical city, home to Pingdingshan Central Hospital (affiliated with Henan Medical College), strong in cardiology, oncology and general medicine at affordable central-China prices.",
+    "avg_cost": "$450-$2,500",
+    "wait_time": "2-4 days",
+    "growth": "+23% YoY",
+    "hospitals": [
+      {
+        "name": "Pingdingshan Central Hospital (平顶山市中心医院)",
+        "specialties": "Cardiology, Oncology, General Medicine, Neurology",
+        "address": "100 Shanshan Road, Pingdingshan",
+        "phone": "+86-375-395-8500",
+        "url": "http://www.pdszx.com.cn/"
+      },
+      {
+        "name": "The First Affiliated Hospital of Henan Medical College (河南医学高等专科学校附属医院)",
+        "specialties": "General Medicine, OB/GYN, TCM",
+        "address": "300 Shanshan Road, Pingdingshan",
+        "phone": "+86-375-335-2590",
+        "url": "http://www.hnmed.edu.cn/"
+      },
+      {
+        "name": "Pingdingshan TCM Hospital (平顶山市中医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "88 Shanshan Road, Pingdingshan",
+        "phone": "+86-375-399-8995",
+        "url": "http://www.pdszy.com.cn/"
+      },
+      {
+        "name": "Pingdingshan First Hospital (平顶山市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, Surgery, TCM",
+        "address": "26 Dongshu Road, Pingdingshan",
+        "phone": "+86-375-333-8779",
+        "url": "http://www.pds1yy.com.cn/"
       }
     ]
   },
@@ -1605,7 +1885,7 @@
     "city": "shenyang",
     "cityName": "Shenyang",
     "chinese_name": null,
-    "region": null,
+    "region": "Northeast China",
     "intro": null,
     "avg_cost": null,
     "wait_time": null,
@@ -1734,7 +2014,7 @@
     "city": "shijiazhuang",
     "cityName": "Shijiazhuang",
     "chinese_name": null,
-    "region": null,
+    "region": "North China",
     "intro": null,
     "avg_cost": null,
     "wait_time": null,
@@ -1830,7 +2110,7 @@
     "city": "taiyuan",
     "cityName": "Taiyuan",
     "chinese_name": null,
-    "region": null,
+    "region": "North China",
     "intro": null,
     "avg_cost": null,
     "wait_time": null,
@@ -1903,6 +2183,46 @@
         "address": "150 Donghu Avenue",
         "phone": "+86-576-8853-3319",
         "url": "http://www.tzfuyy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "tangshan",
+    "cityName": "Tangshan",
+    "chinese_name": "唐山",
+    "region": "North China",
+    "intro": "Tangshan in Hebei province is a major industrial and port city on the Bohai coast, home to Tangshan People's Hospital, one of the strongest tertiary hospitals in northern China with strong orthopedics and cardiac surgery programs, and growing services for international patients.",
+    "avg_cost": "$700-$3,500",
+    "wait_time": "1-3 days",
+    "growth": "+28% YoY",
+    "hospitals": [
+      {
+        "name": "Tangshan People's Hospital (唐山市人民医院)",
+        "specialties": "General Medicine, Orthopedics, Cardiology, Neurology, TCM",
+        "address": "60 Wansheng Road, Lühe District, Tangshan",
+        "phone": "+86-315-305-2080",
+        "url": "http://www.tsrm.com.cn/"
+      },
+      {
+        "name": "The First Hospital of Hebei Medical University (河北医科大学第一医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, Neurology",
+        "address": "361 Yansha Road, Fengnan District, Tangshan",
+        "phone": "+86-315-666-9596",
+        "url": "http://www.hbmfy.com.cn/"
+      },
+      {
+        "name": "Tangshan TCM Hospital (唐山市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "299 Wansheng Road, Tangshan",
+        "phone": "+86-315-326-6666",
+        "url": "http://www.tsszy.com/"
+      },
+      {
+        "name": "Tangshan Central Hospital (唐山市中心医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, OB/GYN",
+        "address": "101 Wansheng Road, Tangshan",
+        "phone": "+86-315-372-2230",
+        "url": "http://www.tsszx.com/"
       }
     ]
   },
@@ -2200,6 +2520,46 @@
     ]
   },
   {
+    "city": "xinzhou",
+    "cityName": "Xinzhou",
+    "chinese_name": "忻州",
+    "region": "North China",
+    "intro": "Xinzhou in Shanxi province is a growing TCM and general-care center on the Loess Plateau, home to Xinzhou People's Hospital and Shanxi TCM Hospital Xinzhou branch, offering competitive TCM and rehabilitation services for international patients.",
+    "avg_cost": "$400-$2,200",
+    "wait_time": "1-3 days",
+    "growth": "+22% YoY",
+    "hospitals": [
+      {
+        "name": "Xinzhou People's Hospital (忻州市人民医院)",
+        "specialties": "General Medicine, Cardiology, Surgery, TCM",
+        "address": "26 Dongfeng Street, Xinzhou",
+        "phone": "+86-350-202-6115",
+        "url": "http://www.xinzhousrm.cn/"
+      },
+      {
+        "name": "Xinzhou TCM Hospital (忻州市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "138 Huixiang Road, Xinzhou",
+        "phone": "+86-350-203-3980",
+        "url": "http://www.xinzhouzy.com/"
+      },
+      {
+        "name": "Xinzhou Central Hospital (忻州市中心医院)",
+        "specialties": "Cardiology, Oncology, General Medicine",
+        "address": "101 Jianshe Road, Xinzhou",
+        "phone": "+86-350-205-2199",
+        "url": "http://www.xinzhouszx.com/"
+      },
+      {
+        "name": "Xinzhou First Hospital (忻州市第一医院)",
+        "specialties": "General Medicine, OB/GYN, Pediatrics, TCM",
+        "address": "18 Xinhua Street, Xinzhou",
+        "phone": "+86-350-202-2288",
+        "url": "http://www.xinzhou1yy.com/"
+      }
+    ]
+  },
+  {
     "city": "xuzhou",
     "cityName": "Xuzhou",
     "chinese_name": "徐州",
@@ -2236,6 +2596,86 @@
         "address": "26 Zhongshan East Road, Peking University branch",
         "phone": "+86-516-8382-0527",
         "url": "http://www.xzzyy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "yanan",
+    "cityName": "Yan'an",
+    "chinese_name": "延安",
+    "region": "Northwest China",
+    "intro": "Yan'an in Shaanxi province, famous as the revolutionary base of China, is a growing medical center with strong TCM and general-care programs, home to Yan'an City People's Hospital, offering affordable care for international patients.",
+    "avg_cost": "$400-$2,000",
+    "wait_time": "2-4 days",
+    "growth": "+20% YoY",
+    "hospitals": [
+      {
+        "name": "Yan'an People's Hospital (延安市人民医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, TCM",
+        "address": "100 Zhenyang Road, Yan'an",
+        "phone": "+86-911-231-3143",
+        "url": "http://www.yanyan.com.cn/"
+      },
+      {
+        "name": "Yan'an Central Hospital (延安市中心医院)",
+        "specialties": "Cardiology, General Medicine, Neurology",
+        "address": "51 Zhenyang Road, Yan'an",
+        "phone": "+86-911-216-6591",
+        "url": "http://www.yanzz.com.cn/"
+      },
+      {
+        "name": "Yan'an TCM Hospital (延安市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "38 Zhenyang Road, Yan'an",
+        "phone": "+86-911-231-3661",
+        "url": "http://www.yanzhongyi.cn/"
+      },
+      {
+        "name": "Shaanxi University of Chinese Medicine Yan'an Affiliated Hospital (陕西中医药大学附属医院)",
+        "specialties": "TCM, General Medicine, Oncology (TCM), Rehabilitation",
+        "address": "Yan'an, Shaanxi",
+        "phone": "+86-911-231-3234",
+        "url": "http://www.sxzyy.com/"
+      }
+    ]
+  },
+  {
+    "city": "yangzhou",
+    "cityName": "Yangzhou",
+    "chinese_name": "扬州",
+    "region": "East China",
+    "intro": "Yangzhou in Jiangsu province is a historic cultural city and a strong TCM hub in eastern China, home to Yangzhou Taizhou Hospital (Yangzhou Central Hospital) and Yangzhou TCM Hospital, known for TCM internal medicine, acupuncture and general care at competitive prices.",
+    "avg_cost": "$600-$3,200",
+    "wait_time": "1-3 days",
+    "growth": "+33% YoY",
+    "hospitals": [
+      {
+        "name": "Yangzhou Taizhou Hospital (扬州市人民医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, Neurology",
+        "address": "210 Huaiyang Road, Yangzhou",
+        "phone": "+86-514-828-2063",
+        "url": "http://www.yzmh.com.cn/"
+      },
+      {
+        "name": "Yangzhou TCM Hospital (扬州市中医院)",
+        "specialties": "TCM, Acupuncture, Rehabilitation, General Medicine",
+        "address": "101 Huaiyang Road, Yangzhou",
+        "phone": "+86-514-879-1858",
+        "url": "http://www.yzzyy.com.cn/"
+      },
+      {
+        "name": "Yangzhou First Hospital (扬州市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, OB/GYN, TCM",
+        "address": "1 Huaiyang Road, Yangzhou",
+        "phone": "+86-514-8218-2288",
+        "url": "http://www.yzyy1.com.cn/"
+      },
+      {
+        "name": "The First Affiliated Hospital of Yangzhou University (扬州大学附属医院)",
+        "specialties": "Cardiology, Oncology, General Medicine, Neurology",
+        "address": "210 Huaiyang Road, Yangzhou",
+        "phone": "+86-514-898-7002",
+        "url": "http://www.yzfyy.com.cn/"
       }
     ]
   },
@@ -2316,6 +2756,46 @@
         "address": "65 Jianshui Road, Zhangzhou",
         "phone": "+86-596-269-2999",
         "url": "http://www.zz1yy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "zhaoqing",
+    "cityName": "Zhaoqing",
+    "chinese_name": "肇庆",
+    "region": "South China",
+    "intro": "Zhaoqing in Guangdong, adjacent to the Pearl River Delta, is a growing TCM and general-care center, home to Zhaoqing Central Hospital and Guangdong TCM Hospital Zhaoqing branch, offering TCM, rehabilitation and general medicine at competitive South China prices.",
+    "avg_cost": "$550-$3,000",
+    "wait_time": "1-3 days",
+    "growth": "+30% YoY",
+    "hospitals": [
+      {
+        "name": "Zhaoqing Central Hospital (肇庆市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, Neurology",
+        "address": "53 Dazhong Road, Zhaoqing",
+        "phone": "+86-758-225-2001",
+        "url": "http://www.zqzyy.com.cn/"
+      },
+      {
+        "name": "Zhaoqing Second Hospital (肇庆市第二人民医院)",
+        "specialties": "Cardiology, General Medicine, TCM",
+        "address": "109 Dazhong Road, Zhaoqing",
+        "phone": "+86-758-273-5851",
+        "url": "http://www.zqse.com.cn/"
+      },
+      {
+        "name": "Guangdong TCM Hospital Zhaoqing Branch (广东省中医院肇庆分院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "152 Beihuan East Road, Zhaoqing",
+        "phone": "+86-758-257-1100",
+        "url": "http://www.gdzyy.com.cn/"
+      },
+      {
+        "name": "Zhaoqing TCM Hospital (肇庆市中医院)",
+        "specialties": "TCM, Rehabilitation, General Medicine",
+        "address": "78 Dazhong Road, Zhaoqing",
+        "phone": "+86-758-229-9096",
+        "url": "http://www.zqzy.com.cn/"
       }
     ]
   },

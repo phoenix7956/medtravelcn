@@ -18,39 +18,31 @@ if (!existsSync(DB_PATH)) {
   process.exit(1);
 }
 
-// Load old search_index.json as fallback (some fields migrate.mjs expects: cityName / city / hospitals structure)
-const oldData = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : [];
-
-// Helper: old entry lookup by slug
-const oldByCity = new Map();
-for (const c of oldData) oldByCity.set(c.city, c);
-
 const db = new Database(DB_PATH, { readonly: true });
 
-const cityRows = db.prepare(`
-  SELECT slug, name, chinese_name, region, intro, avg_cost, wait_time, growth
-  FROM cities
-  ORDER BY slug
-`).all();
+// 一次性取出所有数据，再 close DB，避免 native cleanup-hook 在 GC 时崩溃
+// （Node 24 + better-sqlite3@12.11.1 已知 bug：prepared statement 析构时 env==null）
+let cityRows, hospitalRows;
+try {
+  cityRows = db.prepare('SELECT slug,name,chinese_name,region,intro,avg_cost,wait_time,growth FROM cities ORDER BY slug').all();
+  const colRows = db.prepare(`SELECT name FROM pragma_table_info('hospitals')`).all();
+  const dbColSet = new Set(colRows.map(r => r.name));
+  const NEW_HOSP_COLS = [
+    'jci_certified','accepts_international','english_departments','booking_method',
+    'visa_assist','inpatient_standard','payment_methods','insurance_direct',
+    'interpreter_on_site','verified','source_url','updated_at',
+  ].filter(c => dbColSet.has(c));
+  hospitalRows = db.prepare(
+    `SELECT city_slug,name,chinese_name,specialties,address,phone,url,sort_order${NEW_HOSP_COLS.length ? ', '+NEW_HOSP_COLS.join(', ') : ''} FROM hospitals ORDER BY city_slug, sort_order`
+  ).all();
+} finally {
+  db.close();
+}
 
-// 数据库化(2026-10-26)：12 个国际患者字段直接从 DB 导出。
-// 列探测：老库若尚未跑 scripts/init-sqlite-intl.mjs，缺列时自动降级（不挂导出链）。
-// 注意：better-sqlite3 的 prepared statement 在 .all() 之后被 GC 析构时会触发
-// 本机 Node 24 与 native 模块的 cleanup-hook 断言崩溃，故按列探测结果直接
-// 拼 SQL、一次 .all()，不再保留额外的 prepared statement。
-const colRows = db.prepare(`SELECT name FROM pragma_table_info('hospitals')`).all();
-const dbColSet = new Set(colRows.map(r => r.name));
-const NEW_HOSP_COLS = [
-  'jci_certified', 'accepts_international', 'english_departments', 'booking_method',
-  'visa_assist', 'inpatient_standard', 'payment_methods', 'insurance_direct',
-  'interpreter_on_site', 'verified', 'source_url', 'updated_at',
-].filter(c => dbColSet.has(c));
-
-const hospitalRows = db.prepare(`
-  SELECT city_slug, name, chinese_name, specialties, address, phone, url, sort_order${NEW_HOSP_COLS.length ? ', ' + NEW_HOSP_COLS.join(', ') : ''}
-  FROM hospitals
-  ORDER BY city_slug, sort_order
-`).all();
+// 取完数据后读旧文件（此时 db 已 close，无 native 引用残留）
+const oldData = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : [];
+const oldByCity = new Map();
+for (const c of oldData) oldByCity.set(c.city, c);
 
 const out = [];
 
@@ -88,5 +80,3 @@ writeFileSync(OUT, JSON.stringify(out, null, 2));
 console.log(`✅ Exported ${cityRows.length} cities, ${hospitalRows.length} hospitals from medtravelcn.db to search_index.json`);
 console.log(`   File: ${OUT}`);
 console.log(`   Size: ${(JSON.stringify(out).length / 1024).toFixed(1)} KB`);
-
-db.close();
