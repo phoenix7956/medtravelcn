@@ -60,17 +60,40 @@ ALTER TABLE hospitals ADD COLUMN IF NOT EXISTS verified            BOOLEAN DEFAU
 ALTER TABLE hospitals ADD COLUMN IF NOT EXISTS source_url          TEXT;
 ALTER TABLE hospitals ADD COLUMN IF NOT EXISTS updated_at          TIMESTAMPTZ;
 
+-- 与 SQLite 侧 schema 对齐（city_slug + field 粒度，R142 YMYL 溯源口径）
 CREATE TABLE IF NOT EXISTS data_provenance (
   id          SERIAL PRIMARY KEY,
-  entity_type TEXT NOT NULL,           -- city | hospital
-  entity_slug TEXT,
-  source_url  TEXT NOT NULL,
+  city_slug   TEXT NOT NULL REFERENCES cities(slug) ON DELETE CASCADE,
+  field       TEXT NOT NULL,
   source_name TEXT,
-  accessed_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  verified    BOOLEAN DEFAULT FALSE,
-  note        TEXT
+  source_url  TEXT,
+  metric_basis TEXT,
+  value_type  TEXT NOT NULL DEFAULT 'unverified'
+    CHECK (value_type IN ('observed','estimated','unverified')),
+  verified_at TIMESTAMPTZ,
+  maintainer  TEXT,
+  note        TEXT,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (city_slug, field)
 );
-CREATE INDEX IF NOT EXISTS idx_prov_entity ON data_provenance(entity_type, entity_slug);
+CREATE INDEX IF NOT EXISTS idx_prov_city ON data_provenance(city_slug);
+
+-- 医院资质补录（与 SQLite hospital_meta 对齐）
+CREATE TABLE IF NOT EXISTS hospital_meta (
+  hospital_id     INTEGER PRIMARY KEY REFERENCES hospitals(id) ON DELETE CASCADE,
+  foreign_access  TEXT,
+  cert_level      TEXT,
+  cert_source     TEXT,
+  cert_year       INTEGER,
+  insurance_direct TEXT,
+  emergency_24h   TEXT,
+  international_dept TEXT,
+  source_url      TEXT,
+  verified_at     TEXT,
+  maintainer      TEXT,
+  note            TEXT
+);
 
 CREATE TABLE IF NOT EXISTS reviews (
   id            SERIAL PRIMARY KEY,
@@ -131,18 +154,29 @@ for (const h of snap.hospitals) {
 }
 console.log(`✅ hospitals: new=${hNew} skip=${hSkip}`);
 
+// reviews 幂等：按 (author, content) 去重（snapshot 只含 approved，无 id 冲突问题）
+let rNew = 0, rSkip = 0;
 for (const r of snap.reviews || []) {
+  const exists = await c.query(
+    'SELECT 1 FROM reviews WHERE author = $1 AND content = $2 LIMIT 1',
+    [r.author, r.content]
+  );
+  if (exists.rowCount > 0) { rSkip++; continue; }
   await c.query(
     `INSERT INTO reviews (city_slug,hospital_name,rating,author,email,country,content,approved,created_at)
      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,COALESCE($9, now()))`,
     [r.city_slug ?? null, r.hospital_name ?? null, r.rating, r.author, r.email ?? null,
      r.country ?? null, r.content, r.approved ?? 1, r.created_at ?? null]
   );
+  rNew++;
 }
-console.log(`✅ reviews: ${(snap.reviews || []).length} 条（幂等：approved 去重）`);
+console.log(`✅ reviews: new=${rNew} skip=${rSkip}`);
 
 const { rows: cN } = await c.query('SELECT COUNT(*)::int n FROM cities');
 const { rows: hN } = await c.query('SELECT COUNT(*)::int n FROM hospitals');
+const { rows: pN } = await c.query('SELECT COUNT(*)::int n FROM data_provenance');
+const { rows: vN } = await c.query('SELECT COUNT(*)::int n FROM views');
 console.log(`\n📊 DB 现状: ${cN[0].n} cities · ${hN[0].n} hospitals`);
+console.log(`   provenance: ${pN[0].n} · views: ${vN[0].n}`);
 
 await c.end();

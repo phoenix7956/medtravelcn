@@ -2,7 +2,7 @@
 // src/layouts/Base.astro
 // Single source of truth for header/nav/footer/CTA.
 // Change once → applies to ALL pages.
-import { getAllCities, getViews, getAllHospitals } from '~/lib/db';
+import { allCities, viewsOf, allHospitals } from '~/lib/store';
 
 interface Props {
   title: string;
@@ -13,10 +13,10 @@ interface Props {
 
 const { title, description = 'World-class medical care in China at a fraction of Western costs.', page = 'home', showHero = false } = Astro.props;
 
-const cities = getAllCities();
-const hospitals = getAllHospitals();
+const cities = await allCities();
+const hospitals = await allHospitals();
 const totalHospitals = hospitals.length;
-const todayViews = (await getViews(page)) as number;
+const todayViews = Number(await viewsOf(page));
 ---
 <!DOCTYPE html>
 <html lang="en">

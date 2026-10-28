@@ -1,7 +1,7 @@
 // src/pages/api/track.ts
-// View tracking (Vercel KV in prod, SQLite in dev)
+// View tracking (Postgres/SQLite 落库；snapshot 端内存兜底)
 import type { APIRoute } from 'astro';
-import { incrementView, storageMode } from '~/lib/db';
+import { incrementView, storeMode } from '~/lib/store';
 
 export const GET: APIRoute = async ({ url }) => {
   const page = url.searchParams.get('page') || 'home';
@@ -9,7 +9,7 @@ export const GET: APIRoute = async ({ url }) => {
     return new Response('Invalid page', { status: 400 });
   }
   const count = await incrementView(page);
-  return new Response(JSON.stringify({ page, views: count, mode: storageMode() }), {
+  return new Response(JSON.stringify({ page, views: count, mode: storeMode() }), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
   });
@@ -18,7 +18,7 @@ export const GET: APIRoute = async ({ url }) => {
 export const POST: APIRoute = async ({ url }) => {
   const page = url.searchParams.get('page') || 'home';
   const count = await incrementView(page);
-  return new Response(JSON.stringify({ page, views: count, mode: storageMode() }), {
+  return new Response(JSON.stringify({ page, views: count, mode: storeMode() }), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
   });

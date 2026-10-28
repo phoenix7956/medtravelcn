@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/gen-snapshot.mjs && astro build",
+    "build": "node scripts/gen-snapshot.mjs && node scripts/gen-sitemap.mjs && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "db:export": "node scripts/export-db-to-search-index.mjs",
@@ -20,6 +20,7 @@
     "db:snapshot": "node scripts/gen-snapshot.mjs",
     "build:local": "node scripts/gen-snapshot.mjs && node scripts/export-db-to-search-index.mjs && node scripts/init-db.mjs && node scripts/migrate.mjs && astro build",
     "db:pg:init": "node scripts/init-postgres.mjs",
+    "db:pg:sync": "node scripts/sync-sqlite-to-postgres.mjs",
     "data:quality": "node scripts/data-quality.mjs",
     "meta:stats": "node scripts/backfill-hospital-meta.mjs --stats",
     "meta:list": "node scripts/backfill-hospital-meta.mjs --list",

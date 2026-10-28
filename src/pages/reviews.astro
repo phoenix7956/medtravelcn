@@ -2,10 +2,9 @@
 // src/pages/reviews.astro
 // All approved reviews
 import Base from '~/layouts/Base.astro';
-import { getApprovedReviews } from '~/lib/db';
-import { allCities } from '~/lib/store';
+import { allCities, approvedReviews } from '~/lib/store';
 
-const reviews = await getApprovedReviews(100);
+const reviews = await approvedReviews(100);
 const cities = await allCities();
 const cityMap = Object.fromEntries(cities.map(c => [c.slug, c.name]));
 ---

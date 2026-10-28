@@ -7,8 +7,7 @@ export const prerender = false;
 
 import Base from '~/layouts/Base.astro';
 import HospitalCard from '~/components/HospitalCard.astro';
-import { allCities, oneCity, hospitalsOf, searchHospitals } from '~/lib/store';
-import { getReviewsByCity, incrementView } from '~/lib/db';
+import { allCities, oneCity, hospitalsOf, searchHospitals, approvedReviews, incrementView } from '~/lib/store';
 
 const { slug } = Astro.params;
 const city = await oneCity(slug!);
@@ -17,7 +16,7 @@ if (!city) {
 }
 
 const hospitals = await hospitalsOf(slug!);
-const reviews = await getReviewsByCity(slug!, 5);
+const reviews = await approvedReviews(5, slug!);
 
 await incrementView(`city-${slug}`);
 ---

@@ -1,8 +1,8 @@
 // src/pages/api/reviews.ts
-// POST: submit a new review (writes to Vercel KV in prod, SQLite in dev)
+// POST: submit a new review (Postgres/SQLite 落库；无 DB 的 snapshot 端返回 503)
 // GET: list approved reviews
 import type { APIRoute } from 'astro';
-import { insertReview, getApprovedReviews, storageMode } from '~/lib/db';
+import { insertReview, approvedReviews, storeMode } from '~/lib/store';
 
 export const POST: APIRoute = async ({ request, redirect }) => {
   const formData = await request.formData();
@@ -36,13 +36,14 @@ export const POST: APIRoute = async ({ request, redirect }) => {
   return redirect('/submit-review/?success=1', 303);
 };
 
+// 旧签名保留兼容：insertReview 在新 store 里是 async，POST 必须 await
 export const GET: APIRoute = async ({ url }) => {
   const citySlug = url.searchParams.get('city');
   const limit = parseInt(url.searchParams.get('limit') || '50');
-  const allReviews = await getApprovedReviews(limit);
+  const allReviews = await approvedReviews(limit, citySlug || undefined);
   const filtered = citySlug ? allReviews.filter(r => r.city_slug === citySlug) : allReviews;
   return new Response(JSON.stringify({
-    mode: storageMode(),
+    mode: storeMode(),
     count: filtered.length,
     reviews: filtered,
   }, null, 2), {

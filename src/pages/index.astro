@@ -3,8 +3,7 @@
 // Homepage - dynamically renders city grid from SQLite
 import Base from '~/layouts/Base.astro';
 import CityCard from '~/components/CityCard.astro';
-import { incrementView } from '~/lib/db';
-import { allCities, hospitalCount, hospitalsOf } from '~/lib/store';
+import { allCities, hospitalCount, incrementView } from '~/lib/store';
 
 // Track this page view
 await incrementView('home');
