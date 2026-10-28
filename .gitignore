@@ -31,3 +31,4 @@ data/*.db-wal
 # 本地报告不入库
 reports/
 docs/SCHEMA*.md.bak
+VERCEL_TOKEN

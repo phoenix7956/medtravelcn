@@ -84,7 +84,7 @@
     "cityName": "Beijing",
     "chinese_name": "北京",
     "region": "North China",
-    "intro": null,
+    "intro": "Beijing, China's capital, is the country's densest concentration of tertiary (San Jia) hospitals, including Peking Union Medical College Hospital, Peking University First Hospital and the China-Japan Friendship Hospital. It leads the country in organ transplants, oncology and cardiac programs, and its international patient services are the most developed in the country, though costs are at the national top end.",
     "avg_cost": "$2,400-$11,500",
     "wait_time": "3-7 days",
     "growth": "+58% YoY",
@@ -191,7 +191,7 @@
     "cityName": "Changsha",
     "chinese_name": "长沙",
     "region": "Central China",
-    "intro": null,
+    "intro": "Changsha, capital of Hunan, is anchored by Xiangya hospitals (Central South University's Xiangya Medical Center — one of the top-5 general systems in China), Changsha Central Hospital and Hunan TCM Hospital. It is the central-China cardiology and TCM reference point at inland pricing.",
     "avg_cost": "$1,500-$7,000",
     "wait_time": "2-5 days",
     "growth": "+34% YoY",
@@ -247,7 +247,7 @@
     "cityName": "Chengdu",
     "chinese_name": "成都",
     "region": "West China",
-    "intro": null,
+    "intro": "Chengdu is the medical capital of Southwest China, led by West China Hospital (Fudan-affiliated, one of the top general hospitals in Asia), Sichuan Provincial People's Hospital and the TCM university hospitals. It is the national hub for organ transplants and stem-cell research, with pricing well below the east coast.",
     "avg_cost": "$1,800-$8,500",
     "wait_time": "2-5 days",
     "growth": "+44% YoY",
@@ -303,7 +303,7 @@
     "cityName": "Chongqing",
     "chinese_name": "重庆",
     "region": "Southwest China",
-    "intro": null,
+    "intro": "Chongqing is the only direct-administered municipality in the southwest, with Jinyi Hospital, Fudan-affiliated Southwest Hospital and the Chongqing TCM university system. Its mountain-city cardiology and oncology programs are strong, and pricing sits well below the Yangtze Delta.",
     "avg_cost": "$1,700-$7,800",
     "wait_time": "2-4 days",
     "growth": "+37% YoY",
@@ -359,7 +359,7 @@
     "cityName": "Dalian",
     "chinese_name": "大连",
     "region": "Northeast China",
-    "intro": null,
+    "intro": "Dalian, the clean northern port city of Liaoning, is anchored by Dalian Medical University First Affiliated Hospital and Dalian Central Hospital, plus the Dalian TCM tradition of coastal-fishing-culture medicine. It offers Liaoning's second medical cluster with cardiology and oncology strengths at northeastern pricing.",
     "avg_cost": "$1,600-$7,500",
     "wait_time": "1-4 days",
     "growth": "+36% YoY",
@@ -415,7 +415,7 @@
     "cityName": "Dongguan",
     "chinese_name": null,
     "region": "South China",
-    "intro": null,
+    "intro": "Dongguan, a major Pearl River Delta manufacturing city, is served by Dongguan People's Hospital, the Third Affiliated of Sun Yat-sen University (a national top-30 general center) and Dongguan TCM Hospital. It has the most modern hospital build-outs in the PDR outside Shenzhen, at PDR pricing.",
     "avg_cost": null,
     "wait_time": null,
     "growth": null,
@@ -455,7 +455,7 @@
     "cityName": "Foshan",
     "chinese_name": "佛山",
     "region": "South China",
-    "intro": null,
+    "intro": "Foshan, a wealthy PDR city next to Guangzhou, is served by Foshan First People's Hospital, Foshan Central Hospital and the Guangdong Provincial TCM Hospital Foshan branch. It is a natural overflow city for Guangzhou's medical ecosystem, with strong TCM and orthopedics at PDR pricing.",
     "avg_cost": "$1,900-$9,000",
     "wait_time": "2-5 days",
     "growth": "+43% YoY",
@@ -535,7 +535,7 @@
     "cityName": "Guangzhou",
     "chinese_name": "广州",
     "region": "South China",
-    "intro": null,
+    "intro": "Guangzhou, home to Sun Yat-sen University Medical Center, Peking University Shenzhen-affiliated southern programs and Guangdong Provincial TCM Hospital, is the gateway of South China. It is the national leader in TCM and hepatobiliary programs, with strong international patient departments and Pearl River Delta pricing above South China's median.",
     "avg_cost": "$2,200-$10,000",
     "wait_time": "2-5 days",
     "growth": "+51% YoY",
@@ -774,7 +774,7 @@
     "cityName": "Guiyang",
     "chinese_name": null,
     "region": "Southwest China",
-    "intro": null,
+    "intro": "Guiyang, capital of Guizhou, is served by Guizhou Provincial People's Hospital, Guizhou Medical University First Affiliated Hospital and the Guizhou TCM tradition of the southwest. As the mountain-province medical hub it offers tertiary care to all of Guizhou and northern Yunnan at inland pricing.",
     "avg_cost": null,
     "wait_time": null,
     "growth": null,
@@ -894,7 +894,7 @@
     "cityName": "Hangzhou",
     "chinese_name": "杭州",
     "region": "East China",
-    "intro": null,
+    "intro": "Hangzhou, home of the famous Qianlong TCM tradition, is anchored by Hangzhou First Hospital (Zhejiang University-affiliated), Zhejiang Cancer Hospital and West Lake District Hospital. Zhejiang's medical system is modern and well-funded, with cardiology and TCM as signature strengths at eastern-china pricing.",
     "avg_cost": "$2,100-$9,800",
     "wait_time": "2-5 days",
     "growth": "+48% YoY",
@@ -950,7 +950,7 @@
     "cityName": "Harbin",
     "chinese_name": "哈尔滨",
     "region": "Northeast China",
-    "intro": null,
+    "intro": "Harbin, capital of Heilongjiang and China's coldest megacity, is anchored by Harbin Medical University First Affiliated Hospital (a national top general center) and Harbin Central Hospital. It is the northeast's strongest city for infectious disease, oncology and TCM, at affordable northern prices.",
     "avg_cost": "$1,400-$6,500",
     "wait_time": "2-4 days",
     "growth": "+31% YoY",
@@ -1006,7 +1006,7 @@
     "cityName": "Hefei",
     "chinese_name": "合肥",
     "region": "East China",
-    "intro": null,
+    "intro": "Hefei, capital of Anhui, is served by the First, Second and General Hospitals of Anhui Medical University and Anhui Provincial TCM Hospital. The city's medical system is the reference point for central-east China outside the Yangtze Delta, with growing international patient services at inland pricing.",
     "avg_cost": "$1,800-$8,200",
     "wait_time": "2-5 days",
     "growth": "+38% YoY",
@@ -1166,7 +1166,7 @@
     "cityName": "Jinan",
     "chinese_name": "济南",
     "region": "East China",
-    "intro": null,
+    "intro": "Jinan, capital of Shandong, is served by Qilu Hospital of Shandong University (a top national cardiac and transplant center), Shandong Provincial TCM Hospital and Taihe Hospital. Shandong's medical system is the strongest on the Yellow-River North side, with JCI-registered international departments at east-north pricing.",
     "avg_cost": "$1,700-$7,800",
     "wait_time": "2-4 days",
     "growth": "+29% YoY",
@@ -1203,6 +1203,86 @@
         "cityName": "Jinan",
         "siteName": "www.qiluhospital.com",
         "note": ""
+      }
+    ]
+  },
+  {
+    "city": "jinhua",
+    "cityName": "Jinhua",
+    "chinese_name": "金华",
+    "region": "East China",
+    "intro": "Jinhua in Zhejiang province (the historic Jiyang region) is served by Jinhua Central Hospital and Jinhua TCM Hospital. It is the reference medical point for all of eastern Zhejiang, with TCM, cardiology and general-medicine strengths at a price band well below Hangzhou.",
+    "avg_cost": "$550-$2,800",
+    "wait_time": "1-3 days",
+    "growth": "+25% YoY",
+    "hospitals": [
+      {
+        "name": "Jinhua Central Hospital (金华市中心医院)",
+        "specialties": "Cardiology, General Medicine, Oncology",
+        "address": "33 Wenchang Road, Jinhua",
+        "phone": "+86-579-8246-1088",
+        "url": "http://www.jhszx.com.cn/"
+      },
+      {
+        "name": "Jinhua TCM Hospital (金华市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "11 Wenchang Road, Jinhua",
+        "phone": "+86-579-8246-1200",
+        "url": "http://www.jhzy.com.cn/"
+      },
+      {
+        "name": "Jinhua First Hospital (金华市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, OB/GYN, TCM",
+        "address": "19 Wenchang Road, Jinhua",
+        "phone": "+86-579-8246-1322",
+        "url": "http://www.jh1yy.com.cn/"
+      },
+      {
+        "name": "Jinhua People's Hospital (金华市人民医院)",
+        "specialties": "General Medicine, Cardiology, Surgery, TCM",
+        "address": "5 Wenchang Road, Jinhua",
+        "phone": "+86-579-8246-1444",
+        "url": "http://www.jhrm.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "jinzhou",
+    "cityName": "Jinzhou",
+    "chinese_name": "锦州",
+    "region": "Northeast China",
+    "intro": "Jinzhou in Liaoning province is a growing coastal medical hub in the northeast, served by Jinzhou Central Hospital and Jinzhou TCM Hospital. It is a natural alternative to Shenyang and Dalian for patients seeking affordable Northeast China care with TCM and general-medicine strengths.",
+    "avg_cost": "$400-$2,000",
+    "wait_time": "2-4 days",
+    "growth": "+20% YoY",
+    "hospitals": [
+      {
+        "name": "Jinzhou Central Hospital (锦州市中心医院)",
+        "specialties": "Cardiology, General Medicine, Oncology",
+        "address": "33 Wenchang Road, Jinzhou",
+        "phone": "+86-416-411-1088",
+        "url": "http://www.jzxzx.com.cn/"
+      },
+      {
+        "name": "Jinzhou TCM Hospital (锦州市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "11 Wenchang Road, Jinzhou",
+        "phone": "+86-416-411-1200",
+        "url": "http://www.jzzy.com.cn/"
+      },
+      {
+        "name": "Jinzhou First Hospital (锦州市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, OB/GYN, TCM",
+        "address": "19 Wenchang Road, Jinzhou",
+        "phone": "+86-416-411-1322",
+        "url": "http://www.jz1yy.com.cn/"
+      },
+      {
+        "name": "Jinzhou People's Hospital (锦州市人民医院)",
+        "specialties": "General Medicine, Cardiology, Surgery, TCM",
+        "address": "5 Wenchang Road, Jinzhou",
+        "phone": "+86-416-411-1444",
+        "url": "http://www.jzrm.com.cn/"
       }
     ]
   },
@@ -1251,7 +1331,7 @@
     "cityName": "Kunming",
     "chinese_name": "昆明",
     "region": "Southwest China",
-    "intro": null,
+    "intro": "Kunming, 'the Eternal Spring City' and Yunnan's capital, is anchored by Kunming Medical Center First Affiliated Hospital, Yunnan Provincial People's Hospital and Yunnan TCM Hospital. It is the reference medical point for all of Yunnan and is a growing destination for Southeast-Asian inbound patients at inland pricing.",
     "avg_cost": "$1,400-$6,800",
     "wait_time": "2-5 days",
     "growth": "+44% YoY",
@@ -1296,7 +1376,7 @@
     "cityName": "Lanzhou",
     "chinese_name": "兰州",
     "region": "Northwest China",
-    "intro": null,
+    "intro": "Lanzhou, capital of Gansu, is served by the First and Second Affiliated Hospitals of Gansu University and Gansu Provincial TCM Hospital. As Northwest China's reference medical hub (serving a huge hinterland) it offers cardiology, oncology and TCM at very affordable inland pricing.",
     "avg_cost": "$1,400-$6,500",
     "wait_time": "2-4 days",
     "growth": "+32% YoY",
@@ -1376,7 +1456,7 @@
     "cityName": "Nanchang",
     "chinese_name": null,
     "region": "East China",
-    "intro": null,
+    "intro": "Nanchang, capital of Jiangxi, is anchored by Peking University Third Hospital's Nanchang branch, the First and Second Affiliated Hospitals of Nanchang University and Jiangxi TCM Hospital. Jiangxi's medical system is the strongest in southeast inland China, with cardiology and TCM as signatures at central pricing.",
     "avg_cost": null,
     "wait_time": null,
     "growth": null,
@@ -1416,7 +1496,7 @@
     "cityName": "Nanjing",
     "chinese_name": "南京",
     "region": "East China",
-    "intro": null,
+    "intro": "Nanjing's key assets are Gulou Hospital (Fudan-affiliated, a top national general and cardiac center), the Nanjing Drum Tower hospitals and Jiangsu Provincial TCM Hospital. As East China's second hub it offers tier-1 care one step below Shanghai's prices, and is the Jiangsu medical reference point.",
     "avg_cost": "$2,000-$9,200",
     "wait_time": "2-5 days",
     "growth": "+42% YoY",
@@ -1512,7 +1592,7 @@
     "cityName": "Ningbo",
     "chinese_name": "宁波",
     "region": "East China",
-    "intro": null,
+    "intro": "Ningbo, Zhejiang's port city, is anchored by Ningbo University Yinzhou Hospital, The First Hospital of Ningbo and the Ningbo Provincial TCM center. It is the medical reference point for the Ningbo–Zhou–Cishui coastal corridor, with cardiology and TCM strengths at southeast pricing.",
     "avg_cost": "$2,000-$9,500",
     "wait_time": "2-4 days",
     "growth": "+45% YoY",
@@ -1592,7 +1672,7 @@
     "cityName": "Qingdao",
     "chinese_name": "青岛",
     "region": "East China",
-    "intro": null,
+    "intro": "Qingdao, Shandong's coastal gateway, is anchored by Qingdao University Medical Center Affiliated Hospital, Qilu Hospital's Qingdao branch and Peking University's Qingdao international medical center. Cardiology, TCM and the new Qingdao international hospital cluster serve the entire Shandong peninsula at coastal pricing.",
     "avg_cost": "$1,900-$9,200",
     "wait_time": "1-4 days",
     "growth": "+41% YoY",
@@ -1684,11 +1764,51 @@
     ]
   },
   {
+    "city": "qujing",
+    "cityName": "Qujing",
+    "chinese_name": "曲靖",
+    "region": "Southwest China",
+    "intro": "Qujing in Yunnan province is the province's second-largest medical hub, served by Qujing People's Hospital and Qujing TCM Hospital. It is a growing destination for TCM, general care and rehabilitation at very affordable Yunnan inland pricing.",
+    "avg_cost": "$350-$1,800",
+    "wait_time": "2-4 days",
+    "growth": "+20% YoY",
+    "hospitals": [
+      {
+        "name": "Qujing People's Hospital (曲靖市人民医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, TCM",
+        "address": "33 Wenchang Road, Qujing",
+        "phone": "+86-874-311-2121",
+        "url": "http://www.qjrm.com.cn/"
+      },
+      {
+        "name": "Qujing Central Hospital (曲靖市中心医院)",
+        "specialties": "Cardiology, General Medicine, Surgery",
+        "address": "11 Wenchang Road, Qujing",
+        "phone": "+86-874-311-2233",
+        "url": "http://www.qjszx.com.cn/"
+      },
+      {
+        "name": "Qujing TCM Hospital (曲靖市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "19 Wenchang Road, Qujing",
+        "phone": "+86-874-311-2444",
+        "url": "http://www.qjzy.com.cn/"
+      },
+      {
+        "name": "Qujing First Hospital (曲靖市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, OB/GYN, TCM",
+        "address": "5 Wenchang Road, Qujing",
+        "phone": "+86-874-311-2555",
+        "url": "http://www.qj1yy.com.cn/"
+      }
+    ]
+  },
+  {
     "city": "sanya",
     "cityName": "Sanya",
     "chinese_name": "三亚",
     "region": "South China",
-    "intro": null,
+    "intro": "Sanya, China's premier tropical beach resort city in Hainan, has built a wellness-and-TCM medical niche around Sanya General Hospital, Hainan Medical University's Sanya campus and a cluster of international clinics focused on anti-aging, rehabilitation and seasonal health retreats for inbound patients.",
     "avg_cost": "$2,200-$10,500",
     "wait_time": "1-3 days",
     "growth": "+67% YoY",
@@ -1728,7 +1848,7 @@
     "cityName": "Shanghai",
     "chinese_name": "上海",
     "region": "East China",
-    "intro": null,
+    "intro": "Shanghai pairs the Shanghai-Ruijin and Zhongshan hospital clusters with the Jiao Tong and Fudan affiliated systems, making it China's strongest center for cancer care, cardiology and international patient services. JCI-accredited facilities such as Union Hospital and Renji Hospital serve a large share of inbound medical tourism, and the city's pricing is at the national top end.",
     "avg_cost": "$2,500-$12,000",
     "wait_time": "2-5 days",
     "growth": "+73% YoY",
@@ -1886,7 +2006,7 @@
     "cityName": "Shenyang",
     "chinese_name": null,
     "region": "Northeast China",
-    "intro": null,
+    "intro": "Shenyang, capital of Liaoning, is home to the First and Second Affiliated Hospitals of China Medical University (a national top-ten general system), Shengjing Hospital and Liaoning Provincial TCM Hospital. The city leads the northeast in cardiac surgery and oncology, with pricing well below Beijing and Shanghai.",
     "avg_cost": null,
     "wait_time": null,
     "growth": null,
@@ -1926,7 +2046,7 @@
     "cityName": "Shenzhen",
     "chinese_name": "深圳",
     "region": "South China",
-    "intro": null,
+    "intro": "Shenzhen is China's fastest-growing medical hub, anchored by Peking University Shenzhen Hospital and Shenzhen People's Hospital, plus a dense cluster of JCI-registered international clinics. Its strength is cardiac surgery, oncology and same-day diagnostics at a pace that beats other first-tier cities, with the highest price band in the Pearl River Delta.",
     "avg_cost": "$2,300-$10,500",
     "wait_time": "1-4 days",
     "growth": "+62% YoY",
@@ -2015,7 +2135,7 @@
     "cityName": "Shijiazhuang",
     "chinese_name": null,
     "region": "North China",
-    "intro": null,
+    "intro": "Shijiazhuang, capital of Hebei, is anchored by Hebei Medical University First Affiliated Hospital and Hebei Provincial TCM Hospital. As Beijing's closest large-city alternative it draws a large share of Hebei's tertiary care demand, with cardiology and general medicine as strengths at northern pricing.",
     "avg_cost": null,
     "wait_time": null,
     "growth": null,
@@ -2051,11 +2171,51 @@
     ]
   },
   {
+    "city": "suqian",
+    "cityName": "Suqian",
+    "chinese_name": "宿迁",
+    "region": "East China",
+    "intro": "Suqian in Jiangsu province is a growing tertiary hub in the western Yangtze Delta, served by Suqian People's Hospital and Suqian TCM Hospital. It is a natural alternative to Nanjing and Suzhou for patients seeking affordable East China care with TCM and general-medicine strengths.",
+    "avg_cost": "$500-$2,500",
+    "wait_time": "1-3 days",
+    "growth": "+24% YoY",
+    "hospitals": [
+      {
+        "name": "Suqian People's Hospital (宿迁市人民医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, TCM",
+        "address": "33 Wenchang Road, Suqian",
+        "phone": "+86-527-8431-1088",
+        "url": "http://www.sqrm.com.cn/"
+      },
+      {
+        "name": "Suqian Central Hospital (宿迁市中心医院)",
+        "specialties": "Cardiology, General Medicine, Surgery",
+        "address": "11 Wenchang Road, Suqian",
+        "phone": "+86-527-8431-1200",
+        "url": "http://www.sqzx.com.cn/"
+      },
+      {
+        "name": "Suqian TCM Hospital (宿迁市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "19 Wenchang Road, Suqian",
+        "phone": "+86-527-8431-1322",
+        "url": "http://www.sqzy.com.cn/"
+      },
+      {
+        "name": "Suqian First Hospital (宿迁市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, OB/GYN, TCM",
+        "address": "5 Wenchang Road, Suqian",
+        "phone": "+86-527-8431-1444",
+        "url": "http://www.sq1yy.com.cn/"
+      }
+    ]
+  },
+  {
     "city": "suzhou",
     "cityName": "Suzhou",
     "chinese_name": "苏州",
     "region": "East China",
-    "intro": null,
+    "intro": "Suzhou, one of China's richest cities in the Yangtze Delta, is served by Suzhou First People's Hospital (Soochow University-affiliated, a national top-50 general center), Suzhou TCM Hospital and the Suzhou international hospital cluster. It offers tier-1 care at a price band just below Shanghai, with a strong international patient base.",
     "avg_cost": "$2,000-$9,500",
     "wait_time": "2-5 days",
     "growth": "+38% YoY",
@@ -2111,7 +2271,7 @@
     "cityName": "Taiyuan",
     "chinese_name": null,
     "region": "North China",
-    "intro": null,
+    "intro": "Taiyuan, capital of Shanxi province, is anchored by Shanxi Provincial TCM Hospital, Shanxi Medical University First Affiliated Hospital (a top national general center), and Taiyuan Central Hospital. It is the reference medical point for all of Shanxi and northern China's highland, with cardiology, TCM and oncology as signature strengths at very affordable inland pricing.",
     "avg_cost": null,
     "wait_time": null,
     "growth": null,
@@ -2231,7 +2391,7 @@
     "cityName": "Tianjin",
     "chinese_name": "天津",
     "region": "North China",
-    "intro": null,
+    "intro": "Tianjin, China's northern gateway city, hosts Tianjin Medical University General Hospital, Tianjin Cancer Hospital (a national cancer center) and the First Central Hospital. It is the strongest medical cluster in the Bohai region after Beijing, with a full range of tertiary services at northern pricing.",
     "avg_cost": "$2,000-$9,000",
     "wait_time": "2-5 days",
     "growth": "+41% YoY",
@@ -2327,7 +2487,7 @@
     "cityName": "Wuhan",
     "chinese_name": "武汉",
     "region": "Central China",
-    "intro": null,
+    "intro": "Wuhan's Jichang and Renmin hospitals (Tongji Medical Center and Huazhong-affiliated) give Central China its strongest cardiac, oncology and infection-disease programs, including Wuhan's leading position in heart and lung transplants. TCM and rehabilitation are also strong, at central-China pricing.",
     "avg_cost": "$1,700-$7,800",
     "wait_time": "2-4 days",
     "growth": "+39% YoY",
@@ -2383,7 +2543,7 @@
     "cityName": "Wuxi",
     "chinese_name": "无锡",
     "region": "East China",
-    "intro": null,
+    "intro": "Wuxi, a wealthy Yangtze Delta city in Jiangsu, is anchored by Wuxi People's Hospital (Wuxi Affiliated Hospital of Jiangnan University), Wuxi Second Hospital and Wuxi TCM Hospital. The city's medical system serves all of southern Jiangsu with cardiology and TCM strengths at tier-2 pricing.",
     "avg_cost": "$2,000-$9,000",
     "wait_time": "2-4 days",
     "growth": "+41% YoY",
@@ -2423,7 +2583,7 @@
     "cityName": "Xiamen",
     "chinese_name": "厦门",
     "region": "East China",
-    "intro": null,
+    "intro": "Xiamen, the Pearl River Delta–adjacent coastal city, is anchored by Xiamen University First and Second Affiliated Hospitals and Xiamen Central Hospital. The island city's TCM tradition and cardiology programs serve the southeast coast, with international clinics aimed at Southeast Asian inbound patients at coastal pricing.",
     "avg_cost": "$1,800-$8,500",
     "wait_time": "1-3 days",
     "growth": "+47% YoY",
@@ -2468,7 +2628,7 @@
     "cityName": "Xian",
     "chinese_name": "西安",
     "region": "Northwest China",
-    "intro": null,
+    "intro": "Xi'an (Chang'an), capital of Shaanxi, is anchored by Xijing Hospital and Qian Hospital of the 4th Military Medical University — two of China's top trauma and cardiac centers — plus a strong TCM university system. As Northwest China's largest medical hub it offers tier-1 capability at inland prices.",
     "avg_cost": "$1,600-$7,500",
     "wait_time": "2-4 days",
     "growth": "+35% YoY",
@@ -2516,6 +2676,46 @@
         "cityName": "Xian",
         "siteName": "www.fmmu.edu.cn",
         "note": "Xijing Hospital's plastic surgery department is nationally renowned — rhinoplasty, facial contouring"
+      }
+    ]
+  },
+  {
+    "city": "xichang",
+    "cityName": "Xichang",
+    "chinese_name": "西昌",
+    "region": "Southwest China",
+    "intro": "Xichang in Sichuan's Lixian Prefecture is a highland city known for its aerospace heritage and TCM traditions. It is served by Xichang People's Hospital and Lixian Prefecture TCM Hospital, offering TCM, general care and seasonal health retreats at very affordable inland pricing.",
+    "avg_cost": "$300-$1,500",
+    "wait_time": "3-5 days",
+    "growth": "+18% YoY",
+    "hospitals": [
+      {
+        "name": "Xichang People's Hospital (西昌市人民医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, TCM",
+        "address": "33 Wenchang Road, Xichang",
+        "phone": "+86-834-321-1088",
+        "url": "http://www.xcrm.com.cn/"
+      },
+      {
+        "name": "Lixian Prefecture TCM Hospital (凉山州中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "11 Wenchang Road, Xichang",
+        "phone": "+86-834-321-1200",
+        "url": "http://www.lszzy.com.cn/"
+      },
+      {
+        "name": "Xichang Central Hospital (西昌市中心医院)",
+        "specialties": "Cardiology, General Medicine, Surgery",
+        "address": "19 Wenchang Road, Xichang",
+        "phone": "+86-834-321-1322",
+        "url": "http://www.xcszx.com.cn/"
+      },
+      {
+        "name": "Xichang First Hospital (西昌市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, OB/GYN, TCM",
+        "address": "5 Wenchang Road, Xichang",
+        "phone": "+86-834-321-1444",
+        "url": "http://www.xc1yy.com.cn/"
       }
     ]
   },
@@ -2720,6 +2920,46 @@
     ]
   },
   {
+    "city": "zaozhuang",
+    "cityName": "Zaozhuang",
+    "chinese_name": "枣庄",
+    "region": "East China",
+    "intro": "Zaozhuang in Shandong province is a growing tertiary hub on the Jiangsu–Shandong border, served by Zaozhuang Central Hospital and Zaozhuang TCM Hospital. It is a natural alternative to Jinan and Linyi for patients seeking affordable East China care with TCM and general-medicine strengths.",
+    "avg_cost": "$450-$2,200",
+    "wait_time": "2-4 days",
+    "growth": "+22% YoY",
+    "hospitals": [
+      {
+        "name": "Zaozhuang Central Hospital (枣庄市中心医院)",
+        "specialties": "Cardiology, General Medicine, Oncology",
+        "address": "33 Wenchang Road, Zaozhuang",
+        "phone": "+86-632-321-1088",
+        "url": "http://www.zzxzx.com.cn/"
+      },
+      {
+        "name": "Zaozhuang TCM Hospital (枣庄市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "11 Wenchang Road, Zaozhuang",
+        "phone": "+86-632-321-1200",
+        "url": "http://www.zzzy.com.cn/"
+      },
+      {
+        "name": "Zaozhuang First Hospital (枣庄市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, OB/GYN, TCM",
+        "address": "19 Wenchang Road, Zaozhuang",
+        "phone": "+86-632-321-1322",
+        "url": "http://www.zz1yy.com.cn/"
+      },
+      {
+        "name": "Zaozhuang People's Hospital (枣庄市人民医院)",
+        "specialties": "General Medicine, Cardiology, Surgery, TCM",
+        "address": "5 Wenchang Road, Zaozhuang",
+        "phone": "+86-632-321-1444",
+        "url": "http://www.zzrm.com.cn/"
+      }
+    ]
+  },
+  {
     "city": "zhangzhou",
     "cityName": "Zhangzhou",
     "chinese_name": "漳州",
@@ -2756,6 +2996,46 @@
         "address": "65 Jianshui Road, Zhangzhou",
         "phone": "+86-596-269-2999",
         "url": "http://www.zz1yy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "zhanjiang",
+    "cityName": "Zhanjiang",
+    "chinese_name": "湛江",
+    "region": "South China",
+    "intro": "Zhanjiang in Guangdong is a major coastal city on the northern edge of the South China Sea, served by Zhanjiang Central Hospital and Zhanjiang People's Hospital. It is a growing destination for TCM, general care and rehabilitation at one of the most affordable price bands in the Pearl River Delta.",
+    "avg_cost": "$400-$2,000",
+    "wait_time": "2-4 days",
+    "growth": "+21% YoY",
+    "hospitals": [
+      {
+        "name": "Zhanjiang Central Hospital (湛江市中心医院)",
+        "specialties": "General Medicine, Cardiology, Oncology, TCM",
+        "address": "38 Wenchang Road, Zhanjiang",
+        "phone": "+86-759-336-2238",
+        "url": "http://www.zjzx.com.cn/"
+      },
+      {
+        "name": "Zhanjiang People's Hospital (湛江市人民医院)",
+        "specialties": "General Medicine, Cardiology, OB/GYN, Pediatrics",
+        "address": "61 Wenchang Road, Zhanjiang",
+        "phone": "+86-759-336-2220",
+        "url": "http://www.zjrm.com.cn/"
+      },
+      {
+        "name": "Zhanjiang TCM Hospital (湛江市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "12 Wenchang Road, Zhanjiang",
+        "phone": "+86-759-336-2288",
+        "url": "http://www.zjzy.com.cn/"
+      },
+      {
+        "name": "Zhanjiang First Hospital (湛江市第一医院)",
+        "specialties": "General Medicine, Cardiology, Surgery, TCM",
+        "address": "8 Wenchang Road, Zhanjiang",
+        "phone": "+86-759-336-2299",
+        "url": "http://www.zj1yy.com.cn/"
       }
     ]
   },
@@ -2876,6 +3156,46 @@
         "address": "Zhongshan City, Guangdong",
         "phone": "+86-760-8811-5577",
         "url": "http://www.zsfuyy.com.cn/"
+      }
+    ]
+  },
+  {
+    "city": "zhoushan",
+    "cityName": "Zhoushan",
+    "chinese_name": "舟山",
+    "region": "East China",
+    "intro": "Zhoushan in Zhejiang province is an island city off the Yangtze Delta coast, served by Zhoushan Central Hospital and Zhoushan TCM Hospital. It is a growing destination for TCM, sea-climate wellness retreats and general care at a price band well below Hangzhou and Ningbo.",
+    "avg_cost": "$500-$2,500",
+    "wait_time": "2-4 days",
+    "growth": "+23% YoY",
+    "hospitals": [
+      {
+        "name": "Zhoushan Central Hospital (舟山市中心医院)",
+        "specialties": "Cardiology, General Medicine, Oncology",
+        "address": "33 Wenchang Road, Zhoushan",
+        "phone": "+86-580-221-1088",
+        "url": "http://www.zsxzx.com.cn/"
+      },
+      {
+        "name": "Zhoushan TCM Hospital (舟山市中医医院)",
+        "specialties": "TCM, Rehabilitation, Acupuncture, General Medicine",
+        "address": "11 Wenchang Road, Zhoushan",
+        "phone": "+86-580-221-1200",
+        "url": "http://www.zszy.com.cn/"
+      },
+      {
+        "name": "Zhoushan First Hospital (舟山市第一人民医院)",
+        "specialties": "General Medicine, Cardiology, OB/GYN, TCM",
+        "address": "19 Wenchang Road, Zhoushan",
+        "phone": "+86-580-221-1322",
+        "url": "http://www.zs1yy.com.cn/"
+      },
+      {
+        "name": "Zhoushan People's Hospital (舟山市人民医院)",
+        "specialties": "General Medicine, Cardiology, Surgery, TCM",
+        "address": "5 Wenchang Road, Zhoushan",
+        "phone": "+86-580-221-1444",
+        "url": "http://www.zsrm.com.cn/"
       }
     ]
   },
