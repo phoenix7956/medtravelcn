@@ -169,6 +169,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://medtravelcn.net/cities/jinhua/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://medtravelcn.net/cities/jinzhou/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://medtravelcn.net/cities/kaifeng/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -235,6 +247,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://medtravelcn.net/cities/qujing/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://medtravelcn.net/cities/sanya/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -272,6 +290,12 @@
   </url>
   <url>
     <loc>https://medtravelcn.net/cities/shijiazhuang/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://medtravelcn.net/cities/suqian/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -337,6 +361,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://medtravelcn.net/cities/xichang/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://medtravelcn.net/cities/xinzhou/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -367,7 +397,19 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://medtravelcn.net/cities/zaozhuang/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://medtravelcn.net/cities/zhangzhou/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://medtravelcn.net/cities/zhanjiang/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -386,6 +428,12 @@
   </url>
   <url>
     <loc>https://medtravelcn.net/cities/zhongshan/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://medtravelcn.net/cities/zhoushan/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
